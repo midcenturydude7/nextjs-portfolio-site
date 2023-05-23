@@ -31,15 +31,6 @@
   animation: slide-up-bounce 1.75s ease-in 1s forwards;
 }
 
-.header {
-  position: relative;
-  width: 75%;
-  margin: 1em 0 2em;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
 @keyframes slide-up-bounce {
   0% {
     transform: translateY(100px);
