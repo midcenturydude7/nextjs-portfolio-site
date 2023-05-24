@@ -2,6 +2,7 @@
 @import "../app/components/Navbar/styles/Navbar.module.css";
 @import "../app/components/HeroSection/styles/HeroSection.module.css";
 @import "../app/components/HeroSection/styles/HeroGradient.module.css";
+@import "../app/components/CardSection/styles/CardSection.module.css";
 
 *,
 *::before,
@@ -223,29 +224,6 @@ body {
   }
 }
 
-@keyframes boxes {
-  from {
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.0275);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-
 @keyframes slide-up-nobounce {
   0% {
     transform: translateY(100px);
@@ -302,12 +280,6 @@ body {
   }
   100% {
     background-position: right;
-  }
-}
-
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
   }
 }
 
