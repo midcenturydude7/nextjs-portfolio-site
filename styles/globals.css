@@ -172,10 +172,6 @@ body {
   color: #bfb5f7;
 }
 
-img {
-  max-width: 100%;
-}
-
 /* ANIMATIONS */
 @keyframes navbar {
   from {
@@ -304,64 +300,58 @@ img {
 }
 /* MEDIA QUERIES */
 @media (min-width: 1500px) {
-  main .main-content .main-title {
+  .main-wrapper .main-content .main-title {
     font-size: 4.5vw;
   }
-  main .main-content .main-title .gradient {
+  .main-wrapper .main-content .main-title .gradient {
     font-size: 5.5vw;
   }
-  main .main-content .main-terminal {
+  .main-wrapper .main-content .main-terminal {
     margin-left: -0.3em;
   }
-  main .main-content .main-terminal p {
+  .main-wrapper .main-content .main-terminal p {
     font-size: 2.25vw;
   }
 }
 @media (min-width: 1800px) {
-  main .main-content .main-title {
+  .main-wrapper .main-content .main-title {
     font-size: 4vw;
   }
-  main .main-content .main-title .gradient {
+  .main-wrapper .main-content .main-title .gradient {
     font-size: 5vw;
   }
-  main .main-content .main-terminal {
+  .main-wrapper .main-content .main-terminal {
     margin-left: -0.2em;
   }
-  main .main-content .main-terminal p {
+  .main-wrapper .main-content .main-terminal p {
     font-size: 2vw;
   }
 }
 @media (min-width: 2000px) {
-  header {
-    width: 70%;
-  }
-  main .main-content .main-title {
+  .main-wrapper .main-content .main-title {
     font-size: 3.75vw;
   }
-  main .main-content .main-title .gradient {
+  .main-wrapper .main-content .main-title .gradient {
     font-size: 4.75vw;
   }
-  main .main-content .main-terminal {
+  .main-wrapper .main-content .main-terminal {
     margin-left: -0.25em;
   }
-  main .main-content .main-terminal p {
+  .main-wrapper .main-content .main-terminal p {
     font-size: 1.75vw;
   }
 }
 @media (min-width: 2500px) {
-  header {
-    width: 55%;
-  }
-  main .main-content .main-title {
+  .main-wrapper .main-content .main-title {
     font-size: 3.5vw;
   }
-  main .main-content .main-title .gradient {
+  .main-wrapper .main-content .main-title .gradient {
     font-size: 4.5vw;
   }
-  main .main-content .main-terminal {
+  .main-wrapper .main-content .main-terminal {
     margin-left: -0.35em;
   }
-  main .main-content .main-terminal p {
+  .main-wrapper .main-content .main-terminal p {
     font-size: 1.5vw;
   }
 }/*# sourceMappingURL=globals.css.map */

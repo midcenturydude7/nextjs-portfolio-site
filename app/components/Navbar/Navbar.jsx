@@ -5,7 +5,7 @@ import "./styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <header className="header">
+    <header className="header-nav">
       <nav className="nav">
         <ul className="logo">
           <li>
