@@ -6,8 +6,8 @@ import "./styles/HeroGradient.module.css";
 const HeroSection = () => {
   return (
     <main className="main-wrapper">
-      <div class="gradient-hero--container">
-        <div class="gradient-hero">
+      <div className="gradient-hero--container">
+        <div className="gradient-hero">
           <div className="image-container">
             <Image
               src="/../public/assets/images/MG_Avatar.jpg"
@@ -19,24 +19,24 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div class="main-content">
-        <h1 class="main-title">
-          <span class="gradient-title">Hi,</span> I&#39;m Matt
+      <div className="main-content">
+        <h1 className="main-title">
+          <span className="gradient-title">Hi,</span> I&#39;m Matt
         </h1>
-        <div class="main-terminal">
-          <div class="terminal-window">
-            <div class="header-hero">
+        <div className="main-terminal">
+          <div className="terminal-window">
+            <div className="header-hero">
               <ul>
-                <li class="button first"></li>
-                <li class="button second"></li>
-                <li class="button third"></li>
+                <li className="button first"></li>
+                <li className="button second"></li>
+                <li className="button third"></li>
               </ul>
             </div>
-            <div class="console-container">
+            <div className="console-container">
               <p>
                 $<span id="text"></span>
               </p>
-              <p class="console-underscore" id="console-text">
+              <p className="console-underscore" id="console-text">
                 &#95;
               </p>
             </div>
