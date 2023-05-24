@@ -1,0 +1,121 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+.main-wrapper {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
+
+.gradient-hero--container {
+  animation: hero-image 1s ease-in-out 0.5s forwards;
+  opacity: 0;
+}
+
+.gradient-hero {
+  --card-height: 27vh;
+  --card-width: calc(var(--card-height) / 1);
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: 50%;
+  border: 7px solid #ffffff28;
+  border-image-outset: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    var(--rotate),
+    #26d0ff,
+    #7493f0,
+    43%,
+    #6e29d6
+  );
+  z-index: -1;
+  animation: spin 10s linear infinite;
+}
+
+.gradient-hero::after {
+  position: absolute;
+  top: calc(var(--card-height) / 75);
+  left: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  transform: scale(0.95);
+  border-radius: 50%;
+  filter: blur(calc(var(--card-height) / 5));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  z-index: -1;
+
+  transition: opacity 0.5s;
+  animation: spin 10s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main {
+    --card-height: 25vh;
+  }
+}
+
+@media (min-width: 1800px) {
+  .main {
+    --card-height: 23vh;
+  }
+}
+
+@media (min-width: 2500px) {
+  .main {
+    --card-height: 20vh;
+  }
+}

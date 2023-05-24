@@ -1,5 +1,7 @@
 @import "../app/styles/page.module.css";
 @import "../app/components/Navbar/styles/Navbar.module.css";
+@import "../app/components/HeroSection/styles/HeroSection.module.css";
+@import "../app/components/HeroSection/styles/HeroGradient.module.css";
 
 *,
 *::before,
@@ -29,8 +31,23 @@
   --clr-10: hsl(59, 85%, 45%) 90%;
   --clr-11: hsl(250, 79%, 59%) 100%;
 
+  /** Gradient Schemes **/
   --gradient-logo: linear-gradient(
     90deg,
+    hsl(240deg 85% 45%) 0%,
+    hsl(250deg 90% 42%) 10%,
+    hsl(257deg 94% 38%) 20%,
+    hsl(261deg 98% 35%) 30%,
+    hsl(265deg 100% 33%) 40%,
+    hsl(268deg 100% 30%) 50%,
+    hsl(271deg 100% 28%) 60%,
+    hsl(274deg 100% 26%) 70%,
+    hsl(276deg 100% 24%) 80%,
+    hsl(279deg 99% 22%) 90%,
+    hsl(281deg 94% 21%) 100%
+  );
+  --gradient-logo-hover: linear-gradient(
+    -90deg,
     hsl(240deg 85% 45%) 0%,
     hsl(250deg 90% 42%) 10%,
     hsl(257deg 94% 38%) 20%,
@@ -152,6 +169,21 @@
     hsl(252, 60%, 67%) 100%,
     hsl(249, 58%, 75%) 100%
   );
+
+  // --card-height: 27vh;
+  // --card-width: calc(var(--card-height) / 1);
+
+  // --clr-1: hsl(240deg 85% 45%) 0%;
+  // --clr-2: hsl(209, 90%, 42%) 10%;
+  // --clr-3: hsl(257, 40%, 48%) 20%;
+  // --clr-4: hsl(261deg 98% 35%) 30%;
+  // --clr-5: hsl(265deg 100% 33%) 40%;
+  // --clr-6: hsl(204, 100%, 30%) 50%;
+  // --clr-7: hsl(172, 100%, 28%) 60%;
+  // --clr-8: hsl(274deg 100% 26%) 70%;
+  // --clr-9: hsl(277, 32%, 33%) 80%;
+  // --clr-10: hsl(59, 85%, 45%) 90%;
+  // --clr-11: hsl(250, 79%, 59%) 100%;
 }
 
 body {

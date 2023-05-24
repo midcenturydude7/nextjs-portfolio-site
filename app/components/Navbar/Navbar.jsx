@@ -8,7 +8,11 @@ const Navbar = () => {
     <header className="header">
       <nav className="nav">
         <ul className="logo">
-          <li>MG[dev]</li>
+          <li>
+            <Link href="/" className="nav-link-home">
+              MG[dev]
+            </Link>
+          </li>
         </ul>
         <ul className="nav-primary">
           <li>
@@ -36,17 +40,26 @@ const Navbar = () => {
       <nav className="nav">
         <ul className="nav-utility">
           <li>
-            <Link href="#" className="nav-link">
+            <Link
+              href="https://github.com/midcenturydude7"
+              className="nav-link"
+              target="_blank">
               <FaGithub />
             </Link>
           </li>
           <li>
-            <Link href="#" className="nav-link">
+            <Link
+              href="https://codepen.io/midcenturydude7"
+              className="nav-link"
+              target="_blank">
               <FaCodepen />
             </Link>
           </li>
           <li>
-            <Link href="#" className="nav-link">
+            <Link
+              href="https://t.me/midcenturydude7"
+              className="nav-link"
+              target="_blank">
               <FaTelegram />
             </Link>
           </li>

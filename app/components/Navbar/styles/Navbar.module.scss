@@ -71,6 +71,23 @@
       border-radius: 5px;
       box-shadow: inset 0 0 2px 2px #dbdbdb15;
       background-image: var(--gradient-logo);
+      transition: all 0.8s ease-in-out both;
+
+      &:hover {
+        background-image: var(--gradient-logo-hover);
+        transition: all 0.8s ease-in-out;
+      }
+
+      li {
+        .nav-link-home {
+          text-decoration: none;
+          color: #bfb5f7;
+
+          &:hover {
+            color: #dbd5fc;
+          }
+        }
+      }
     }
 
     ul.nav-primary {

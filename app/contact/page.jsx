@@ -1,7 +1,12 @@
-import React from "react";
+import Navbar from "../components/Navbar/Navbar";
 
 const Contact = () => {
-  return <h1>Contact Matt</h1>;
+  return (
+    <div className="wrapper-truncated">
+      <Navbar />
+      <h1>Get in touch</h1>
+    </div>
+  );
 };
 
 export default Contact;

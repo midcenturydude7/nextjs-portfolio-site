@@ -1,7 +1,12 @@
-import React from "react";
+import Navbar from "../components/Navbar/Navbar";
 
 const Resources = () => {
-  return <h1>Resources</h1>;
+  return (
+    <div className="wrapper-truncated">
+      <Navbar />
+      <h1>Resources</h1>
+    </div>
+  );
 };
 
 export default Resources;

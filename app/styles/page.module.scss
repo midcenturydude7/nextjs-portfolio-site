@@ -30,7 +30,7 @@
     height: 40rem;
     left: -5%;
     right: -5%;
-    top: 90%;
+  top: 90%;
     transition: transform 1s ease-in-out;
     transform-origin: 0 0;
     background-image: var(--gradient-box-solid);
@@ -38,6 +38,33 @@
     opacity: 0;
     animation: slide-up-bounce 1.75s ease-in 1s forwards;
   }
+}
+
+.wrapper-truncated {
+  width: 100%;
+  padding: 1.75em 1.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  min-height: 100vh;
+  perspective: 100px;
+  background-color: rgb(1, 8, 22);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(1, 8, 22, 1) 80%,
+    rgb(10, 2, 37) 98%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(1, 8, 22, 1) 80%,
+    rgb(10, 2, 37) 98%
+  );
+  background: linear-gradient(0deg, rgba(1, 8, 22, 1) 80%, rgb(10, 2, 37) 98%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#010816",endColorstr="#040e2f",GradientType=1);
 }
 
 @keyframes slide-up-bounce {
