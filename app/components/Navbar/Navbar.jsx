@@ -1,48 +1,48 @@
 import Link from "next/link";
 import { FaGithub, FaCodepen, FaTelegram } from "react-icons/fa";
 
-import "./styles/Navbar.module.css";
+import style from "./styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <header className="header-nav">
-      <nav className="nav">
-        <ul className="logo">
+    <header className={style["header-nav"]}>
+      <nav className={style["nav-left"]}>
+        <ul className={style.logo}>
           <li>
-            <Link href="/" className="nav-link-home">
+            <Link href="/" className={style["nav-link-home"]}>
               MG[dev]
             </Link>
           </li>
         </ul>
-        <ul className="nav-primary">
+        <ul className={style["nav-primary"]}>
           <li>
-            <Link href="/about" className="nav-link">
+            <Link href="/about" className={style["nav-link"]}>
               about
             </Link>
           </li>
           <li>
-            <Link href="/work" className="nav-link">
+            <Link href="/work" className={style["nav-link"]}>
               work
             </Link>
           </li>
           <li>
-            <Link href="/resources" className="nav-link">
+            <Link href="/resources" className={style["nav-link"]}>
               resources
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="nav-link">
+            <Link href="/contact" className={style["nav-link"]}>
               contact
             </Link>
           </li>
         </ul>
       </nav>
-      <nav className="nav">
-        <ul className="nav-utility">
+      <nav className={style["nav-right"]}>
+        <ul className={style["nav-utility"]}>
           <li>
             <Link
               href="https://github.com/midcenturydude7"
-              className="nav-link"
+              className={style["nav-link"]}
               target="_blank">
               <FaGithub />
             </Link>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <li>
             <Link
               href="https://codepen.io/midcenturydude7"
-              className="nav-link"
+              className={style["nav-link"]}
               target="_blank">
               <FaCodepen />
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <li>
             <Link
               href="https://t.me/midcenturydude7"
-              className="nav-link"
+              className={style["nav-link"]}
               target="_blank">
               <FaTelegram />
             </Link>

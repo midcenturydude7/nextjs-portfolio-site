@@ -1,60 +1,60 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import "./styles/CardSection.module.css";
+import style from "./styles/CardSection.module.css";
 
 const CardSection = () => {
   return (
-    <section className="section">
-      <div class="section-box_container">
-        <div class="section-box">
-          <div class="box-banner">nextjs</div>
+    <section className={style.section}>
+      <div className={style["section-box_container"]}>
+        <div className={style["section-box"]}>
+          <div className={style["box-banner"]}>nextjs</div>
           <Image
             src="/../public/assets/images/port4.jpg"
             alt="Stock photo"
             width={300}
             height={300}
-            className="box-image"
+            className={style["box-image"]}
           />
-          <div class="box-text">
-            <h2 className="box-text-title">
-              <Link href="#" className="box-text-link">
+          <div className={style["box-text"]}>
+            <h2>
+              <Link href="#" className={style["box-text-link-title"]}>
                 Ecommerce Website
               </Link>
             </h2>
-            <p className="box-text-content">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur asperiores, quos expedita, ullam debitis soluta nobis
               dolorem excepturi et aut?...
-              <span className="box-text-content-link">
-                <Link href="#" className="box-text-link">
+              <span>
+                <Link href="#" className={style["box-text-link-content"]}>
                   Read more 🡆
                 </Link>
               </span>
             </p>
           </div>
         </div>
-        <div class="section-box">
-          <div class="box-banner">mern</div>
+        <div className={style["section-box"]}>
+          <div className={style["box-banner"]}>mern</div>
           <Image
-            src="/../public/assets/images/port5.jpg"
+            src="/../public/assets/images/port7.jpg"
             alt="Stock photo"
             width={300}
             height={300}
-            className="box-image"
+            className={style["box-image"]}
           />
-          <div class="box-text">
-            <h2 className="box-text-title">
-              <Link href="#" className="box-text-link">
-                MERN Dashboard
+          <div className={style["box-text"]}>
+            <h2>
+              <Link href="#" className={style["box-text-link-title"]}>
+                Mern Dashboard
               </Link>
             </h2>
-            <p className="box-text-content">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur asperiores, quos expedita, ullam debitis soluta nobis
               dolorem excepturi et aut?...
-              <span className="box-text-content-link">
-                <Link href="#" className="box-text-link">
+              <span>
+                <Link href="#" className={style["box-text-link-content"]}>
                   Read more 🡆
                 </Link>
               </span>

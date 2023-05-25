@@ -55,11 +55,11 @@
   z-index: 1;
   transition: height border-top 2.5s ease, background-image 0.2s ease;
 }
-.section .section-box_container .section-box:hover .box-text .box-text-link {
+.section .section-box_container .section-box:hover .box-text h2 .box-text-link-title {
   margin-bottom: 0.25em;
   color: #8b77fc;
 }
-.section .section-box_container .section-box:hover .box-text .box-text-content {
+.section .section-box_container .section-box:hover .box-text p {
   opacity: 1;
   transition: opacity 0.8s ease-in-out;
 }
@@ -107,29 +107,32 @@
   transition: all 0.4s ease;
   z-index: 10;
 }
-.section .section-box_container .section-box .box-text .box-text-link {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-.section .section-box_container .section-box .box-text .box-text-title {
+.section .section-box_container .section-box .box-text h2 {
   font-weight: 500;
 }
-.section .section-box_container .section-box .box-text .box-text-title:hover {
+.section .section-box_container .section-box .box-text h2 .box-text-link-title {
+  color: inherit;
+  text-decoration: none;
+}
+.section .section-box_container .section-box .box-text h2 .box-text-link-title:hover {
   color: #a698f8;
   transition: color 0.4s ease;
 }
-.section .section-box_container .section-box .box-text .box-text-content {
+.section .section-box_container .section-box .box-text p {
   font-size: 0.9rem;
   line-height: 1.75;
   margin: 0;
   opacity: 0;
   text-align: justify;
 }
-.section .section-box_container .section-box .box-text .box-text-content .box-text-content-link {
+.section .section-box_container .section-box .box-text p span {
   color: #8b77fc;
 }
-.section .section-box_container .section-box .box-text .box-text-content .box-text-content-link:hover {
+.section .section-box_container .section-box .box-text p span .box-text-link-content {
+  text-decoration: none;
+  color: inherit;
+}
+.section .section-box_container .section-box .box-text p span .box-text-link-content:hover {
   color: #a698f8;
   transition: color 0.4s ease;
 }
