@@ -28,6 +28,7 @@ const CardSection = () => {
               dolorem excepturi et aut?...
               <span>
                 <Link href="#" className={style["box-text-link-content"]}>
+                  {" "}
                   Read more 🡆
                 </Link>
               </span>
@@ -55,6 +56,7 @@ const CardSection = () => {
               dolorem excepturi et aut?...
               <span>
                 <Link href="#" className={style["box-text-link-content"]}>
+                  {" "}
                   Read more 🡆
                 </Link>
               </span>

@@ -11,8 +11,8 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    border-left: 10px solid #8b77fc;
     border: 1px solid #cfcfcf41;
+    border-left: 10px solid #8b77fc;
     border-radius: 8px;
     padding: 0.65em 1.25em;
     background: #ececec1e;
@@ -112,13 +112,15 @@
     width: auto;
     display: flex;
     justify-content: space-between;
-    border-right: 10px solid #8b77fc;
+    align-items: center;
     border: 1px solid #cfcfcf41;
+    border-right: 10px solid #8b77fc;
     border-radius: 8px;
     background: #ececec1e;
-    opacity: 1;
+    opacity: 0;
     font-size: 1.1425rem;
     margin: 0;
+    padding: 0.6em 1em;
     animation: navbar 1s ease-in-out 0.5s forwards;
 
     ul.nav-utility {
@@ -162,7 +164,7 @@
       }
 
       li + li {
-        margin-left: 1em;
+        margin-left: 1.2em;
       }
     }
   }
