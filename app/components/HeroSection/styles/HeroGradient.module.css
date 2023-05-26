@@ -10,16 +10,6 @@
   inherits: false;
 }
 
-.main-wrapper {
-  width: 85%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 0.75em 0;
-  padding: 0;
-}
-
 .gradient-hero--container {
   animation: hero-image 1s ease-in-out 0.5s forwards;
   opacity: 0;

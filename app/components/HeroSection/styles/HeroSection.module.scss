@@ -1,4 +1,12 @@
 .main-wrapper {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0.75em 0;
+  padding: 0;
+  
   .main-content {
     display: flex;
     flex-direction: column;
@@ -70,15 +78,15 @@
               border: 1px solid #cfcfcf41;
             }
 
-            .button.first {
+            .button:nth-child(1) {
               background-image: var(--gradient-btnPurple);
             }
 
-            .button.second {
+            .button:nth-child(2) {
               background-image: var(--gradient-btnBlue);
             }
 
-            .button.third {
+            .button:nth-child(3) {
               background-image: var(--gradient-btnAqua);
             }
           }

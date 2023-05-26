@@ -1,3 +1,12 @@
+.main-wrapper {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0.75em 0;
+  padding: 0;
+}
 .main-wrapper .main-content {
   display: flex;
   flex-direction: column;
@@ -65,13 +74,13 @@
   margin: 0 0.25em;
   border: 1px solid rgba(207, 207, 207, 0.2549019608);
 }
-.main-wrapper .main-content .main-terminal .terminal-window .header-hero ul .button.first {
+.main-wrapper .main-content .main-terminal .terminal-window .header-hero ul .button:nth-child(1) {
   background-image: var(--gradient-btnPurple);
 }
-.main-wrapper .main-content .main-terminal .terminal-window .header-hero ul .button.second {
+.main-wrapper .main-content .main-terminal .terminal-window .header-hero ul .button:nth-child(2) {
   background-image: var(--gradient-btnBlue);
 }
-.main-wrapper .main-content .main-terminal .terminal-window .header-hero ul .button.third {
+.main-wrapper .main-content .main-terminal .terminal-window .header-hero ul .button:nth-child(3) {
   background-image: var(--gradient-btnAqua);
 }
 .main-wrapper .main-content .main-terminal .terminal-window .console-container {

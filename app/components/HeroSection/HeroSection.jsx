@@ -27,9 +27,9 @@ const HeroSection = () => {
           <div className="terminal-window">
             <div className="header-hero">
               <ul>
-                <li className="button first"></li>
-                <li className="button second"></li>
-                <li className="button third"></li>
+                <li className="button"></li>
+                <li className="button"></li>
+                <li className="button"></li>
               </ul>
             </div>
             <div className="console-container">
