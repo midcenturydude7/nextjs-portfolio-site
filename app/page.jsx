@@ -6,11 +6,15 @@ import Footer from "./components/Footer/Footer";
 import style from "./styles/page.module.css";
 
 export default function Home() {
+  const onPointerMove = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className={style.wrapper}>
       <Navbar />
       <HeroSection />
-      <CardSection />
+      <CardSection onPointerMove={onPointerMove} />
       <Footer />
     </div>
   );

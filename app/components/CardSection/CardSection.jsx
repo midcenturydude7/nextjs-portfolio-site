@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import style from "./styles/CardSection.module.css";
 
-const CardSection = () => {
+const CardSection = ({ onPointerMove }) => {
   return (
     <section className={style.section}>
       <div className={style["section-box_container"]}>
