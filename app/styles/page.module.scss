@@ -30,13 +30,13 @@
     height: 40rem;
     left: -5%;
     right: -5%;
-  top: 90%;
+    top: 90%;
     transition: transform 1s ease-in-out;
     transform-origin: 0 0;
     background-image: var(--gradient-box-solid);
     box-shadow: 0 0 80px 120px #0a0025;
     opacity: 0;
-    animation: slide-up-bounce 1.75s ease-in 1s forwards;
+    animation: var(--slide-02, slide-up-bounce 1.75s ease-in 1s forwards);
   }
 }
 

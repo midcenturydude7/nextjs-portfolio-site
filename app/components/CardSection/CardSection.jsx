@@ -1,11 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import style from "./styles/CardSection.module.css";
 
-const CardSection = ({ onPointerMove }) => {
+const CardSection = ({ handlePointerOver, handlePointerOut }) => {
   return (
-    <section className={style.section}>
+    <section
+      className={style.section}
+      onPointerEnter={handlePointerOver}
+      onPointerLeave={handlePointerOut}>
       <div className={style["section-box_container"]}>
         <div className={style["section-box"]}>
           <div className={style["box-banner"]}>nextjs</div>
@@ -15,6 +20,7 @@ const CardSection = ({ onPointerMove }) => {
             width={300}
             height={300}
             className={style["box-image"]}
+            priority={true}
           />
           <div className={style["box-text"]}>
             <h2>
@@ -43,6 +49,7 @@ const CardSection = ({ onPointerMove }) => {
             width={300}
             height={300}
             className={style["box-image"]}
+            priority={true}
           />
           <div className={style["box-text"]}>
             <h2>

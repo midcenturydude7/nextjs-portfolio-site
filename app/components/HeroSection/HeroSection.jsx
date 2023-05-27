@@ -15,6 +15,7 @@ const HeroSection = () => {
               className="hero-image"
               width={260}
               height={260}
+              priority={true}
             />
           </div>
         </div>
