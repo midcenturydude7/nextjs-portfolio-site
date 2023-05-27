@@ -1,4 +1,5 @@
-.wrapper {
+.wrapper,
+.nowrapper {
   width: 100%;
   padding: 1.75em 1.5em 0;
   display: flex;
@@ -36,8 +37,15 @@
     background-image: var(--gradient-box-solid);
     box-shadow: 0 0 80px 120px #0a0025;
     opacity: 0;
-    animation: var(--slide-02, slide-up-bounce 1.75s ease-in 1s forwards);
   }
+}
+
+.wrapper::after {
+  animation: slide-up-bounce 1.75s ease-in 1s forwards;
+}
+
+.nowrapper::after {
+  animation: slide-down 1s ease-in-out forwards;
 }
 
 .wrapper-truncated {
@@ -84,5 +92,27 @@
   100% {
     transform: rotateZ(-4deg) translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes slide-up-nobounce {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(-4deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: rotateZ(-4deg) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateZ(0deg) translateY(100px);
+    opacity: 0;
   }
 }

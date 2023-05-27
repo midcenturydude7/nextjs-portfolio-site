@@ -199,17 +199,6 @@ body {
   }
 }
 
-@keyframes slide-up-nobounce {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateZ(-4deg) translateY(0);
-    opacity: 1;
-  }
-}
-
 @keyframes slide-up-content {
   0% {
     transform: translateY(100px);
@@ -221,17 +210,6 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    transform: rotateZ(-4deg) translateY(0);
-    opacity: 1;
-  }
-  100% {
-    transform: rotateZ(0deg) translateY(100px);
-    opacity: 0;
   }
 }
 

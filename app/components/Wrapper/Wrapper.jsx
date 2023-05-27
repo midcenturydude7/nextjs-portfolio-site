@@ -21,7 +21,7 @@ function Wrapper() {
   };
 
   return (
-    <div className={style.wrapper}>
+    <div className={!isHovered ? style.wrapper : style.nowrapper}>
       <Navbar />
       <HeroSection />
       <CardSection
