@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import consoleText from "../../utils/consoleText";
 
-import "./styles/HeroSection.module.css";
-import "./styles/HeroGradient.module.css";
+import style from "./styles/HeroSection.module.css";
+import styleGradient from "./styles/HeroGradient.module.css";
 
 const HeroSection = () => {
   React.useEffect(() => {
@@ -23,14 +23,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <main className="main-wrapper">
-      <div className="gradient-hero--container">
-        <div className="gradient-hero">
-          <div className="image-container">
+    <main className={style["main-wrapper"]}>
+      <div className={styleGradient["gradient-hero--container"]}>
+        <div className={styleGradient["gradient-hero"]}>
+          <div className={style["image-container"]}>
             <Image
               src="/../public/assets/images/MG_Avatar.jpg"
               alt="Avatar"
-              className="hero-image"
+              className={style["hero-image"]}
               width={260}
               height={260}
               priority={true}
@@ -38,27 +38,27 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="main-content">
-        <h1 className="main-title">
-          <Link href="#" className="main-title-link">
-            <span className="gradient-title-greeting">Hi,</span>
+      <div className={style["main-content"]}>
+        <h1 className={style["main-title"]}>
+          <Link href="#" className={style["main-title-link"]}>
+            <span className={style["gradient-title-greeting"]}>Hi,</span>
           </Link>{" "}
-          <span className="gradient-title-name">I&#39;m Matt</span>
+          <span className={style["gradient-title-name"]}>I&#39;m Matt</span>
         </h1>
-        <div className="main-terminal">
-          <div className="terminal-window">
-            <div className="header-hero">
+        <div className={style["main-terminal"]}>
+          <div className={style["terminal-window"]}>
+            <div className={style["header-hero"]}>
               <ul>
-                <li className="button"></li>
-                <li className="button"></li>
-                <li className="button"></li>
+                <li className={style["button"]}></li>
+                <li className={style["button"]}></li>
+                <li className={style["button"]}></li>
               </ul>
             </div>
-            <div className="console-container">
+            <div className={style["console-container"]}>
               <p>
                 $<span id="text"></span>
               </p>
-              <p className="console-underscore" id="console-text">
+              <p className={style["console-underscore"]} id="console-text">
                 &#95;
               </p>
             </div>
