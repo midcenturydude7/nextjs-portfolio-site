@@ -7,13 +7,11 @@ const Navbar = () => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>
-        <ul className={style.logo}>
-          <li>
-            <Link href="/" className={style["nav-link-home"]}>
-              MG[dev]
-            </Link>
-          </li>
-        </ul>
+        <Link href="/" className={style["nav-link-home"]}>
+          <ul className={style.logo}>
+            <li>MG[dev]</li>
+          </ul>
+        </Link>
         <ul className={style["nav-primary"]}>
           <li>
             <Link href="/about" className={style["nav-link"]}>

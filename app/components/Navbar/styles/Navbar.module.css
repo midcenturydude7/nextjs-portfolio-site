@@ -57,7 +57,17 @@
 .header-nav .nav-left ul li .nav-link:hover::after {
   transform: scaleX(1);
 }
-.header-nav .nav-left ul.logo {
+.header-nav .nav-left .nav-link-home {
+  text-decoration: none;
+  color: #bfb5f7;
+}
+.header-nav .nav-left .nav-link-home:hover {
+  color: #dbd5fc;
+}
+.header-nav .nav-left .nav-link-home:hover ul.logo li {
+  color: #dbd5fc;
+}
+.header-nav .nav-left .nav-link-home ul.logo {
   text-align: center;
   letter-spacing: 0.075em;
   font-size: 0.85rem;
@@ -72,15 +82,8 @@
   background-position: left;
   transition: background-position 1s ease-in-out both;
 }
-.header-nav .nav-left ul.logo:hover {
+.header-nav .nav-left .nav-link-home ul.logo:hover {
   background-position: right;
-}
-.header-nav .nav-left ul.logo li .nav-link-home {
-  text-decoration: none;
-  color: #bfb5f7;
-}
-.header-nav .nav-left ul.logo li .nav-link-home:hover {
-  color: #dbd5fc;
 }
 .header-nav .nav-left ul.nav-primary {
   display: flex;
@@ -149,6 +152,7 @@
   margin-left: 1.2em;
 }
 
+/* ANIMATIONS */
 @keyframes navbar {
   from {
     transform: translateY(-50px);
