@@ -27,7 +27,7 @@
   --clr-11: hsl(250, 79%, 59%) 100%;
 
   /** Gradient Schemes **/
-  // Navbar.module.scss: ul.logo
+  // Navbar.module.scss: ul.logo | CardSection.module.scss: .box-banner
   --gradient-logo: linear-gradient(
     90deg,
     hsl(240deg 85% 45%) 0%,
@@ -130,6 +130,8 @@
     hsl(212deg 59% 56%) 82%,
     hsl(209deg 61% 50%) 100%
   );
+
+  // CardSection.module.scss: .box-text
   --gradient-box: linear-gradient(
     -20deg,
     hsla(269, 66%, 8%, 0.507) 0%,
@@ -143,7 +145,9 @@
     hsla(252, 60%, 67%, 0.411) 100%,
     hsla(249, 58%, 75%, 0.11) 100%
   );
-  --gradient-box-solid: linear-gradient(
+
+  //page.module.scss: .wrapper::after
+  --gradient-footer-bgclr: linear-gradient(
     -20deg,
     hsl(269, 66%, 8%) 0%,
     hsl(269, 66%, 15%) 26%,
@@ -155,25 +159,6 @@
     hsl(254, 60%, 60%) 99%,
     hsl(252, 60%, 67%) 100%,
     hsl(249, 58%, 75%) 100%
-  );
-
-  --gradient-footer: linear-gradient(
-    125deg,
-    hsl(249deg 96% 73%) 0%,
-    hsl(251deg 95% 71%) 4%,
-    hsl(253deg 94% 69%) 8%,
-    hsl(256deg 93% 68%) 14%,
-    hsl(258deg 92% 66%) 21%,
-    hsl(260deg 91% 63%) 32%,
-    hsl(263deg 89% 61%) 71%,
-    hsl(266deg 88% 58%) 86%,
-    hsl(256deg 89% 64%) 91%,
-    hsl(247deg 87% 68%) 94%,
-    hsl(239deg 82% 71%) 96%,
-    hsl(233deg 75% 71%) 98%,
-    hsl(229deg 64% 71%) 99%,
-    hsl(226deg 51% 72%) 99%,
-    hsl(224deg 34% 73%) 100%
   );
 }
 

@@ -143,6 +143,7 @@
   animation-play-state: paused;
 }
 
+/* ANIMATIONS */
 @keyframes boxes {
   from {
     transform: translateY(200px);

@@ -103,6 +103,7 @@
   }
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 1000px) {
   .main {
     --card-height: 25vh;
