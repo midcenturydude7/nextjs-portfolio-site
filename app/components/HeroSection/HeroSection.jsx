@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className={styleGradient["gradient-hero"]}>
           <div className={style["image-container"]}>
             <Image
-              src="/../public/assets/images/MG_Avatar.jpg"
+              src="../../../public/assets/images/MG_Avatar.jpg"
               alt="Avatar"
               className={style["hero-image"]}
               width={260}
