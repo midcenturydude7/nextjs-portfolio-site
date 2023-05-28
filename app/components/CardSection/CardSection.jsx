@@ -15,7 +15,7 @@ const CardSection = ({ handlePointerOver, handlePointerOut }) => {
         <div className={style["section-box"]}>
           <div className={style["box-banner"]}>nextjs</div>
           <Image
-            src="/../public/assets/images/port4.jpg"
+            src="/assets/images/port4.jpg"
             alt="Stock photo"
             width={300}
             height={300}
@@ -44,7 +44,7 @@ const CardSection = ({ handlePointerOver, handlePointerOut }) => {
         <div className={style["section-box"]}>
           <div className={style["box-banner"]}>mern</div>
           <Image
-            src="/../public/assets/images/port7.jpg"
+            src="/assets/images/port7.jpg"
             alt="Stock photo"
             width={300}
             height={300}
