@@ -35,14 +35,15 @@ export default function consoleText(words, id, colors) {
     }
   }, 120);
 
-  window.setInterval(function () {
-    if (visible === true) {
-      consoleText.className = "console-underscore hidden";
-      visible = false;
-    } else {
-      consoleText.className = "console-underscore";
+  // Cursor blinker | Disabled for now
+  // window.setInterval(function () {
+  //   if (visible === true) {
+  //     consoleText.className = "console-underscore hidden";
+  //     visible = false;
+  //   } else {
+  //     consoleText.className = "console-underscore";
 
-      visible = true;
-    }
-  }, 200);
+  //     visible = true;
+  //   }
+  // }, 200);
 }

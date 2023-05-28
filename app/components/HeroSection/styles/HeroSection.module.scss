@@ -23,25 +23,39 @@
 
       .main-title-link {
         text-decoration: none;
-      }
 
-      span.gradient-title-greeting {
-        font-family: "Poppins", sans-serif;
-        font-size: 6.5vw;
-        font-weight: 700;
-        background-size: 200%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-stroke: 1px transparent;
-        color: rgba(255, 255, 255, 0.219);
-        background-image: var(--gradient-text);
-        background-position: left;
-        transition: background-position 2s ease;
+        span.gradient-title-greeting {
+          z-index: -1;
+          position: relative;
+          font-family: "Poppins", sans-serif;
+          font-size: 6.5vw;
+          font-weight: 700;
+          background-size: 200%;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-stroke: 1px transparent;
+          color: rgba(255, 255, 255, 0.219);
+          background-image: var(--gradient-text);
+          background-position: left;
+          transition: background-position 2s ease;
 
-        &:hover,
-        &:focus {
-          background-position: right;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -28px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            box-shadow: 0 0 25px 60px rgb(1, 8, 22);
+          }
         }
+
+        // span.gradient-title-greeting {
+        //   &:hover,
+        //   &:focus {
+        //     background-position: right;
+        //   }
+        // }
       }
 
       span.gradient-title-name {
@@ -57,6 +71,7 @@
         transition: background-position 2s ease;
       }
     }
+
     .main-terminal {
       width: 100%;
       border-top: 1px solid #cfcfcf41;
@@ -113,17 +128,18 @@
           padding: 1.5em 1.25em 2em;
           font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
 
-          .hidden {
-            opacity: 0;
-          }
-
           p {
             font-size: 1.2rem;
             color: #00ccff;
 
-            #text {
+            span.text-underscore {
               margin-left: 0.4em;
             }
+          }
+
+          .console-underscore {
+            opacity: 0;
+            animation: blinker 0.4s step-start infinite;
           }
 
           &::after {
@@ -170,12 +186,25 @@
     opacity: 1;
   }
 }
+
 @keyframes animation-title {
   to {
     background-position: top;
   }
   from {
     background-position: bottom;
+  }
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

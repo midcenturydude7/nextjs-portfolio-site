@@ -56,7 +56,7 @@ const HeroSection = () => {
             </div>
             <div className={style["console-container"]}>
               <p>
-                $<span id="text"></span>
+                $<span className={style["text-underscore"]} id="text"></span>
               </p>
               <p className={style["console-underscore"]} id="console-text">
                 &#95;
