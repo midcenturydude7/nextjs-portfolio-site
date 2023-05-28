@@ -180,32 +180,6 @@ body {
     opacity: 1;
   }
 }
-@keyframes slide-up-content {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  70% {
-    opacity: 0.25;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-down-content {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  30% {
-    opacity: 0.25;
-  }
-  100% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-}
 @keyframes animate {
   50% {
     background-position: left;

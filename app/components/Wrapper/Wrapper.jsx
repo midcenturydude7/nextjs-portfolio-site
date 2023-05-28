@@ -12,12 +12,10 @@ function Wrapper() {
 
   const handlePointerOver = () => {
     setIsHovered(true);
-    console.log("Hovered!");
   };
 
   const handlePointerOut = () => {
     setIsHovered(false);
-    console.log("You're not hovering on the box section!");
   };
 
   return (
@@ -28,7 +26,7 @@ function Wrapper() {
         handlePointerOver={handlePointerOver}
         handlePointerOut={handlePointerOut}
       />
-      <Footer />
+      <Footer isHovered={isHovered} />
     </div>
   );
 }

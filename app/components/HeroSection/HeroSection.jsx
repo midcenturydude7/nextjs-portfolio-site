@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import "./styles/HeroSection.module.css";
 import "./styles/HeroGradient.module.css";
@@ -87,7 +88,10 @@ const HeroSection = () => {
       </div>
       <div className="main-content">
         <h1 className="main-title">
-          <span className="gradient-title">Hi,</span> I&#39;m Matt
+          <Link href="#" className="main-title-link">
+            <span className="gradient-title-greeting">Hi,</span>
+          </Link>{" "}
+          <span className="gradient-title-name">I&#39;m Matt</span>
         </h1>
         <div className="main-terminal">
           <div className="terminal-window">
