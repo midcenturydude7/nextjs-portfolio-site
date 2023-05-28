@@ -11,6 +11,7 @@
 }
 
 .gradient-hero--container {
+  z-index: 1;
   animation: hero-image 1s ease-in-out 0.5s forwards;
   opacity: 0;
 }
