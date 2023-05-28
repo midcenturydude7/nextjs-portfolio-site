@@ -52,7 +52,6 @@
   background-image: linear-gradient(180deg, hsl(250, 57%, 92%) 0%, hsl(249, 32%, 82%) 19%, hsl(249, 24%, 73%) 35%, hsl(248, 20%, 64%) 49%, hsl(247, 18%, 55%) 62%, hsl(246, 18%, 47%) 73%, hsl(244, 23%, 39%) 82%, hsl(241, 30%, 31%) 90%, hsl(236, 46%, 22%) 97%, hsl(225, 100%, 13%) 100%);
   background-position: top;
   transition: background-position 2s ease;
-  animation: animation-title 5s infinite alternate;
 }
 .main-wrapper .main-content .main-terminal {
   width: 100%;
