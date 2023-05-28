@@ -74,6 +74,17 @@
   animation: spin 10s linear infinite;
 }
 
+/* ANIMATIONS */
+@keyframes hero-image {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes rotation {
   0% {
     --gradient-angle: 0deg;
