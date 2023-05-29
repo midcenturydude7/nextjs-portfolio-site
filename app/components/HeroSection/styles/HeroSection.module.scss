@@ -210,12 +210,36 @@
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 1000px) {
+  .main-wrapper {
+    .main-content {
+      .main-title {
+        &::after {
+          bottom: -30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-wrapper {
+    .main-content {
+      .main-title {
+        &::after {
+          bottom: -28px;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 1500px) {
   .main-wrapper {
     .main-content {
       .main-title {
         &::after {
-          bottom: -20px;
+          bottom: -25px;
         }
         .main-title-link {
           span.gradient-title-greeting {
