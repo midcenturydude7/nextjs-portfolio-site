@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "mg[dev] Portfolio Site",
+  title: "mg[dev]'s Portfolio Site",
   description:
     "Frontend developer specializing in building web sites and web applications with React and Next.js",
 };

@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 
 import style from "../../styles/page.module.css";
 
-function Wrapper() {
+const Wrapper = () => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const handlePointerOver = () => {
@@ -29,6 +29,6 @@ function Wrapper() {
       <Footer isHovered={isHovered} />
     </div>
   );
-}
+};
 
 export default Wrapper;
