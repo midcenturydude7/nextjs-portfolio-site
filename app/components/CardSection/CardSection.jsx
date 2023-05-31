@@ -5,10 +5,10 @@ import Link from "next/link";
 
 import style from "./styles/CardSection.module.css";
 
-const CardSection = ({ handlePointerOver, handlePointerOut }) => {
+const CardSection = ({ handlePointerOver, handlePointerOut, isNavOpen }) => {
   return (
     <section
-      className={style.section}
+      className={isNavOpen ? style["section-mobile"] : style.section}
       onPointerEnter={handlePointerOver}
       onPointerLeave={handlePointerOut}>
       <div className={style["section-box_container"]}>

@@ -68,14 +68,14 @@
       &:hover {
         color: #dbd5fc;
 
-        ul.logo {
+        .logo {
           li {
             color: #dbd5fc;
           }
         }
       }
 
-      ul.logo {
+      .logo {
         text-align: center;
         letter-spacing: 0.075em;
         font-size: 0.85rem;
@@ -199,12 +199,37 @@
 @media (max-width: 1150px) {
   .header-nav {
     .nav-left {
+      flex-grow: 1;
+
+      .nav-link-home {
+        .logo {
+          flex-grow: 1;
+        }
+      }
+
       .nav-primary {
-        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: -5000px;
+        right: 5px;
+        width: 100%;
+        height: 100vh;
+        background: #ececec18;
+        transition: all 0.5s ease-in-out;
+
+        li + li {
+          border-left: none;
+        }
+      }
+
+      .isActive {
+        top: 56px;
       }
 
       .nav-mobile {
-        display: inline-block;
+        display: block;
         cursor: pointer;
 
         li {

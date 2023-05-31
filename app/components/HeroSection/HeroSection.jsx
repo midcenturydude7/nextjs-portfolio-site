@@ -7,7 +7,7 @@ import consoleText from "../../utils/consoleText";
 import style from "./styles/HeroSection.module.css";
 import styleGradient from "./styles/HeroGradient.module.css";
 
-const HeroSection = () => {
+const HeroSection = ({ isNavOpen }) => {
   React.useEffect(() => {
     consoleText(
       [
@@ -23,7 +23,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <main className={style["main-wrapper"]}>
+    <main className={isNavOpen ? style["main-mobile"] : style["main-wrapper"]}>
       <div className={styleGradient["gradient-hero--container"]}>
         <div className={styleGradient["gradient-hero"]}>
           <div className={style["image-container"]}>

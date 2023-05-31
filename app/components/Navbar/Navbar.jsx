@@ -1,10 +1,13 @@
+"use client";
+import React from "react";
 import Link from "next/link";
 import { FaGithub, FaCodepen, FaTelegram } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { CgCloseO } from "react-icons/cg";
 
 import style from "./styles/Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ isNavOpen, toggleNav }) => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>
@@ -13,7 +16,10 @@ const Navbar = () => {
             <li>MG[dev]</li>
           </ul>
         </Link>
-        <ul className={style["nav-primary"]}>
+        <ul
+          className={`${style["nav-primary"]} ${
+            isNavOpen ? style.isActive : ""
+          }`}>
           <li>
             <Link href="/about" className={style["nav-link"]}>
               about
@@ -35,9 +41,13 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <ul className={style["nav-mobile"]}>
+        <ul className={style["nav-mobile"]} onClick={toggleNav}>
           <li>
-            <GiHamburgerMenu className={style["mobile-icon"]} />
+            {isNavOpen ? (
+              <CgCloseO className={style["mobile-icon"]} />
+            ) : (
+              <GiHamburgerMenu className={style["mobile-icon"]} />
+            )}
           </li>
         </ul>
       </nav>
