@@ -198,6 +198,12 @@
 /* MEDIA QUERIES */
 @media (max-width: 1150px) {
   .header-nav {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-nav {
     .nav-left {
       flex-grow: 1;
 
