@@ -6,6 +6,18 @@
   justify-content: space-evenly;
   align-items: center;
   max-width: 1200px;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    // border-bottom: 1px solid #fff;
+    box-shadow: 0 0 20px 35px rgba(11, 1, 29, 0.493);
+  }
 
   .nav-left {
     width: 80%;
@@ -199,6 +211,11 @@
 @media (max-width: 1150px) {
   .header-nav {
     width: 90%;
+
+    // &::after {
+    //   left: 0;
+    //   width: 100%;
+    // }
   }
 }
 
@@ -206,20 +223,10 @@
   .header-nav {
     width: 95%;
     margin-top: 0.25em;
+    overflow: visible;
 
     .nav-left {
-      position: relative;
       flex-grow: 1;
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: 80px;
-        left: 10px;
-        width: 92%;
-        height: 0;
-        // box-shadow: 0 0 20px 35px rgba(86, 62, 121, 0.26);
-      }
 
       .nav-link-home {
         .logo {
@@ -237,21 +244,7 @@
         right: 5px;
         width: 100%;
         height: 100vh;
-        // background: #ececec1e;
-        background-image: linear-gradient(
-          180deg,
-          hsla(264, 32%, 36%, 0.842) 0%,
-          hsla(265, 31%, 33%, 0.671) 2%,
-          hsla(265, 29%, 30%, 0.514) 4%,
-          hsla(266, 27%, 27%, 0.582) 6%,
-          hsla(265, 25%, 24%, 0.712) 10%,
-          hsla(266, 21%, 21%, 0.808) 14%,
-          hsla(268, 20%, 19%, 0.863) 21%,
-          hsla(265, 15%, 16%, 0.87) 30%,
-          hsla(270, 9%, 13%, 0.938) 45%,
-          hsla(0, 0%, 11%, 0.973) 86%
-        );
-        object-fit: cover;
+        background: #ececec1a;
         border-left: 1px solid #cfcfcf41;
         border-right: 1px solid #cfcfcf41;
         transition: all 0.5s ease-in-out;
@@ -265,8 +258,9 @@
           width: 100%;
           height: 0;
           z-index: 1;
-          box-shadow: 0 80px 70px 170px rgba(66, 44, 99, 0.651);
+          box-shadow: 0 80px 70px 170px #573f7ca6;
         }
+
         &::after {
           content: "";
           position: absolute;
@@ -276,8 +270,9 @@
           height: 30vh;
           background-image: url("../../../assets/images/port1.jpg");
           background-repeat: no-repeat;
-          background-position: center;
-          opacity: 0.2;
+          background-position: unset;
+          opacity: 0.3;
+          background-size: cover;
         }
 
         li {
