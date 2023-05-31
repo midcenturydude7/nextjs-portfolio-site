@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaCodepen, FaTelegram } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import style from "./styles/Navbar.module.css";
 
@@ -32,6 +33,11 @@ const Navbar = () => {
             <Link href="/contact" className={style["nav-link"]}>
               contact
             </Link>
+          </li>
+        </ul>
+        <ul className={style["nav-mobile"]}>
+          <li>
+            <GiHamburgerMenu className={style["mobile-icon"]} />
           </li>
         </ul>
       </nav>
