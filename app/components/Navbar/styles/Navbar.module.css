@@ -177,6 +177,10 @@
   }
 }
 @media (max-width: 900px) {
+  .header-nav {
+    width: 95%;
+    margin-top: 0.25em;
+  }
   .header-nav .nav-left {
     position: relative;
     flex-grow: 1;
