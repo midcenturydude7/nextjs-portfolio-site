@@ -66,6 +66,25 @@ const HeroSection = ({ isMobile, isNavOpen }) => {
             </div>
           </div>
         )}
+        {/* {isMobile && (
+          <div className={style["main-terminal"]}>
+            <div className={style["terminal-window"]}>
+              <div className={style["header-hero"]}>
+                <ul>
+                  <li className={style["button"]}></li>
+                  <li className={style["button"]}></li>
+                  <li className={style["button"]}></li>
+                </ul>
+              </div>
+              <div className={style["console-container"]}>
+                <p>
+                  $<span className={style["text-underscore"]}></span>
+                </p>
+                <p className={style["console-underscore"]}>&#95;</p>
+              </div>
+            </div>
+          </div>
+        )} */}
       </div>
     </main>
   );
