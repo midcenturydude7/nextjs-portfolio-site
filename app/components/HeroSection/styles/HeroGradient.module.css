@@ -105,20 +105,32 @@
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 1000px) {
-  .main {
+@media (max-width: 1199px) {
+  .gradient-hero {
+    --card-height: 22vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gradient-hero {
+    --card-height: 23vh;
+  }
+}
+
+@media (min-width: 1500px) {
+  .gradient-hero {
     --card-height: 25vh;
   }
 }
 
 @media (min-width: 1800px) {
-  .main {
+  .gradient-hero {
     --card-height: 23vh;
   }
 }
 
 @media (min-width: 2500px) {
-  .main {
+  .gradient-hero {
     --card-height: 20vh;
   }
 }

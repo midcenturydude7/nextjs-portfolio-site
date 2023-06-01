@@ -9,11 +9,14 @@
   .section-box_container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 2.5em;
 
     .section-box {
       width: 33.3vw;
+      min-width: 400px;
       height: 40vh;
+      min-height: 350px;
       background: #ececec1e;
       border-radius: 8px;
       border: 1px solid #cfcfcf41;
@@ -192,5 +195,18 @@
   }
   100% {
     transform: scaleY(1);
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 950px) {
+  .section-box_container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    .section-box {
+      width: 700px;
+    }
   }
 }

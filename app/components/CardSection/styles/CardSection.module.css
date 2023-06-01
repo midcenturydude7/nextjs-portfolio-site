@@ -9,11 +9,14 @@
 .section .section-box_container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 2.5em;
 }
 .section .section-box_container .section-box {
   width: 33.3vw;
+  min-width: 400px;
   height: 40vh;
+  min-height: 350px;
   background: rgba(236, 236, 236, 0.1176470588);
   border-radius: 8px;
   border: 1px solid rgba(207, 207, 207, 0.2549019608);
@@ -167,5 +170,16 @@
   }
   100% {
     transform: scaleY(1);
+  }
+}
+/* MEDIA QUERIES */
+@media (max-width: 950px) {
+  .section-box_container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-box_container .section-box {
+    width: 700px;
   }
 }/*# sourceMappingURL=CardSection.module.css.map */
