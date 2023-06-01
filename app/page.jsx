@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React from "react";
 import Wrapper from "./components/Wrapper/Wrapper";
@@ -5,23 +6,27 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import style from "./styles/page.module.css";
 
 export default function Home() {
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(false);
+  const [isNavOpen, setIsNavOpen] = React.useState(false);
 
   React.useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 900) {
+      if (window.innerWidth <= 1050) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
       }
     };
 
+    handleResize();
+
+    window.addEventListener("load", handleResize);
     window.addEventListener("resize", handleResize);
 
-    console.log(isMobile);
+    console.log(`Mobile display is: ${isMobile}`);
 
     return () => {
+      window.removeEventListener("load", handleResize);
       window.removeEventListener("resize", handleResize);
     };
   }, [isMobile]);
@@ -34,7 +39,11 @@ export default function Home() {
 
   return (
     <div className={style.body}>
-      <Wrapper isNavOpen={isNavOpen} toggleNav={toggleNav} />
+      <Wrapper
+        isMobile={isMobile}
+        isNavOpen={isNavOpen}
+        toggleNav={toggleNav}
+      />
     </div>
   );
 }

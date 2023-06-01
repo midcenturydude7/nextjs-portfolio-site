@@ -199,8 +199,24 @@
 
 /* MEDIA QUERIES */
 @media (max-width: 950px) {
-  .section-box_container {
-    flex-direction: column;
-    align-items: center;
+  .section {
+    .section-box_container {
+      flex-direction: column;
+      align-items: center;
+
+      .section-box {
+        width: 60vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .section {
+    .section-box_container {
+      .section-box {
+        width: 80vw;
+      }
+    }
   }
 }

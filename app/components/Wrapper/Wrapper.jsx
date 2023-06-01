@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 
 import style from "../../styles/page.module.css";
 
-const Wrapper = ({ isNavOpen, toggleNav }) => {
+const Wrapper = ({ isMobile, isNavOpen, toggleNav }) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const handlePointerOver = () => {
@@ -21,7 +21,7 @@ const Wrapper = ({ isNavOpen, toggleNav }) => {
   return (
     <div className={!isHovered ? style.wrapper : style.nowrapper}>
       <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} />
-      <HeroSection isNavOpen={isNavOpen} />
+      <HeroSection isMobile={isMobile} isNavOpen={isNavOpen} />
       <CardSection
         handlePointerOver={handlePointerOver}
         handlePointerOut={handlePointerOut}

@@ -7,7 +7,7 @@ import consoleText from "../../utils/consoleText";
 import style from "./styles/HeroSection.module.css";
 import styleGradient from "./styles/HeroGradient.module.css";
 
-const HeroSection = ({ isNavOpen }) => {
+const HeroSection = ({ isMobile, isNavOpen }) => {
   React.useEffect(() => {
     consoleText(
       [
@@ -20,7 +20,7 @@ const HeroSection = ({ isNavOpen }) => {
       "text",
       ["#00ccff", "#00ccff"]
     );
-  }, []);
+  }, [isMobile]);
 
   return (
     <main className={isNavOpen ? style["main-mobile"] : style["main-wrapper"]}>
@@ -45,25 +45,27 @@ const HeroSection = ({ isNavOpen }) => {
           </Link>{" "}
           <span className={style["gradient-title-name"]}>I&#39;m Matt</span>
         </h1>
-        <div className={style["main-terminal"]}>
-          <div className={style["terminal-window"]}>
-            <div className={style["header-hero"]}>
-              <ul>
-                <li className={style["button"]}></li>
-                <li className={style["button"]}></li>
-                <li className={style["button"]}></li>
-              </ul>
-            </div>
-            <div className={style["console-container"]}>
-              <p>
-                $<span className={style["text-underscore"]} id="text"></span>
-              </p>
-              <p className={style["console-underscore"]} id="console-text">
-                &#95;
-              </p>
+        {!isMobile && (
+          <div className={style["main-terminal"]}>
+            <div className={style["terminal-window"]}>
+              <div className={style["header-hero"]}>
+                <ul>
+                  <li className={style["button"]}></li>
+                  <li className={style["button"]}></li>
+                  <li className={style["button"]}></li>
+                </ul>
+              </div>
+              <div className={style["console-container"]}>
+                <p>
+                  $<span className={style["text-underscore"]} id="text"></span>
+                </p>
+                <p className={style["console-underscore"]} id="console-text">
+                  &#95;
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </main>
   );

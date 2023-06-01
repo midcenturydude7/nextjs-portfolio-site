@@ -1,12 +1,12 @@
 export default function consoleText(words, id, colors) {
   if (colors === undefined) colors = ["#fff"];
-  let visible = true;
-  const consoleText = document.getElementById("console-text");
+  // let visible = true;
+  // const consoleText = document.getElementById("console-text");
   let letterCount = 1;
   let x = 1;
   let waiting = false;
-  const target = document.getElementById(id);
-  target.setAttribute("style", "color:" + colors[0]);
+  const target = document.getElementById(id) || [];
+  // target.setAttribute("style", "color:" + colors[0]);
 
   window.setInterval(function () {
     if (letterCount === 0 && waiting === false) {
@@ -18,7 +18,7 @@ export default function consoleText(words, id, colors) {
         let usedWord = words.shift();
         words.push(usedWord);
         x = 1;
-        target.setAttribute("style", "color:" + colors[0]);
+        // target.setAttribute("style", "color:" + colors[0]);
         letterCount += x;
         waiting = false;
       }, 1000);
