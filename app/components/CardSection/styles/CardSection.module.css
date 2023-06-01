@@ -13,7 +13,6 @@
 }
 .section .section-box_container .section-box {
   width: 33.3vw;
-  min-width: 400px;
   height: 40vh;
   min-height: 350px;
   background: rgba(236, 236, 236, 0.1176470588);
