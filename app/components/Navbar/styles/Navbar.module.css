@@ -6,7 +6,6 @@
   justify-content: space-evenly;
   align-items: center;
   max-width: 1200px;
-  overflow: hidden;
 }
 .header-nav::after {
   position: absolute;
@@ -128,7 +127,7 @@
   opacity: 0;
   font-size: 1.1425rem;
   margin: 0;
-  padding: 0.6em 1em;
+  padding: 0.575em 1em;
   animation: navbar 1s ease-in-out 0.5s forwards;
 }
 .header-nav .nav-right .nav-utility {
