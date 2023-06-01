@@ -184,5 +184,6 @@
 @media (max-width: 750px) {
   .section .section-box_container .section-box {
     width: 80vw;
+    max-width: 90% !important;
   }
 }/*# sourceMappingURL=CardSection.module.css.map */
