@@ -45,16 +45,21 @@ const HeroSection = ({ isMobile, isNavOpen }) => {
           </Link>{" "}
           <span className={style["gradient-title-name"]}>I&#39;m Matt</span>
         </h1>
-        {!isMobile && (
-          <div className={style["main-terminal"]}>
-            <div className={style["terminal-window"]}>
-              <div className={style["header-hero"]}>
-                <ul>
-                  <li className={style["button"]}></li>
-                  <li className={style["button"]}></li>
-                  <li className={style["button"]}></li>
-                </ul>
-              </div>
+        <div className={style["main-terminal"]}>
+          <div
+            className={
+              isMobile
+                ? style["terminal-window-mobile"]
+                : style["terminal-window"]
+            }>
+            <div className={style["header-hero"]}>
+              <ul>
+                <li className={style["button"]}></li>
+                <li className={style["button"]}></li>
+                <li className={style["button"]}></li>
+              </ul>
+            </div>
+            {!isMobile && (
               <div className={style["console-container"]}>
                 <p>
                   $<span className={style["text-underscore"]} id="text"></span>
@@ -63,9 +68,18 @@ const HeroSection = ({ isMobile, isNavOpen }) => {
                   &#95;
                 </p>
               </div>
-            </div>
+            )}
+            {isMobile && (
+              <div className={style["console-container-mobile"]}>
+                <p>$ I build things for the web.</p>
+                <p className={style["console-underscore"]} id="console-text">
+                  &#95;
+                </p>
+              </div>
+            )}
           </div>
-        )}
+        </div>
+
         {/* {isMobile && (
           <div className={style["main-terminal"]}>
             <div className={style["terminal-window"]}>

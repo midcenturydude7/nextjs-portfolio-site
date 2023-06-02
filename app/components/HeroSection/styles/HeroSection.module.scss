@@ -78,12 +78,13 @@
 
     .main-terminal {
       width: 100%;
-      border-top: 1px solid #cfcfcf41;
+      border-top: 1px solid #cfcfcf31;
       margin-left: -0.125em;
       padding: 0 1.25em 0 7em;
       z-index: 9;
 
-      .terminal-window {
+      .terminal-window,
+      .terminal-window-mobile {
         width: 600px;
         height: auto;
         margin-top: 2em;
@@ -127,7 +128,8 @@
           }
         }
 
-        .console-container {
+        .console-container,
+        .console-container-mobile {
           position: relative;
           display: flex;
           padding: 1.5em 1.25em 2em;
@@ -157,6 +159,10 @@
             box-shadow: 0 0 25px 60px rgb(1, 8, 22);
           }
         }
+      }
+
+      .terminal-window-mobile {
+        width: 450px;
       }
     }
   }
@@ -250,8 +256,13 @@
         }
       }
     }
+    .main-terminal {
+      display: flex;
+      padding: 0 1em !important;
+    }
   }
 }
+
 @media (max-width: 950px) {
   .main-wrapper {
     width: 100%;
