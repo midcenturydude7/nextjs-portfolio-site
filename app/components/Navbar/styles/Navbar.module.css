@@ -180,15 +180,10 @@
   }
 }
 /* MEDIA QUERIES */
-@media (max-width: 1150px) {
-  .header-nav {
-    width: 90%;
-  }
-}
 @media (max-width: 900px) {
   .header-nav {
-    width: 95%;
-    margin-top: 0.25em;
+    margin: 0.25em 0 2em;
+    padding: 0;
     overflow: visible;
   }
   .header-nav .nav-left {
@@ -274,5 +269,10 @@
   }
   .header-nav .nav-right {
     display: none;
+  }
+}
+@media (max-width: 1150px) {
+  .header-nav {
+    width: 90%;
   }
 }/*# sourceMappingURL=Navbar.module.css.map */
