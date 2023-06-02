@@ -105,6 +105,14 @@
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 650px) {
+  .gradient-hero {
+    height: 30vh;
+    width: 30vh;
+
+  }
+}
+
 @media (max-width: 1199px) {
   .gradient-hero {
     --card-height: 22vh;
