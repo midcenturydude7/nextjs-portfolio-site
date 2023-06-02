@@ -71,9 +71,13 @@ const HeroSection = ({ isMobile, isNavOpen }) => {
             )}
             {isMobile && (
               <div className={style["console-container-mobile"]}>
-                <p>$ I build things for the web.</p>
-                <p className={style["console-underscore"]} id="console-text">
-                  &#95;
+                <p>
+                  $ I build things for the web.{" "}
+                  <span
+                    className={style["console-underscore"]}
+                    id="console-text">
+                    &#95;
+                  </span>
                 </p>
               </div>
             )}
