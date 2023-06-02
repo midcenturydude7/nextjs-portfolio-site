@@ -191,7 +191,7 @@
     bottom: -25px;
   }
   .main-wrapper .main-content .main-title .main-title-link .gradient-title-greeting {
-    font-size: 4.5rem !important;
+    font-size: 4.75rem !important;
   }
   .main-wrapper .main-content .main-title .gradient-title-name {
     font-size: 3.8rem !important;
@@ -205,10 +205,10 @@
     bottom: -30px;
   }
   .main-wrapper .main-content .main-title .main-title-link .gradient-title-greeting {
-    font-size: 5.25rem !important;
+    font-size: 5.25rem;
   }
   .main-wrapper .main-content .main-title .gradient-title-name {
-    font-size: 4.25rem !important;
+    font-size: 4.25rem;
   }
 }
 @media (max-width: 1050px) {

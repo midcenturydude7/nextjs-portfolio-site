@@ -115,7 +115,8 @@
 
 @media (max-width: 1199px) {
   .gradient-hero {
-    --card-height: 22vh;
+    height: 27vh;
+    width: 27vh;
   }
 }
 
