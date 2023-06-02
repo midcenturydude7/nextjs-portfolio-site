@@ -220,15 +220,15 @@
     .main-content {
       .main-title {
         &::after {
-          bottom: -25px;
+          bottom: -30px;
         }
         .main-title-link {
           .gradient-title-greeting {
-            font-size: 5.25rem !important;
+            font-size: 4.8rem !important;
           }
         }
         .gradient-title-name {
-          font-size: 4.25rem !important;
+          font-size: 4rem !important;
         }
       }
     }
