@@ -237,6 +237,11 @@
         }
       }
     }
+    .main-terminal {
+      .terminal-window-mobile {
+        width: 375px !important;
+      }
+    }
   }
 }
 @media (max-width: 650px) {

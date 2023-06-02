@@ -221,6 +221,9 @@
   .main-wrapper .main-content .main-title .gradient-title-name {
     font-size: 3.25rem !important;
   }
+  .main-wrapper .main-terminal .terminal-window-mobile {
+    width: 375px !important;
+  }
 }
 @media (max-width: 650px) {
   .main-wrapper .main-content .main-title::after {
