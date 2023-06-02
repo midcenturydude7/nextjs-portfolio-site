@@ -107,15 +107,29 @@
 /* MEDIA QUERIES */
 @media (max-width: 500px) {
   .gradient-hero {
-    height: 35vh;
-    width: 35vh;
+    height: 33vh !important;
+    width: 33vh !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .gradient-hero {
+    height: 42vh;
+    width: 42vh;
+  }
+}
+
+@media (max-width: 1259px) {
+  .gradient-hero {
+    height: 37vh;
+    width: 37vh;
   }
 }
 
 @media (max-width: 1499px) {
   .gradient-hero {
-    height: 37vh !important;
-    width: 37vh !important;
+    height: 33vh;
+    width: 33vh;
   }
 }
 
