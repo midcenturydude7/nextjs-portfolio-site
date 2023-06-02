@@ -214,6 +214,25 @@
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 650px) {
+  .main-wrapper {
+    .main-content {
+      .main-title {
+        &::after {
+          bottom: -25px;
+        }
+        .main-title-link {
+          .gradient-title-greeting {
+            font-size: 4.5rem !important;
+          }
+        }
+        .gradient-title-name {
+          font-size: 3.8rem !important;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 950px) {
   .main-wrapper {
     width: 100%;
@@ -224,11 +243,11 @@
         }
         .main-title-link {
           .gradient-title-greeting {
-            font-size: 4.8rem !important;
+            font-size: 5.25rem !important;
           }
         }
         .gradient-title-name {
-          font-size: 4rem !important;
+          font-size: 4.25rem !important;
         }
       }
     }
