@@ -72,7 +72,8 @@ const HeroSection = ({ isMobile, isNavOpen }) => {
             {isMobile && (
               <div className={style["console-container-mobile"]}>
                 <p>
-                  $ I build things for the web.{" "}
+                  $ I build things for the{" "}
+                  <span className={style.spacer}>web.</span>{" "}
                   <span
                     className={style["console-underscore"]}
                     id="console-text">

@@ -236,6 +236,9 @@
     display: flex;
     padding: 0 1em !important;
   }
+  .main-wrapper .main-terminal .terminal-window-mobile .console-container-mobile p span.spacer {
+    margin-left: 1.2125em;
+  }
 }
 @media (max-width: 950px) {
   .main-wrapper {

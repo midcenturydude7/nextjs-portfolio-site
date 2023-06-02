@@ -259,6 +259,16 @@
     .main-terminal {
       display: flex;
       padding: 0 1em !important;
+
+      .terminal-window-mobile {
+        .console-container-mobile {
+          p {
+            span.spacer {
+              margin-left: 1.2125em;
+            }
+          }
+        }
+      }
     }
   }
 }
