@@ -105,41 +105,34 @@
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 650px) {
+@media (max-width: 500px) {
   .gradient-hero {
-    height: 30vh;
-    width: 30vh;
-
+    height: 35vh;
+    width: 35vh;
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1499px) {
   .gradient-hero {
-    height: 27vh;
-    width: 27vh;
-  }
-}
-
-@media (min-width: 1200px) {
-  .gradient-hero {
-    --card-height: 23vh;
+    height: 37vh !important;
+    width: 37vh !important;
   }
 }
 
 @media (min-width: 1500px) {
   .gradient-hero {
-    --card-height: 25vh;
+    --card-height: 32vh;
   }
 }
 
 @media (min-width: 1800px) {
   .gradient-hero {
-    --card-height: 23vh;
+    --card-height: 28vh;
   }
 }
 
 @media (min-width: 2500px) {
   .gradient-hero {
-    --card-height: 20vh;
+    --card-height: 25vh;
   }
 }
