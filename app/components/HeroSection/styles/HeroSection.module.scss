@@ -219,15 +219,15 @@
     .main-content {
       .main-title {
         &::after {
-          bottom: -25px;
+          bottom: -35px !important;
         }
         .main-title-link {
           .gradient-title-greeting {
-            font-size: 4.75rem !important;
+            font-size: 4.25rem !important;
           }
         }
         .gradient-title-name {
-          font-size: 3.8rem !important;
+          font-size: 3.5rem !important;
         }
       }
     }
