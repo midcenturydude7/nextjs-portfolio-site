@@ -1,49 +1,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React from "react";
-import Wrapper from "./components/Wrapper/Wrapper";
+import Navbar from "./components/Navbar/Navbar";
+import HeroSection from "./components/HeroSection/HeroSection";
+import CardSection from "./components/CardSection/CardSection";
+import Footer from "./components/Footer/Footer";
+
+import { useTheme } from "../context/ThemeProvider";
 
 import style from "./styles/page.module.css";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = React.useState(false);
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const { isMobile, isNavOpen, toggleNav } = useTheme();
+  const [isHovered, setIsHovered] = React.useState(false);
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1050) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
+  const handlePointerOver = () => {
+    setIsHovered(true);
+  };
 
-    handleResize();
-
-    window.addEventListener("load", handleResize);
-    window.addEventListener("resize", handleResize);
-
-    console.log(`Mobile display is: ${isMobile}`);
-
-    return () => {
-      window.removeEventListener("load", handleResize);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isMobile]);
-
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-    console.log(isNavOpen);
-    console.log("Button clicked!");
+  const handlePointerOut = () => {
+    setIsHovered(false);
   };
 
   return (
-    <div className={style.body}>
-      <Wrapper
-        isMobile={isMobile}
+    <div className={!isHovered ? style.wrapper : style.nowrapper}>
+      <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} />
+      <HeroSection isMobile={isMobile} isNavOpen={isNavOpen} />
+      <CardSection
+        handlePointerOver={handlePointerOver}
+        handlePointerOut={handlePointerOut}
         isNavOpen={isNavOpen}
-        toggleNav={toggleNav}
       />
+      <Footer isHovered={isHovered} />
     </div>
   );
 }
