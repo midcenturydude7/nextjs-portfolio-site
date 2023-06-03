@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import consoleText from "../../utils/consoleText";
+import consoleText from "../../../utils/consoleText";
 
 import style from "./styles/HeroSection.module.css";
 import styleGradient from "./styles/HeroGradient.module.css";
