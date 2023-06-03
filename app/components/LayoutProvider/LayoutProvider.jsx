@@ -8,7 +8,11 @@ export function useLayoutContext() {
 }
 
 const LayoutProvider = ({ children }) => {
-  return <LayoutContext.Provider>{children}</LayoutContext.Provider>;
+  return (
+    <LayoutContext.Provider value="isNavOpen">
+      {children}
+    </LayoutContext.Provider>
+  );
 };
 
 export default LayoutProvider;
