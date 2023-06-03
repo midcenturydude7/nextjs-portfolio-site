@@ -8,6 +8,7 @@ import style from "./styles/page.module.css";
 export default function Home() {
   const [isMobile, setIsMobile] = React.useState(false);
   const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
 
   React.useEffect(() => {
     const handleResize = () => {
@@ -37,12 +38,23 @@ export default function Home() {
     console.log("Button clicked!");
   };
 
+  const handlePointerOver = () => {
+    setIsHovered(true);
+  };
+
+  const handlePointerOut = () => {
+    setIsHovered(false);
+  };
+
   return (
     <div className={style.body}>
       <Wrapper
         isMobile={isMobile}
         isNavOpen={isNavOpen}
         toggleNav={toggleNav}
+        isHovered={isHovered}
+        handlePointerOver={handlePointerOver}
+        handlePointerOut={handlePointerOut}
       />
     </div>
   );
