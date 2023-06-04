@@ -21,22 +21,34 @@ const Navbar = ({ isNavOpen, toggleNav }) => {
             isNavOpen ? style.isActive : ""
           }`}>
           <li>
-            <Link href="/about" className={style["nav-link"]}>
+            <Link
+              href="/about"
+              className={style["nav-link"]}
+              onClick={toggleNav}>
               about
             </Link>
           </li>
           <li>
-            <Link href="/work" className={style["nav-link"]}>
+            <Link
+              href="/work"
+              className={style["nav-link"]}
+              onClick={toggleNav}>
               work
             </Link>
           </li>
           <li>
-            <Link href="/resources" className={style["nav-link"]}>
+            <Link
+              href="/resources"
+              className={style["nav-link"]}
+              onClick={toggleNav}>
               resources
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={style["nav-link"]}>
+            <Link
+              href="/contact"
+              className={style["nav-link"]}
+              onClick={toggleNav}>
               contact
             </Link>
           </li>
