@@ -11,7 +11,7 @@ const Navbar = ({ isNavOpen, toggleNav }) => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>
-        <Link href="/" className={style["nav-link-home"]}>
+        <Link href="/" className={style["nav-link-home"]} onClick={toggleNav}>
           <ul className={style.logo}>
             <li>MG[dev]</li>
           </ul>
