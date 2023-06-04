@@ -1,0 +1,120 @@
+.footer-container {
+  position: absolute;
+  width: 110%;
+  height: 50rem;
+  left: -5%;
+  top: 90%;
+  transition: transform 1s ease-in-out;
+  transform-origin: 0 0;
+  transform: rotateZ(-3deg);
+  background-image: var(--gradient-footer-bgclr);
+  box-shadow: 0 0 80px 120px #0a0025;
+  opacity: 0;
+  animation: slide-up 1.75s ease-in 0.5s both;
+  display: flex;
+  justify-content: center;
+}
+.footer-container .footer-content {
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 3.75em;
+  animation: slide-up-text 1.75s ease-in 0.75s both;
+}
+.footer-container p {
+  margin-top: 0.25em;
+  padding: 0;
+  flex-grow: 1;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #8b77fc;
+  text-align: center;
+}
+.footer-container p span {
+  padding-left: 0.25em;
+}
+.footer-container ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+.footer-container ul li {
+  font-size: 2rem;
+  color: #8b77fc;
+}
+.footer-container ul li + li {
+  margin-left: 1em;
+}
+.footer-container ul li a {
+  text-decoration: none;
+  font-size: inherit;
+  color: #8b77fc;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+.footer-container ul li a :visited {
+  color: #8b77fc !important;
+}
+.footer-container ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #bfb5f7;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease-in-out;
+}
+.footer-container ul li a:hover {
+  color: #bfb5f7;
+}
+.footer-container ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ANIMATIONS */
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateZ(-3deg) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-up-text {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  25% {
+    transform: rotateZ(-3deg);
+  }
+  50% {
+    transform: rotateZ(-1deg);
+  }
+  75% {
+    transform: rotateZ(1deg);
+  }
+  100% {
+    transform: rotateZ(3deg) translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 650px) {
+  .footer-container .footer-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 1.5em;
+  }
+  .footer-container .footer-content p {
+    display: none;
+  }
+}/*# sourceMappingURL=FooterRoute.module.css.map */

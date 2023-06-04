@@ -34,20 +34,21 @@
 }
 
 .wrapper::after {
-  animation: slide-up-bounce 1.75s ease-in 1s forwards;
+  animation: slide-up-bounce 1.75s ease-in 1s both;
 }
 
 .nowrapper::after {
-  animation: slide-down 1s ease-in-out forwards;
+  animation: slide-down 1s ease-in-out both;
 }
 
 /* ROUTES */
 .wrapper-truncated {
+  position: relative;
   width: 100%;
-  padding: 1.75em 1.5em 0;
+  padding: 1.75em 0 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
   position: relative;
@@ -81,6 +82,7 @@
     opacity: 1;
   }
 }
+/* ANIMATIONS */
 @keyframes slide-up-nobounce {
   0% {
     transform: translateY(100px);
@@ -103,7 +105,8 @@
 }
 /* MEDIA QUERIES */
 @media (max-width: 650px) {
-  .wrapper {
+  .wrapper,
+  .wrapper-truncated {
     padding: 1.75em 0 0;
   }
 }/*# sourceMappingURL=page.module.css.map */

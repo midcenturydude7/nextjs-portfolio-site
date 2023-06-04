@@ -1,16 +1,19 @@
 "use client";
 import Navbar from "../components/Navbar/Navbar";
+import ContentRoute from "../components/ContentRoute/ContentRoute";
+import FooterRoute from "../components/FooterRoute/FooterRoute";
 import { useTheme } from "../../context/ThemeProvider";
 
 import style from "../styles/page.module.scss";
 
 const About = () => {
-  const { isMobile, isNavOpen, toggleNav } = useTheme();
+  const { isNavOpen, toggleNav } = useTheme();
 
   return (
     <div className={style["wrapper-truncated"]}>
-      <Navbar isMobile={isMobile} isNavOpen={isNavOpen} toggleNav={toggleNav} />
-      <h1>What&#39;s up with Matt</h1>
+      <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} />
+      <ContentRoute title="What&#39;s up with Matt?" isNavOpen={isNavOpen} />
+      <FooterRoute />
     </div>
   );
 };

@@ -1,0 +1,18 @@
+.content-container-mobile {
+  display: none;
+}
+
+.content-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto 20vh;
+  padding: 0 2em;
+}
+.content-container p {
+  margin: 1em auto;
+  text-align: justify;
+}/*# sourceMappingURL=ContentRoute.module.css.map */
