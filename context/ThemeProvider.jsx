@@ -16,11 +16,10 @@ export const useTheme = () => useContext(ThemeContext);
 export default function ThemeProvider({ children }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
-  // const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 1050) {
+      if (window.innerWidth <= 900) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -39,13 +38,6 @@ export default function ThemeProvider({ children }) {
       window.removeEventListener("resize", handleResize);
     };
   }, [isMobile]);
-
-  // const closeNav = useCallback(() => {
-  //   setIsNavOpen(false);
-
-  //   console.log(`isNavOpen: ${isNavOpen}`);
-  //   console.log("Close nav btn clicked!");
-  // }, [isNavOpen]);
 
   const toggleNav = useCallback(() => {
     setIsNavOpen(!isNavOpen);
