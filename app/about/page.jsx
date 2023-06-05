@@ -7,16 +7,11 @@ import { useTheme } from "../../context/ThemeProvider";
 import style from "../styles/page.module.scss";
 
 const About = () => {
-  const { isNavOpen, toggleNav, closeNav, isMobile } = useTheme();
+  const { isNavOpen, toggleNav, isMobile } = useTheme();
 
   return (
     <div className={style["wrapper-truncated"]}>
-      <Navbar
-        isNavOpen={isNavOpen}
-        toggleNav={toggleNav}
-        closeNav={closeNav}
-        isMobile={isMobile}
-      />
+      <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} isMobile={isMobile} />
       <ContentRoute title="What&#39;s up with Matt?" isNavOpen={isNavOpen} />
       <FooterRoute />
     </div>

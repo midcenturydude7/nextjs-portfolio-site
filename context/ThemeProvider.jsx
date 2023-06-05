@@ -40,12 +40,12 @@ export default function ThemeProvider({ children }) {
     };
   }, [isMobile]);
 
-  const closeNav = useCallback(() => {
-    setIsNavOpen(false);
+  // const closeNav = useCallback(() => {
+  //   setIsNavOpen(false);
 
-    console.log(`isNavOpen: ${isNavOpen}`);
-    console.log("Close nav btn clicked!");
-  }, [isNavOpen]);
+  //   console.log(`isNavOpen: ${isNavOpen}`);
+  //   console.log("Close nav btn clicked!");
+  // }, [isNavOpen]);
 
   const toggleNav = useCallback(() => {
     setIsNavOpen(!isNavOpen);
@@ -59,7 +59,6 @@ export default function ThemeProvider({ children }) {
         isMobile,
         isNavOpen,
         toggleNav,
-        closeNav,
       }}>
       {children}
     </ThemeContext.Provider>

@@ -7,7 +7,7 @@ import { CgCloseO } from "react-icons/cg";
 
 import style from "./styles/Navbar.module.css";
 
-const Navbar = ({ isNavOpen, toggleNav, closeNav, isMobile }) => {
+const Navbar = ({ isNavOpen, toggleNav, isMobile }) => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>

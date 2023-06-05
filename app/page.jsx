@@ -11,7 +11,7 @@ import { useTheme } from "../context/ThemeProvider";
 import style from "./styles/page.module.css";
 
 export default function Home() {
-  const { isMobile, isNavOpen, toggleNav, closeNav } = useTheme();
+  const { isMobile, isNavOpen, toggleNav } = useTheme();
   const [isHovered, setIsHovered] = React.useState(false);
 
   const handlePointerOver = () => {
@@ -24,12 +24,7 @@ export default function Home() {
 
   return (
     <div className={!isHovered ? style.wrapper : style.nowrapper}>
-      <Navbar
-        isNavOpen={isNavOpen}
-        toggleNav={toggleNav}
-        closeNav={closeNav}
-        isMobile={isMobile}
-      />
+      <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} isMobile={isMobile} />
       <HeroSection isMobile={isMobile} isNavOpen={isNavOpen} />
       <CardSection
         handlePointerOver={handlePointerOver}
