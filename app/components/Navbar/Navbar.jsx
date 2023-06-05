@@ -7,32 +7,29 @@ import { CgCloseO } from "react-icons/cg";
 
 import style from "./styles/Navbar.module.css";
 
-const Navbar = ({ isNavOpen, toggleNav }) => {
+const Navbar = ({ isNavOpen, toggleNav, closeNav }) => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>
-        <Link href="/" className={style["nav-link-home"]} onClick={toggleNav}>
+        <Link href="/" className={style["nav-link-home"]} onClick={closeNav}>
           <ul className={style.logo}>
             <li>MG[dev]</li>
           </ul>
         </Link>
         <ul
-          className={`${style["nav-primary"]} ${
-            isNavOpen ? style.isActive : ""
-          }`}>
+          className={`${
+            isNavOpen ? style["nav-primary-closed"] : style["nav-primary"]
+          } ${isNavOpen ? style.isActive : ""}`}>
           <li>
             <Link
               href="/about"
               className={style["nav-link"]}
-              onClick={toggleNav}>
+              onClick={closeNav}>
               about
             </Link>
           </li>
           <li>
-            <Link
-              href="/work"
-              className={style["nav-link"]}
-              onClick={toggleNav}>
+            <Link href="/work" className={style["nav-link"]} onClick={closeNav}>
               work
             </Link>
           </li>
@@ -40,7 +37,7 @@ const Navbar = ({ isNavOpen, toggleNav }) => {
             <Link
               href="/resources"
               className={style["nav-link"]}
-              onClick={toggleNav}>
+              onClick={closeNav}>
               resources
             </Link>
           </li>
@@ -48,7 +45,7 @@ const Navbar = ({ isNavOpen, toggleNav }) => {
             <Link
               href="/contact"
               className={style["nav-link"]}
-              onClick={toggleNav}>
+              onClick={closeNav}>
               contact
             </Link>
           </li>

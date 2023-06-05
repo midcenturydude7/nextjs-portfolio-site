@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
@@ -9,6 +10,7 @@ export const useTheme = () => useContext(ThemeContext);
 export default function ThemeProvider({ children }) {
   const [isMobile, setIsMobile] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,8 +36,15 @@ export default function ThemeProvider({ children }) {
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
-    console.log(isNavOpen);
-    console.log("Button clicked!");
+    console.log(`isNavOpen: ${isNavOpen}`);
+    console.log("Toggle nav btn clicked!");
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+
+    console.log(`isNavOpen: ${isNavOpen}`);
+    console.log("Close nav btn clicked!");
   };
 
   return (
@@ -44,6 +53,7 @@ export default function ThemeProvider({ children }) {
         isMobile,
         isNavOpen,
         toggleNav,
+        closeNav,
       }}>
       {children}
     </ThemeContext.Provider>

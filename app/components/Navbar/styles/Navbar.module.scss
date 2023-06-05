@@ -221,6 +221,10 @@
         }
       }
 
+      .nav-primary-closed {
+        display: none;
+      }
+
       .nav-primary {
         position: relative;
         flex-direction: column;

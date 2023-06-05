@@ -192,6 +192,9 @@
   .header-nav .nav-left .nav-link-home .logo {
     flex-grow: 1;
   }
+  .header-nav .nav-left .nav-primary-closed {
+    display: none;
+  }
   .header-nav .nav-left .nav-primary {
     position: relative;
     flex-direction: column;
