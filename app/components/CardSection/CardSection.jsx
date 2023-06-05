@@ -2,10 +2,10 @@ import Card from "../Card/Card";
 
 import style from "./styles/CardSection.module.css";
 
-const CardSection = ({ handlePointerOver, handlePointerOut, isNavOpen }) => {
+const CardSection = ({ handlePointerOver, handlePointerOut, isNavOpen, isMobile }) => {
   return (
     <section
-      className={isNavOpen ? style["section-mobile"] : style.section}
+      className={isNavOpen && isMobile ? style["section-mobile"] : style.section}
       onPointerEnter={handlePointerOver}
       onPointerLeave={handlePointerOut}>
       <div className={style["section-box_container"]}>

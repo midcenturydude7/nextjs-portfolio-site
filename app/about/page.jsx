@@ -12,7 +12,11 @@ const About = () => {
   return (
     <div className={style["wrapper-truncated"]}>
       <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} isMobile={isMobile} />
-      <ContentRoute title="What&#39;s up with Matt?" isNavOpen={isNavOpen} />
+      <ContentRoute
+        title="What&#39;s up with Matt?"
+        isNavOpen={isNavOpen}
+        isMobile={isMobile}
+      />
       <FooterRoute />
     </div>
   );

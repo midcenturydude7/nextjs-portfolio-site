@@ -23,7 +23,10 @@ const HeroSection = ({ isMobile, isNavOpen }) => {
   }, [isMobile]);
 
   return (
-    <main className={isNavOpen ? style["main-mobile"] : style["main-wrapper"]}>
+    <main
+      className={
+        isNavOpen && isMobile ? style["main-mobile"] : style["main-wrapper"]
+      }>
       <div className={styleGradient["gradient-hero--container"]}>
         <div className={styleGradient["gradient-hero"]}>
           <div className={style["image-container"]}>

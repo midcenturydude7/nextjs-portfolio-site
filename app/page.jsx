@@ -30,6 +30,7 @@ export default function Home() {
         handlePointerOver={handlePointerOver}
         handlePointerOut={handlePointerOut}
         isNavOpen={isNavOpen}
+        isMobile={isMobile}
       />
       <Footer isHovered={isHovered} />
     </div>
