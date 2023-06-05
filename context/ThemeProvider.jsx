@@ -43,7 +43,7 @@ export default function ThemeProvider({ children }) {
   const closeNav = useCallback(() => {
     setIsNavOpen(false);
 
-    console.log(`isNavOpen: ${!isNavOpen}`);
+    console.log(`isNavOpen: ${isNavOpen}`);
     console.log("Close nav btn clicked!");
   }, [isNavOpen]);
 

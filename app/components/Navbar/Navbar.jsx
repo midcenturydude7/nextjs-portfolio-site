@@ -11,7 +11,10 @@ const Navbar = ({ isNavOpen, toggleNav, closeNav, isMobile }) => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>
-        <Link href="/" className={style["nav-link-home"]} onClick={closeNav}>
+        <Link
+          href="/"
+          className={style["nav-link-home"]}
+          onClick={isMobile && isNavOpen ? toggleNav : ""}>
           <ul className={style.logo}>
             <li>MG[dev]</li>
           </ul>
@@ -21,17 +24,22 @@ const Navbar = ({ isNavOpen, toggleNav, closeNav, isMobile }) => {
             isMobile && !isNavOpen
               ? style["nav-primary-closed"]
               : style["nav-primary"]
-          } ${isNavOpen ? style.isActive : ""}`}>
+          } ${!isMobile && isNavOpen ? style["nav-primary"] : ""} ${
+            isNavOpen ? style.isActive : ""
+          }`}>
           <li>
             <Link
               href="/about"
               className={style["nav-link"]}
-              onClick={closeNav}>
+              onClick={isMobile ? toggleNav : ""}>
               about
             </Link>
           </li>
           <li>
-            <Link href="/work" className={style["nav-link"]} onClick={closeNav}>
+            <Link
+              href="/work"
+              className={style["nav-link"]}
+              onClick={isMobile ? toggleNav : ""}>
               work
             </Link>
           </li>
@@ -39,7 +47,7 @@ const Navbar = ({ isNavOpen, toggleNav, closeNav, isMobile }) => {
             <Link
               href="/resources"
               className={style["nav-link"]}
-              onClick={closeNav}>
+              onClick={isMobile ? toggleNav : ""}>
               resources
             </Link>
           </li>
@@ -47,7 +55,7 @@ const Navbar = ({ isNavOpen, toggleNav, closeNav, isMobile }) => {
             <Link
               href="/contact"
               className={style["nav-link"]}
-              onClick={closeNav}>
+              onClick={isMobile ? toggleNav : ""}>
               contact
             </Link>
           </li>
