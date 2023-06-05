@@ -7,7 +7,7 @@ import { CgCloseO } from "react-icons/cg";
 
 import style from "./styles/Navbar.module.css";
 
-const Navbar = ({ isNavOpen, toggleNav, closeNav }) => {
+const Navbar = ({ isNavOpen, toggleNav, closeNav, isMobile }) => {
   return (
     <header className={style["header-nav"]}>
       <nav className={style["nav-left"]}>
@@ -18,7 +18,9 @@ const Navbar = ({ isNavOpen, toggleNav, closeNav }) => {
         </Link>
         <ul
           className={`${
-            isNavOpen ? style["nav-primary-closed"] : style["nav-primary"]
+            isMobile && !isNavOpen
+              ? style["nav-primary-closed"]
+              : style["nav-primary"]
           } ${isNavOpen ? style.isActive : ""}`}>
           <li>
             <Link

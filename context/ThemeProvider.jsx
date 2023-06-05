@@ -1,9 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+} from "react";
 
-const ThemeContext = createContext({});
+const ThemeContext = createContext();
 
 export const useTheme = () => useContext(ThemeContext);
 
@@ -34,18 +40,18 @@ export default function ThemeProvider({ children }) {
     };
   }, [isMobile]);
 
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-    console.log(`isNavOpen: ${isNavOpen}`);
-    console.log("Toggle nav btn clicked!");
-  };
-
-  const closeNav = () => {
+  const closeNav = useCallback(() => {
     setIsNavOpen(false);
 
-    console.log(`isNavOpen: ${isNavOpen}`);
+    console.log(`isNavOpen: ${!isNavOpen}`);
     console.log("Close nav btn clicked!");
-  };
+  }, [isNavOpen]);
+
+  const toggleNav = useCallback(() => {
+    setIsNavOpen(!isNavOpen);
+    console.log(`isNavOpen: ${!isNavOpen}`);
+    console.log("Toggle nav btn clicked!");
+  }, [isNavOpen]);
 
   return (
     <ThemeContext.Provider
