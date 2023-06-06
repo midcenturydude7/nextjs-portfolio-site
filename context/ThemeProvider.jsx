@@ -39,11 +39,11 @@ export default function ThemeProvider({ children }) {
     };
   }, [isMobile]);
 
-  const toggleNav = useCallback(() => {
+  const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
     console.log(`isNavOpen: ${!isNavOpen}`);
     console.log("Toggle nav btn clicked!");
-  }, [isNavOpen]);
+  };
 
   return (
     <ThemeContext.Provider

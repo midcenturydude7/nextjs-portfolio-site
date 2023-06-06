@@ -125,9 +125,6 @@
 
     .nav-mobile {
       display: none;
-      font-family: "Poppins", sans-serif;
-      font-size: 1.5rem;
-      color: #bfb5f7;
     }
   }
 
@@ -295,15 +292,29 @@
       .nav-mobile {
         display: block;
         cursor: pointer;
+        margin: 0;
+        padding: 0;
 
         li {
           margin: 0;
           padding: 0;
-          display: flex;
-          flex-direction: column;
 
-          .mobile-icon {
+          button {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.5rem;
+            color: #bfb5f7;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
             transition: all 0.3s ease-in-out;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             &:hover {
               color: #8b77fc;

@@ -60,13 +60,15 @@ const Navbar = ({ isNavOpen, toggleNav, isMobile }) => {
             </Link>
           </li>
         </ul>
-        <ul className={style["nav-mobile"]} onClick={toggleNav}>
+        <ul className={style["nav-mobile"]}>
           <li>
-            {isNavOpen ? (
-              <CgCloseO className={style["mobile-icon"]} />
-            ) : (
-              <GiHamburgerMenu className={style["mobile-icon"]} />
-            )}
+            <button onClick={toggleNav}>
+              {isNavOpen ? (
+                <CgCloseO />
+              ) : (
+                <GiHamburgerMenu />
+              )}
+            </button>
           </li>
         </ul>
       </nav>
