@@ -9,12 +9,6 @@ const ContentRoute = ({ title, isNavOpen, isMobile }) => {
           : style["content-container"]
       }>
       <h1>{title}</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-        sapiente ratione, dolorem maiores consequuntur soluta aspernatur,
-        laboriosam similique voluptatum, sint delectus cum quos. Numquam quas
-        fugiat architecto sit porro eligendi!
-      </p>
     </div>
   );
 };

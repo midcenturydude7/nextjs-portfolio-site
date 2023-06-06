@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "../components/Navbar/Navbar";
-import ContentRoute from "../components/ContentRoute/ContentRoute";
+// import ContentRoute from "../components/ContentRoute/ContentRoute";
+import ContentAbout from "../components/ContentAbout/ContentAbout";
 import FooterRoute from "../components/FooterRoute/FooterRoute";
 import { useTheme } from "../../context/ThemeProvider";
 
@@ -12,7 +13,7 @@ const About = () => {
   return (
     <div className={style["wrapper-truncated"]}>
       <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} isMobile={isMobile} />
-      <ContentRoute
+      <ContentAbout
         title="What&#39;s up with Matt?"
         isNavOpen={isNavOpen}
         isMobile={isMobile}

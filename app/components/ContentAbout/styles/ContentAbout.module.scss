@@ -1,0 +1,195 @@
+.content-container-mobile {
+  display: none;
+}
+
+.content-container {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1150px;
+  margin: 0 auto 5em;
+  padding: 0 2em;
+
+  .graph-container {
+    max-width: 90%;
+
+    p {
+      margin: 1em auto;
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    p + p {
+      margin-bottom: 2em;
+    }
+  }
+
+  .card-container {
+    --stroke-gradient: linear-gradient(
+      45deg,
+      hsl(240deg 100% 20%) 0%,
+      hsl(289deg 100% 21%) 11%,
+      hsl(315deg 100% 27%) 22%,
+      hsl(329deg 100% 36%) 33%,
+      hsl(337deg 100% 43%) 44%,
+      hsl(357deg 91% 59%) 56%,
+      hsl(17deg 100% 59%) 67%,
+      hsl(34deg 100% 53%) 78%,
+      hsl(45deg 100% 50%) 89%,
+      hsl(55deg 100% 50%) 100%
+    );
+    position: relative;
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+
+    .card {
+      position: relative;
+      width: 250px;
+      background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      border-radius: 4px;
+      text-align: center;
+      overflow: hidden;
+      transition: 0.5s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        border: 1px solid #c19aff73;
+
+        .box {
+          .percent {
+            .num {
+              h2 {
+                color: #c19aff;
+
+                span {
+                  color: #c19aff;
+                }
+              }
+            }
+          }
+
+          .text {
+            color: #c19aff;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.03);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .box {
+        .percent {
+          position: relative;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          box-shadow: inset 0 0 50px #000;
+          background: #222;
+          z-index: 1000;
+
+          svg {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            z-index: 1000;
+
+            circle {
+              width: 100%;
+              height: 100%;
+              fill: none;
+              stroke: #191919;
+              stroke-width: 10;
+              stroke-linecap: round;
+              transform: translate(5px, 5px);
+            }
+
+            circle:nth-child(2) {
+              stroke-dasharray: 440;
+              stroke-dashoffset: 440;
+            }
+          }
+
+          .num {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            h2 {
+              color: #777;
+              font-weight: 700;
+              font-size: 40px;
+              transition: all 0.5s ease-in-out;
+
+              span {
+                color: #777;
+                font-size: 24px;
+                transition: all 0.5s ease-in-out;
+              }
+            }
+          }
+        }
+
+        .text {
+          position: relative;
+          color: #777;
+          margin-top: 20px;
+          font-weight: 700;
+          font-size: 18px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+
+    .card:nth-child(1) {
+      .box {
+        .percent {
+          svg {
+            circle:nth-child(2) {
+              stroke-dashoffset: calc(440 - (440 * 80) / 100);
+              stroke: #6913f3;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .box {
+          .percent {
+            svg {
+              circle:nth-child(2) {
+                stroke: #9151f8;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
