@@ -1,6 +1,5 @@
 "use client";
 import Navbar from "../components/Navbar/Navbar";
-// import ContentRoute from "../components/ContentRoute/ContentRoute";
 import ContentAbout from "../components/ContentAbout/ContentAbout";
 import FooterRoute from "../components/FooterRoute/FooterRoute";
 import { useTheme } from "../../context/ThemeProvider";

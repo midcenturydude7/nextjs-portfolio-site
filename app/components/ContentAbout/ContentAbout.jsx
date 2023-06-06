@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import SkillsCard from "../SkillsCard/SkillsCard";
 
 import style from "./styles/ContentAbout.module.css";
 
@@ -38,23 +39,8 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
         </p>
       </div>
 
-      <div class={style["card-container"]}>
-        <div class={style.card}>
-          <div class={style.box}>
-            <div class={style.percent}>
-              <svg>
-                <circle cx="70" cy="70" r="70"></circle>
-                <circle cx="70" cy="70" r="70"></circle>
-              </svg>
-              <div class={style.num}>
-                <h2>
-                  80<span>%</span>
-                </h2>
-              </div>
-            </div>
-            <h2 class={style.text}>Html</h2>
-          </div>
-        </div>
+      <div>
+        <SkillsCard percentage="80" skill="HTML" />
       </div>
     </div>
   );
