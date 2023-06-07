@@ -3,6 +3,9 @@
   display: flex;
 
   .card {
+    --border-violet: #c19aff4d;
+    --border-blue: #092cf359;
+    --border-neutral: #cfcfcf41;
     position: relative;
     width: 200px;
     background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
@@ -18,18 +21,18 @@
     &:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      border: 1px solid #c19aff4d;
+      border: 1px solid var(--border-neutral);
       background: linear-gradient(0deg, #2b2a2a, #2e2c2c, #2a2a2b);
 
       .box {
         .percent {
           .num {
             h2 {
-              color: #c19aff;
+              color: #a794c0;
               font-size: 2.75rem;
 
               span {
-                color: #c19aff;
+                color: #a794c0;
                 font-size: 1.75rem;
               }
             }
@@ -37,7 +40,7 @@
         }
 
         .text {
-          color: #c19aff;
+          color: #a794c0;
           font-size: 1.5rem;
         }
       }
@@ -127,12 +130,13 @@
   }
 
   .card:nth-child(1) {
+    --stroke-color-violet: #6913f3;
+    --stroke-color-blue: #092df3;
+    --stroke-color-rouge: #97226a;
     .box {
       .percent {
         svg {
           circle:nth-child(2) {
-            stroke-dashoffset: calc(440 - (440 * 80) / 100);
-            stroke: #6913f3;
             transition: all 0.5s ease-in-out;
           }
         }
@@ -144,7 +148,6 @@
         .percent {
           svg {
             circle:nth-child(2) {
-              stroke: #9151f8;
               animation: stroke-bar 0.4s ease-in-out forwards;
             }
           }
@@ -161,6 +164,6 @@
   }
 
   100% {
-    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke-dashoffset: calc(440 - (440 * var()) / 100);
   }
 }

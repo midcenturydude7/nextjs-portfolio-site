@@ -2,7 +2,7 @@
 
 import style from "./styles/SkillsCard.module.css";
 
-const SkillsCard = ({ percentage, skill }) => {
+const SkillsCard = ({ percentage, skill, stroke, number }) => {
   return (
     <div class={style["card-container"]}>
       <div class={style.card}>
@@ -10,7 +10,14 @@ const SkillsCard = ({ percentage, skill }) => {
           <div class={style.percent}>
             <svg>
               <circle cx="70" cy="70" r="70"></circle>
-              <circle cx="70" cy="70" r="70"></circle>
+              <circle
+                cx="70"
+                cy="70"
+                r="70"
+                style={{
+                  stroke: `var(${stroke})`,
+                  strokeDashoffset: `calc(440 - (440 * ${number}) / 100)`,
+                }}></circle>
             </svg>
             <div class={style.num}>
               <h2>

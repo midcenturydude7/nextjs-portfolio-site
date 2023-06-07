@@ -3,6 +3,9 @@
   display: flex;
 }
 .card-container .card {
+  --border-violet: #c19aff4d;
+  --border-blue: #092cf359;
+  --border-neutral: #cfcfcf41;
   position: relative;
   width: 200px;
   background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
@@ -18,19 +21,19 @@
 .card-container .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(193, 154, 255, 0.3019607843);
+  border: 1px solid var(--border-neutral);
   background: linear-gradient(0deg, #2b2a2a, #2e2c2c, #2a2a2b);
 }
 .card-container .card:hover .box .percent .num h2 {
-  color: #c19aff;
+  color: #a794c0;
   font-size: 2.75rem;
 }
 .card-container .card:hover .box .percent .num h2 span {
-  color: #c19aff;
+  color: #a794c0;
   font-size: 1.75rem;
 }
 .card-container .card:hover .box .text {
-  color: #c19aff;
+  color: #a794c0;
   font-size: 1.5rem;
 }
 .card-container .card::before {
@@ -104,13 +107,15 @@
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
 }
+.card-container .card:nth-child(1) {
+  --stroke-color-violet: #6913f3;
+  --stroke-color-blue: #092df3;
+  --stroke-color-rouge: #97226a;
+}
 .card-container .card:nth-child(1) .box .percent svg circle:nth-child(2) {
-  stroke-dashoffset: 88;
-  stroke: #6913f3;
   transition: all 0.5s ease-in-out;
 }
 .card-container .card:nth-child(1):hover .box .percent svg circle:nth-child(2) {
-  stroke: #9151f8;
   animation: stroke-bar 0.4s ease-in-out forwards;
 }
 
@@ -120,6 +125,6 @@
     stroke-dashoffset: 440;
   }
   100% {
-    stroke-dashoffset: 88;
+    stroke-dashoffset: calc(440 - 440 * var() / 100);
   }
 }/*# sourceMappingURL=SkillsCard.module.css.map */
