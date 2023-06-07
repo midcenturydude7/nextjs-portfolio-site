@@ -10,12 +10,16 @@
   justify-content: flex-start;
   align-items: center;
   max-width: 1150px;
-  margin: 0 auto 20em;
+  margin: 0.25em auto 2em;
   padding: 0 2em;
+
+  h1 {
+    margin-bottom: 0.25em;
+  }
 
   .graph-container {
     max-width: 95%;
-    height: 175vh;
+    height: auto;
 
     .skills-graph {
       --border-violet: #c19aff4d;
@@ -69,7 +73,7 @@
       border-color: var(--border-violet);
     }
 
-    .skills-graph:last-of-type {
+    .skills-graph:nth-of-type(6) {
       float: left;
       border-color: var(--border-rouge);
 

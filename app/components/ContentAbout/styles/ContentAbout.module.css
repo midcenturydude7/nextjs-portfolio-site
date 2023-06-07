@@ -10,12 +10,15 @@
   justify-content: flex-start;
   align-items: center;
   max-width: 1150px;
-  margin: 0 auto 20em;
+  margin: 0.25em auto 2em;
   padding: 0 2em;
+}
+.content-container h1 {
+  margin-bottom: 0.25em;
 }
 .content-container .graph-container {
   max-width: 95%;
-  height: 175vh;
+  height: auto;
 }
 .content-container .graph-container .skills-graph {
   --border-violet: #c19aff4d;
@@ -62,11 +65,11 @@
   float: left;
   border-color: var(--border-violet);
 }
-.content-container .graph-container .skills-graph:last-of-type {
+.content-container .graph-container .skills-graph:nth-of-type(6) {
   float: left;
   border-color: var(--border-rouge);
 }
-.content-container .graph-container .skills-graph:last-of-type .skills-graph-title-left {
+.content-container .graph-container .skills-graph:nth-of-type(6) .skills-graph-title-left {
   background: #97226a;
 }
 .content-container .graph-container p {

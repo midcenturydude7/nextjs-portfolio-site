@@ -117,6 +117,28 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
             />
           </div>
         </div>
+        <div>
+          <p>
+            Collaboration is a vital aspect of my work ethic. I love working
+            closely with clients and stakeholders, understanding their goals and
+            translating them into tangible results. I believe in the power of
+            effective communication and maintaining a transparent and iterative
+            approach throughout the development process.
+          </p>
+          <p>
+            In addition to my technical expertise, I value continuous learning
+            and keeping up with industry trends. I am always eager to expand my
+            skill set and explore new tools and frameworks that enhance my
+            ability to create exceptional web experiences.
+          </p>
+          <p>
+            Feel free to explore my portfolio and browse through my projects to
+            get a sense of my work. If you have a project in mind or would like
+            to discuss a collaboration opportunity, I would be thrilled to hear
+            from you. Let&#39;s bring your ideas to life and create something
+            amazing together!
+          </p>
+        </div>
       </section>
 
       {/* <section className={style["skills-section"]}>

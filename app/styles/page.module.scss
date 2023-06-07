@@ -59,10 +59,9 @@
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  position: relative;
   transform-style: preserve-3d;
-  min-height: 100vh;
-  perspective: 100px;
+  // min-height: 100vh;
+  // perspective: 100px;
   background-color: rgb(1, 8, 22);
   background: -moz-linear-gradient(
     0deg,
