@@ -24,13 +24,22 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
         <li>
           <h1>{title}</h1>
         </li>
-        <li>
+        {/* <li>
           <button onClick={toggleConcise}>
             {!isConcise ? (
               <FiToggleLeft className={style.icon} />
             ) : (
               <FiToggleRight className={style.icon} />
             )}
+          </button>
+        </li> */}
+        <li>
+          <button className={style.switch} onClick={toggleConcise}>
+            <input type="checkbox" name="toggle" />
+            <label for="toggle">
+              <i></i>
+            </label>
+            <span></span>
           </button>
         </li>
       </ul>
@@ -39,8 +48,8 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
         <section className={style["graph-container"]}>
           <div>
             <p>
-              I&#39;m a self-taught frontend developer specializing in
-              building web applications and websites using React and Next.js. 
+              I&#39;m a self-taught frontend developer specializing in building
+              web applications and websites using React and Next.js.
             </p>
           </div>
         </section>
