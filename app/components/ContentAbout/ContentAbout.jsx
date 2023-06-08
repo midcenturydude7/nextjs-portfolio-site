@@ -40,6 +40,11 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
               <i></i>
             </label>
             <span></span>
+            {!isConcise ? (
+              <span className={style["toggle-text-opaque"]}>verbose</span>
+            ) : (
+              <span className={style["toggle-text"]}>verbose</span>
+            )}
           </button>
         </li>
       </ul>

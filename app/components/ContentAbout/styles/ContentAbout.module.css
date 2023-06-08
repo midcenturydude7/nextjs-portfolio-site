@@ -42,7 +42,7 @@
   transition: all 1s linear;
 }
 .content-container ul li .switch {
-  width: 100px;
+  width: 75px;
   height: 30px;
   position: relative;
 }
@@ -75,11 +75,11 @@
 }
 .content-container ul li .switch input ~ label i {
   display: block;
-  height: 26px;
-  width: 26px;
+  height: 28px;
+  width: 28px;
   position: absolute;
-  left: 2px;
-  top: 2px;
+  left: 1px;
+  top: 1px;
   z-index: 2;
   border-radius: inherit;
   background: #283446; /* Fallback */
@@ -92,7 +92,7 @@
   content: "";
   display: inline-block;
   position: absolute;
-  right: 0px;
+  right: -13px;
   top: 10px;
   width: 12px;
   height: 12px;
@@ -103,6 +103,22 @@
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   z-index: 2;
+}
+.content-container ul li .switch .toggle-text {
+  position: absolute;
+  top: 8px;
+  left: 91.5px;
+  color: #80eaff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.content-container ul li .switch .toggle-text-opaque {
+  position: absolute;
+  top: 8px;
+  left: 91.5px;
+  opacity: 0.5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .content-container ul li .switch input:checked ~ label + span {
   content: "";
