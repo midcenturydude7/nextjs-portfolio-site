@@ -17,7 +17,7 @@ const About = () => {
         isNavOpen={isNavOpen}
         isMobile={isMobile}
       />
-      {/* <FooterRoute /> */}
+      <FooterRoute />
     </div>
   );
 };
