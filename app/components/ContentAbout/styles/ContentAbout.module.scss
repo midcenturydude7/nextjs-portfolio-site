@@ -13,13 +13,52 @@
   margin: 0.25em auto 13.25em;
   padding: 0 2em;
 
-  h1 {
-    margin-bottom: 0.25em;
+  ul {
+    width: 45%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    li {
+      display: flex;
+      margin: 0;
+      padding: 0;
+
+      // h1 {
+      //   margin-bottom: 0.25em;
+      // }
+
+      button {
+        display: flex;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        transition: all 1s ease-in-out;
+      }
+
+      .icon {
+        font-size: 2rem;
+      }
+    }
   }
 
   .graph-container {
     max-width: 95%;
     height: auto;
+
+    div {
+      p {
+        font-size: 1.125rem;
+        font-weight: 400;
+      }
+    }
 
     .skills-graph {
       --border-violet: #c19aff4d;
@@ -42,7 +81,6 @@
       .skills-graph-title-right {
         margin-bottom: 1em;
         padding: 0.1em 0.5em;
-        border: 1px solid #c19aff4d;
         border-radius: 4px;
         color: #858585;
       }

@@ -13,12 +13,40 @@
   margin: 0.25em auto 13.25em;
   padding: 0 2em;
 }
-.content-container h1 {
-  margin-bottom: 0.25em;
+.content-container ul {
+  width: 45%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-container ul li {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.content-container ul li button {
+  display: flex;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all 1s ease-in-out;
+}
+.content-container ul li .icon {
+  font-size: 2rem;
 }
 .content-container .graph-container {
   max-width: 95%;
   height: auto;
+}
+.content-container .graph-container div p {
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 .content-container .graph-container .skills-graph {
   --border-violet: #c19aff4d;
@@ -40,7 +68,6 @@
 .content-container .graph-container .skills-graph .skills-graph-title-right {
   margin-bottom: 1em;
   padding: 0.1em 0.5em;
-  border: 1px solid rgba(193, 154, 255, 0.3019607843);
   border-radius: 4px;
   color: #858585;
 }

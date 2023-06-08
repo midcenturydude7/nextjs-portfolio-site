@@ -4,10 +4,10 @@ import style from "./styles/SkillsCard.module.css";
 
 const SkillsCard = ({ percentage, skill, stroke, number }) => {
   return (
-    <div class={style["card-container"]}>
-      <div class={style.card}>
-        <div class={style.box}>
-          <div class={style.percent}>
+    <div className={style["card-container"]}>
+      <div className={style.card}>
+        <div className={style.box}>
+          <div className={style.percent}>
             <svg>
               <circle cx="70" cy="70" r="70"></circle>
               <circle
@@ -19,14 +19,14 @@ const SkillsCard = ({ percentage, skill, stroke, number }) => {
                   strokeDashoffset: `calc(440 - (440 * ${number}) / 100)`,
                 }}></circle>
             </svg>
-            <div class={style.num}>
+            <div className={style.num}>
               <h2>
                 {percentage}
                 <span>%</span>
               </h2>
             </div>
           </div>
-          <h2 class={style.text}>{skill}</h2>
+          <h2 className={style.text}>{skill}</h2>
         </div>
       </div>
     </div>
