@@ -13,6 +13,13 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   const [isActiveOne, setIsActiveOne] = React.useState(false);
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
   const [isActiveThree, setIsActiveThree] = React.useState(false);
+  const [isClicking, setisClicking] = React.useState(true);
+
+  const handleClickingEvent = () => {
+    setisClicking(true);
+    console.log("Clicked on card!");
+    console.log(`isClicking: ${isClicking}`);
+  };
 
   const toggleConcise = () => {
     setIsConcise(!isConcise);
@@ -115,6 +122,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
                   number="80"
                   skill="HTML"
                   stroke={"--stroke-color-violet"}
+                  handleClickingEvent={handleClickingEvent}
                 />
                 <SkillsCard
                   className={style["skill-card"]}
@@ -122,6 +130,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
                   number="75"
                   skill="CSS"
                   stroke={"--stroke-color-violet"}
+                  handleClickingEvent={handleClickingEvent}
                 />
               </div>
             )}

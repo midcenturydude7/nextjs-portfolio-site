@@ -185,9 +185,11 @@
 }
 .content-container .graph-container .skills-graph ul li .skills-graph-title-left {
   background: #6913f3;
+  border-left: 8px solid #9c9c9c;
 }
 .content-container .graph-container .skills-graph ul li .skills-graph-title-right {
   background: #092df3;
+  border-right: 8px solid #9c9c9c;
 }
 .content-container .graph-container .skills-graph ul ul {
   list-style: none;

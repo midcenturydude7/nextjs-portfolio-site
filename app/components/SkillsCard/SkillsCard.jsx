@@ -2,10 +2,16 @@
 
 import style from "./styles/SkillsCard.module.css";
 
-const SkillsCard = ({ percentage, skill, stroke, number }) => {
+const SkillsCard = ({
+  percentage,
+  skill,
+  stroke,
+  number,
+  handleClickingEvent,
+}) => {
   return (
     <div className={style["card-container"]}>
-      <div className={style.card}>
+      <div className={style.card} onClick={handleClickingEvent}>
         <div className={style.box}>
           <div className={style.percent}>
             <svg>
