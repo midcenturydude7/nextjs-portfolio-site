@@ -1,16 +1,37 @@
 "use client";
 import React from "react";
 import SkillsCard from "../SkillsCard/SkillsCard";
-import { FiToggleLeft, FiToggleRight } from "react-icons/fi";
+import {
+  IoMdArrowDroprightCircle,
+  IoMdArrowDropleftCircle,
+} from "react-icons/io";
 
 import style from "./styles/ContentAbout.module.css";
 
 const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   const [isConcise, setIsConcise] = React.useState(false);
+  const [isActiveOne, setIsActiveOne] = React.useState(false);
+  const [isActiveTwo, setIsActiveTwo] = React.useState(false);
+  const [isActiveThree, setIsActiveThree] = React.useState(false);
 
   const toggleConcise = () => {
     setIsConcise(!isConcise);
     console.log(`Button clicked! isConcise: ${isConcise}`);
+  };
+
+  const toggleArrowOne = () => {
+    setIsActiveOne(!isActiveOne);
+    console.log(`Button clicked! isActive: ${isActiveOne}`);
+  };
+
+  const toggleArrowTwo = () => {
+    setIsActiveTwo(!isActiveTwo);
+    console.log(`Button clicked! isActive: ${isActiveTwo}`);
+  };
+
+  const toggleArrowThree = () => {
+    setIsActiveThree(!isActiveThree);
+    console.log(`Button clicked! isActive: ${isActiveThree}`);
   };
 
   return (
@@ -24,19 +45,10 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
         <li>
           <h1>{title}</h1>
         </li>
-        {/* <li>
-          <button onClick={toggleConcise}>
-            {!isConcise ? (
-              <FiToggleLeft className={style.icon} />
-            ) : (
-              <FiToggleRight className={style.icon} />
-            )}
-          </button>
-        </li> */}
         <li>
           <button className={style.switch} onClick={toggleConcise}>
             <input type="checkbox" name="toggle" />
-            <label for="toggle">
+            <label htmlFor="toggle">
               <i></i>
             </label>
             <span></span>
@@ -72,23 +84,66 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
             </p>
           </div>
           <div className={style["skills-graph"]}>
-            <h2 className={style["skills-graph-title-left"]}>Code</h2>
-            <div className={style["skills-graph-container"]}>
-              <SkillsCard
-                className={style["skill-card"]}
-                percentage="80"
-                number="80"
-                skill="HTML"
-                stroke={"--stroke-color-violet"}
-              />
-              <SkillsCard
-                className={style["skill-card"]}
-                percentage="75"
-                number="75"
-                skill="CSS"
-                stroke={"--stroke-color-violet"}
-              />
-            </div>
+            <ul>
+              <li>
+                <h2 className={style["skills-graph-title-left"]}>Code</h2>
+              </li>
+              <ul>
+                <li>
+                  <button
+                    className={style["arrow-one"]}
+                    onClick={toggleArrowOne}>
+                    {!isActiveOne ? (
+                      <IoMdArrowDroprightCircle
+                        className={style["arrow-icon-one"]}
+                      />
+                    ) : (
+                      <IoMdArrowDropleftCircle
+                        className={style["arrow-icon-one"]}
+                      />
+                    )}
+                  </button>
+                </li>
+              </ul>
+            </ul>
+
+            {!isActiveOne && (
+              <div className={style["skills-graph-container-left"]}>
+                <SkillsCard
+                  className={style["skill-card"]}
+                  percentage="80"
+                  number="80"
+                  skill="HTML"
+                  stroke={"--stroke-color-violet"}
+                />
+                <SkillsCard
+                  className={style["skill-card"]}
+                  percentage="75"
+                  number="75"
+                  skill="CSS"
+                  stroke={"--stroke-color-violet"}
+                />
+              </div>
+            )}
+
+            {isActiveOne && (
+              <div className={style["skills-graph-container-right"]}>
+                <SkillsCard
+                  className={style["skill-card"]}
+                  percentage="55"
+                  number="55"
+                  skill="JavaScript"
+                  stroke={"--stroke-color-violet"}
+                />
+                <SkillsCard
+                  className={style["skill-card"]}
+                  percentage="20"
+                  number="20"
+                  skill="TypeScript"
+                  stroke={"--stroke-color-violet"}
+                />
+              </div>
+            )}
           </div>
           <div>
             <p>
@@ -111,21 +166,60 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
             </p>
           </div>
           <div className={style["skills-graph"]}>
-            <h2 className={style["skills-graph-title-right"]}>Tools</h2>
-            <div className={style["skills-graph-container"]}>
-              <SkillsCard
-                percentage="55"
-                number="55"
-                skill="React"
-                stroke={"--stroke-color-blue"}
-              />
-              <SkillsCard
-                percentage="35"
-                number="35"
-                skill="Nextjs"
-                stroke={"--stroke-color-blue"}
-              />
-            </div>
+            <ul className={style["skills-list-two"]}>
+              <li>
+                <h2 className={style["skills-graph-title-right"]}>Tools</h2>
+              </li>
+              <ul>
+                <li>
+                  <button
+                    className={style["arrow-two"]}
+                    onClick={toggleArrowTwo}>
+                    {!isActiveTwo ? (
+                      <IoMdArrowDropleftCircle
+                        className={style["arrow-icon-two"]}
+                      />
+                    ) : (
+                      <IoMdArrowDroprightCircle
+                        className={style["arrow-icon-two"]}
+                      />
+                    )}
+                  </button>
+                </li>
+              </ul>
+            </ul>
+            {!isActiveTwo && (
+              <div className={style["skills-graph-container-right"]}>
+                <SkillsCard
+                  percentage="55"
+                  number="55"
+                  skill="React"
+                  stroke={"--stroke-color-blue"}
+                />
+                <SkillsCard
+                  percentage="35"
+                  number="35"
+                  skill="Nextjs"
+                  stroke={"--stroke-color-blue"}
+                />
+              </div>
+            )}
+            {isActiveTwo && (
+              <div className={style["skills-graph-container-left"]}>
+                <SkillsCard
+                  percentage="35"
+                  number="35"
+                  skill="Nodejs"
+                  stroke={"--stroke-color-blue"}
+                />
+                <SkillsCard
+                  percentage="60"
+                  number="60"
+                  skill="Scss"
+                  stroke={"--stroke-color-blue"}
+                />
+              </div>
+            )}
           </div>
           <div>
             <p>
@@ -150,21 +244,60 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
             </p>
           </div>
           <div className={style["skills-graph"]}>
-            <h2 className={style["skills-graph-title-left"]}>Skills</h2>
-            <div className={style["skills-graph-container"]}>
-              <SkillsCard
-                percentage="40"
-                number="40"
-                skill="Design"
-                stroke={"--stroke-color-rouge"}
-              />
-              <SkillsCard
-                percentage="55"
-                number="55"
-                skill="Animation"
-                stroke={"--stroke-color-rouge"}
-              />
-            </div>
+            <ul>
+              <li>
+                <h2 className={style["skills-graph-title-left"]}>Skills</h2>
+              </li>
+              <ul>
+                <li>
+                  <button
+                    className={style["arrow-three"]}
+                    onClick={toggleArrowThree}>
+                    {!isActiveThree ? (
+                      <IoMdArrowDroprightCircle
+                        className={style["arrow-icon-three"]}
+                      />
+                    ) : (
+                      <IoMdArrowDropleftCircle
+                        className={style["arrow-icon-three"]}
+                      />
+                    )}
+                  </button>
+                </li>
+              </ul>
+            </ul>
+            {!isActiveThree && (
+              <div className={style["skills-graph-container-left"]}>
+                <SkillsCard
+                  percentage="40"
+                  number="40"
+                  skill="Design"
+                  stroke={"--stroke-color-pink"}
+                />
+                <SkillsCard
+                  percentage="55"
+                  number="55"
+                  skill="Animation"
+                  stroke={"--stroke-color-pink"}
+                />
+              </div>
+            )}
+            {isActiveThree && (
+              <div className={style["skills-graph-container-right"]}>
+                <SkillsCard
+                  percentage="30"
+                  number="30"
+                  skill="Algo & Data"
+                  stroke={"--stroke-color-pink"}
+                />
+                <SkillsCard
+                  percentage="70"
+                  number="70"
+                  skill="Git"
+                  stroke={"--stroke-color-pink"}
+                />
+              </div>
+            )}
           </div>
           <div>
             <p>

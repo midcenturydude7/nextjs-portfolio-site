@@ -34,7 +34,7 @@
 }
 .card-container .card:hover .box .text {
   color: #a794c0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .card-container .card::before {
   content: "";
@@ -111,6 +111,7 @@
   --stroke-color-violet: #6913f3;
   --stroke-color-blue: #092df3;
   --stroke-color-rouge: #97226a;
+  --stroke-color-pink: #7a31aa;
 }
 .card-container .card:nth-child(1) .box .percent svg circle:nth-child(2) {
   transition: all 0.5s ease-in-out;
