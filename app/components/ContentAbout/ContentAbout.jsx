@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import SkillsGraph from "../SkillsGraph/SkillsGraph";
 import SkillsCard from "../SkillsCard/SkillsCard";
 import {
   IoMdArrowDroprightCircle,
@@ -90,7 +91,16 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
               functionality together to deliver exceptional user experiences.
             </p>
           </div>
-          <div className={style["skills-graph"]}>
+          <SkillsGraph
+            isActiveOne={isActiveOne}
+            toggleArrowOne={toggleArrowOne}
+            handleClickingEvent={handleClickingEvent}
+            cardName="Code"
+            skillsGraphLeft={style["skills-graph-title-left"]}
+            skillsContainerLeft={style["skills-graph-container-left"]}
+            skillsContainerRight={style["skills-graph-container-right"]}
+          />
+          {/* <div className={style["skills-graph"]}>
             <ul>
               <li>
                 <h2 className={style["skills-graph-title-left"]}>Code</h2>
@@ -153,7 +163,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
                 />
               </div>
             )}
-          </div>
+          </div> */}
           <div>
             <p>
               My journey in web development began with a desire to learn.
