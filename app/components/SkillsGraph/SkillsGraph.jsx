@@ -6,14 +6,15 @@ import {
   IoMdArrowDropleftCircle,
 } from "react-icons/io";
 
+import cards from "../../../data/cards";
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
 const SkillsGraph = ({
   handleClickingEvent,
   isActiveOne,
   toggleArrowOne,
-  cardName,
   skillsGraphLeft,
+  skillsGraphRight,
   skillsContainerLeft,
   skillsContainerRight,
 }) => {
@@ -21,7 +22,10 @@ const SkillsGraph = ({
     <div className={style["skills-graph"]}>
       <ul>
         <li>
-          <h2 className={`${skillsGraphLeft}`}>{cardName}</h2>
+          <h2
+            className={`!isActiveOne || !isActiveThree ? ${skillsGraphLeft} : !isActiveTwo ? ${skillsGraphRight}`}>
+            {cards[0].cardName}
+          </h2>
         </li>
         <ul>
           <li>
@@ -36,37 +40,40 @@ const SkillsGraph = ({
         </ul>
       </ul>
 
+      {/* BOX 1 */}
       {!isActiveOne && (
         <div
-          className={`!isActiveOne && isActiveThree ? ${skillsContainerLeft} : !isActiveTwo ? ${skillsContainerRight}`}>
+          className={`!isActiveOne || !isActiveThree ? ${skillsContainerLeft} : !isActiveTwo ? ${skillsContainerRight}`}>
           <SkillsCard
             className={style["skill-card"]}
-            percentage="80"
-            number="80"
-            skill="HTML"
-            stroke={"--stroke-color-violet"}
+            percentage={cards[0].cardItems[0].percentage}
+            number={cards[0].cardItems[0].number}
+            skill={cards[0].cardItems[0].skill}
+            stroke={cards[0].cardItems[0].stroke}
             handleClickingEvent={handleClickingEvent}
           />
           <SkillsCard
             className={style["skill-card"]}
-            percentage="75"
-            number="75"
-            skill="CSS"
-            stroke={"--stroke-color-violet"}
+            percentage={cards[0].cardItems[1].percentage}
+            number={cards[0].cardItems[1].number}
+            skill={cards[0].cardItems[1].skill}
+            stroke={cards[0].cardItems[1].stroke}
             handleClickingEvent={handleClickingEvent}
           />
         </div>
       )}
 
+      {/* BOX 2 */}
       {isActiveOne && (
         <div
-          className={`isActiveOne && isActiveThree ? ${skillsContainerRight} : isActiveTwo ? ${skillsContainerLeft}`}>
+          className={`isActiveOne || isActiveThree ? ${skillsContainerRight} : isActiveTwo ? ${skillsContainerLeft}`}>
           <SkillsCard
             className={style["skill-card"]}
             percentage="55"
             number="55"
             skill="JavaScript"
             stroke={"--stroke-color-violet"}
+            handleClickingEvent={handleClickingEvent}
           />
           <SkillsCard
             className={style["skill-card"]}
@@ -74,6 +81,7 @@ const SkillsGraph = ({
             number="20"
             skill="TypeScript"
             stroke={"--stroke-color-violet"}
+            handleClickingEvent={handleClickingEvent}
           />
         </div>
       )}

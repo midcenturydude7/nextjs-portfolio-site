@@ -7,6 +7,7 @@ import {
   IoMdArrowDropleftCircle,
 } from "react-icons/io";
 
+import cards from "../../../data/cards";
 import style from "./styles/ContentAbout.module.css";
 
 const ContentAbout = ({ title, isNavOpen, isMobile }) => {
@@ -41,6 +42,8 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsActiveThree(!isActiveThree);
     console.log(`Button clicked! isActive: ${isActiveThree}`);
   };
+
+  console.log(cards);
 
   return (
     <main
@@ -91,11 +94,11 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
               functionality together to deliver exceptional user experiences.
             </p>
           </div>
+          {/* CODE BOX */}
           <SkillsGraph
             isActiveOne={isActiveOne}
             toggleArrowOne={toggleArrowOne}
             handleClickingEvent={handleClickingEvent}
-            cardName="Code"
             skillsGraphLeft={style["skills-graph-title-left"]}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
@@ -342,32 +345,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           </div>
         </section>
       )}
-
-      {/* <section className={style["skills-section"]}>
-        <h2 className={style["skills-title"]}>Code</h2>
-        <div className={style["skills-container"]}>
-          <SkillsCard
-            className={style["skill-card"]}
-            percentage="80"
-            skill="HTML"
-          />
-          <SkillsCard
-            className={style["skill-card"]}
-            percentage="75"
-            skill="CSS"
-          />
-          <SkillsCard
-            className={style["skill-card"]}
-            percentage="65"
-            skill="JavaScript"
-          />
-          <SkillsCard
-            className={style["skill-card"]}
-            percentage="30"
-            skill="TypeScript"
-          />
-        </div>
-      </section> */}
     </main>
   );
 };
