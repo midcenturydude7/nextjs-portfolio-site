@@ -7,11 +7,15 @@ const SkillsCard = ({
   skill,
   stroke,
   number,
-  handleClickingEvent,
+  handleClickingEvent
 }) => {
   return (
     <div className={style["card-container"]}>
-      <div className={style.card} onClick={handleClickingEvent}>
+      <div
+        className={style.card}
+        onClick={
+          handleClickingEvent
+        }>
         <div className={style.box}>
           <div className={style.percent}>
             <svg>

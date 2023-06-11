@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
-import SkillsGraph from "../SkillsGraph/SkillsGraph";
+import SkillsGraphOne from "../SkillsGraph/SkillsGraphOne";
+import SkillsGraphTwo from "../SkillsGraph/SkillsGraphTwo";
+import SkillsGraphThree from "../SkillsGraph/SkillsGraphThree";
 import SkillsCard from "../SkillsCard/SkillsCard";
 import {
   IoMdArrowDroprightCircle,
@@ -94,80 +96,15 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
               functionality together to deliver exceptional user experiences.
             </p>
           </div>
+
           {/* CODE BOX */}
-          <SkillsGraph
+          <SkillsGraphOne
             isActiveOne={isActiveOne}
             toggleArrowOne={toggleArrowOne}
             handleClickingEvent={handleClickingEvent}
-            skillsGraphLeft={style["skills-graph-title-left"]}
-            skillsGraphRight={style["skills-graph-title-right"]}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
-          {/* <div className={style["skills-graph"]}>
-            <ul>
-              <li>
-                <h2 className={style["skills-graph-title-left"]}>Code</h2>
-              </li>
-              <ul>
-                <li>
-                  <button
-                    className={style["arrow-one"]}
-                    onClick={toggleArrowOne}>
-                    {!isActiveOne ? (
-                      <IoMdArrowDroprightCircle
-                        className={style["arrow-icon-one"]}
-                      />
-                    ) : (
-                      <IoMdArrowDropleftCircle
-                        className={style["arrow-icon-one"]}
-                      />
-                    )}
-                  </button>
-                </li>
-              </ul>
-            </ul>
-
-            {!isActiveOne && (
-              <div className={style["skills-graph-container-left"]}>
-                <SkillsCard
-                  className={style["skill-card"]}
-                  percentage="80"
-                  number="80"
-                  skill="HTML"
-                  stroke={"--stroke-color-violet"}
-                  handleClickingEvent={handleClickingEvent}
-                />
-                <SkillsCard
-                  className={style["skill-card"]}
-                  percentage="75"
-                  number="75"
-                  skill="CSS"
-                  stroke={"--stroke-color-violet"}
-                  handleClickingEvent={handleClickingEvent}
-                />
-              </div>
-            )}
-
-            {isActiveOne && (
-              <div className={style["skills-graph-container-right"]}>
-                <SkillsCard
-                  className={style["skill-card"]}
-                  percentage="55"
-                  number="55"
-                  skill="JavaScript"
-                  stroke={"--stroke-color-violet"}
-                />
-                <SkillsCard
-                  className={style["skill-card"]}
-                  percentage="20"
-                  number="20"
-                  skill="TypeScript"
-                  stroke={"--stroke-color-violet"}
-                />
-              </div>
-            )}
-          </div> */}
           <div>
             <p>
               My journey in web development began with a desire to learn.
@@ -188,62 +125,15 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
               provide seamless navigation and functional interaction.
             </p>
           </div>
-          <div className={style["skills-graph"]}>
-            <ul className={style["skills-list-two"]}>
-              <li>
-                <h2 className={style["skills-graph-title-right"]}>Tools</h2>
-              </li>
-              <ul>
-                <li>
-                  <button
-                    className={style["arrow-two"]}
-                    onClick={toggleArrowTwo}>
-                    {!isActiveTwo ? (
-                      <IoMdArrowDropleftCircle
-                        className={style["arrow-icon-two"]}
-                      />
-                    ) : (
-                      <IoMdArrowDroprightCircle
-                        className={style["arrow-icon-two"]}
-                      />
-                    )}
-                  </button>
-                </li>
-              </ul>
-            </ul>
-            {!isActiveTwo && (
-              <div className={style["skills-graph-container-right"]}>
-                <SkillsCard
-                  percentage="55"
-                  number="55"
-                  skill="React"
-                  stroke={"--stroke-color-blue"}
-                />
-                <SkillsCard
-                  percentage="35"
-                  number="35"
-                  skill="Nextjs"
-                  stroke={"--stroke-color-blue"}
-                />
-              </div>
-            )}
-            {isActiveTwo && (
-              <div className={style["skills-graph-container-left"]}>
-                <SkillsCard
-                  percentage="35"
-                  number="35"
-                  skill="Nodejs"
-                  stroke={"--stroke-color-blue"}
-                />
-                <SkillsCard
-                  percentage="60"
-                  number="60"
-                  skill="Scss"
-                  stroke={"--stroke-color-blue"}
-                />
-              </div>
-            )}
-          </div>
+
+          {/* TOOLS BOX */}
+          <SkillsGraphTwo
+            isActiveTwo={isActiveTwo}
+            toggleArrowTwo={toggleArrowTwo}
+            handleClickingEvent={handleClickingEvent}
+            skillsContainerLeft={style["skills-graph-container-left"]}
+            skillsContainerRight={style["skills-graph-container-right"]}
+          />
           <div>
             <p>
               Collaboration is a vital aspect of my work ethic. I love working
@@ -266,7 +156,14 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
               something amazing together!
             </p>
           </div>
-          <div className={style["skills-graph"]}>
+          <SkillsGraphThree
+            isActiveThree={isActiveThree}
+            toggleArrowThree={toggleArrowThree}
+            handleClickingEvent={handleClickingEvent}
+            skillsContainerLeft={style["skills-graph-container-left"]}
+            skillsContainerRight={style["skills-graph-container-right"]}
+          />
+          {/* <div className={style["skills-graph"]}>
             <ul>
               <li>
                 <h2 className={style["skills-graph-title-left"]}>Skills</h2>
@@ -321,7 +218,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
                 />
               </div>
             )}
-          </div>
+          </div> */}
           <div>
             <p>
               Collaboration is a vital aspect of my work ethic. I love working
