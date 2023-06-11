@@ -9,9 +9,17 @@ import {
 import cards from "../../../data/cards";
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
+cards.map((card, i) => {
+  if (i === 0) {
+    console.log(card.cardName);
+  }
+});
+
 const SkillsGraph = ({
   handleClickingEvent,
   isActiveOne,
+  isActiveTwo,
+  isActiveThree,
   toggleArrowOne,
   skillsGraphLeft,
   skillsGraphRight,
@@ -21,12 +29,32 @@ const SkillsGraph = ({
   return (
     <div className={style["skills-graph"]}>
       <ul>
-        <li>
-          <h2
-            className={`!isActiveOne || !isActiveThree ? ${skillsGraphLeft} : !isActiveTwo ? ${skillsGraphRight}`}>
-            {cards[0].cardName}
-          </h2>
-        </li>
+        {!isActiveOne && (
+          <li>
+            {cards.map((card, i) => {
+              if (i === 0) {
+                return (
+                  <h2 key={i} className={`${skillsGraphLeft}`}>
+                    {card.cardName}
+                  </h2>
+                );
+              }
+            })}
+          </li>
+        )}
+        {isActiveOne && (
+          <li>
+            {cards.map((card, i) => {
+              if (i === 0) {
+                return (
+                  <h2 key={i} className={`${skillsGraphLeft}`}>
+                    {card.cardName}
+                  </h2>
+                );
+              }
+            })}
+          </li>
+        )}
         <ul>
           <li>
             <button className={style["arrow-one"]} onClick={toggleArrowOne}>
@@ -40,10 +68,12 @@ const SkillsGraph = ({
         </ul>
       </ul>
 
-      {/* BOX 1 */}
+      {/* CODE: BOX 1 */}
       {!isActiveOne && (
         <div
-          className={`!isActiveOne || !isActiveThree ? ${skillsContainerLeft} : !isActiveTwo ? ${skillsContainerRight}`}>
+          className={`${
+            !isActiveOne || !isActiveThree
+          } ? ${skillsContainerLeft} : ${!isActiveTwo} ? ${skillsContainerRight}`}>
           <SkillsCard
             className={style["skill-card"]}
             percentage={cards[0].cardItems[0].percentage}
@@ -63,10 +93,10 @@ const SkillsGraph = ({
         </div>
       )}
 
-      {/* BOX 2 */}
+      {/* CODE: BOX 2 */}
       {isActiveOne && (
         <div
-          className={`isActiveOne || isActiveThree ? ${skillsContainerRight} : isActiveTwo ? ${skillsContainerLeft}`}>
+          className={`${isActiveOne} || ${isActiveThree} ? ${skillsContainerRight} : ${isActiveTwo} ? ${skillsContainerLeft}`}>
           <SkillsCard
             className={style["skill-card"]}
             percentage="55"

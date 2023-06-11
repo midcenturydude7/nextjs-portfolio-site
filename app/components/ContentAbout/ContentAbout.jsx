@@ -100,6 +100,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
             toggleArrowOne={toggleArrowOne}
             handleClickingEvent={handleClickingEvent}
             skillsGraphLeft={style["skills-graph-title-left"]}
+            skillsGraphRight={style["skills-graph-title-right"]}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
