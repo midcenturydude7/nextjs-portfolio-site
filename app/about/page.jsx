@@ -7,7 +7,7 @@ import { useTheme } from "../../context/ThemeProvider";
 import style from "../styles/page.module.scss";
 
 const About = () => {
-  const { isNavOpen, toggleNav, isMobile } = useTheme();
+  const { isNavOpen, toggleNav, isMobile, id } = useTheme();
 
   return (
     <div className={style["wrapper-truncated"]}>

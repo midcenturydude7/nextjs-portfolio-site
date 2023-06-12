@@ -6,12 +6,6 @@ import {
 import cards from "../../../data/cards";
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
-cards.map((card, i) => {
-  if (i === 1) {
-    console.log(card.cardItems[0].styleTitleRight);
-  }
-});
-
 const SkillsHeaderTwo = ({ isActiveTwo, toggleArrowTwo }) => {
   return (
     <ul className={style["skills-list-two"]}>

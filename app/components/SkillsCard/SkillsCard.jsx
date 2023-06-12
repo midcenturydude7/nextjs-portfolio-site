@@ -1,21 +1,12 @@
 "use client";
+import React from "react";
 
 import style from "./styles/SkillsCard.module.css";
 
-const SkillsCard = ({
-  percentage,
-  skill,
-  stroke,
-  number,
-  handleClickingEvent
-}) => {
+const SkillsCard = ({ percentage, skill, stroke, number }) => {
   return (
     <div className={style["card-container"]}>
-      <div
-        className={style.card}
-        onClick={
-          handleClickingEvent
-        }>
+      <div className={style.card}>
         <div className={style.box}>
           <div className={style.percent}>
             <svg>

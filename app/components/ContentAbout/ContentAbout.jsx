@@ -3,27 +3,28 @@ import React from "react";
 import SkillsGraphOne from "../SkillsGraph/SkillsGraphOne";
 import SkillsGraphTwo from "../SkillsGraph/SkillsGraphTwo";
 import SkillsGraphThree from "../SkillsGraph/SkillsGraphThree";
-import SkillsCard from "../SkillsCard/SkillsCard";
-import {
-  IoMdArrowDroprightCircle,
-  IoMdArrowDropleftCircle,
-} from "react-icons/io";
 
 import cards from "../../../data/cards";
 import style from "./styles/ContentAbout.module.css";
 
-const ContentAbout = ({ title, isNavOpen, isMobile }) => {
+const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
   const [isConcise, setIsConcise] = React.useState(false);
   const [isActiveOne, setIsActiveOne] = React.useState(false);
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
   const [isActiveThree, setIsActiveThree] = React.useState(false);
-  const [isClicking, setisClicking] = React.useState(true);
+  const [isClicked, setisClicked] = React.useState(false);
 
-  const handleClickingEvent = () => {
-    setisClicking(true);
-    console.log("Clicked on card!");
-    console.log(`isClicking: ${isClicking}`);
-  };
+  React.useEffect(() => {
+    const handleClickedCard = (e) => {
+      e.target.id = `${cards[0].cardItems[0].id}`;
+      console.log(e.target.id);
+    };
+    document.addEventListener("click", handleClickedCard);
+
+    return () => {
+      document.removeEventListener("click", handleClickedCard);
+    };
+  }, [isClicked]);
 
   const toggleConcise = () => {
     setIsConcise(!isConcise);
@@ -44,8 +45,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsActiveThree(!isActiveThree);
     console.log(`Button clicked! isActive: ${isActiveThree}`);
   };
-
-  console.log(cards);
 
   return (
     <main
@@ -101,7 +100,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           <SkillsGraphOne
             isActiveOne={isActiveOne}
             toggleArrowOne={toggleArrowOne}
-            handleClickingEvent={handleClickingEvent}
+            isClicked={isClicked}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
@@ -130,7 +129,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           <SkillsGraphTwo
             isActiveTwo={isActiveTwo}
             toggleArrowTwo={toggleArrowTwo}
-            handleClickingEvent={handleClickingEvent}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
@@ -159,66 +157,9 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           <SkillsGraphThree
             isActiveThree={isActiveThree}
             toggleArrowThree={toggleArrowThree}
-            handleClickingEvent={handleClickingEvent}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
-          {/* <div className={style["skills-graph"]}>
-            <ul>
-              <li>
-                <h2 className={style["skills-graph-title-left"]}>Skills</h2>
-              </li>
-              <ul>
-                <li>
-                  <button
-                    className={style["arrow-three"]}
-                    onClick={toggleArrowThree}>
-                    {!isActiveThree ? (
-                      <IoMdArrowDroprightCircle
-                        className={style["arrow-icon-three"]}
-                      />
-                    ) : (
-                      <IoMdArrowDropleftCircle
-                        className={style["arrow-icon-three"]}
-                      />
-                    )}
-                  </button>
-                </li>
-              </ul>
-            </ul>
-            {!isActiveThree && (
-              <div className={style["skills-graph-container-left"]}>
-                <SkillsCard
-                  percentage="40"
-                  number="40"
-                  skill="Design"
-                  stroke={"--stroke-color-pink"}
-                />
-                <SkillsCard
-                  percentage="55"
-                  number="55"
-                  skill="Animation"
-                  stroke={"--stroke-color-pink"}
-                />
-              </div>
-            )}
-            {isActiveThree && (
-              <div className={style["skills-graph-container-right"]}>
-                <SkillsCard
-                  percentage="30"
-                  number="30"
-                  skill="Algo & Data"
-                  stroke={"--stroke-color-pink"}
-                />
-                <SkillsCard
-                  percentage="70"
-                  number="70"
-                  skill="Git"
-                  stroke={"--stroke-color-pink"}
-                />
-              </div>
-            )}
-          </div> */}
           <div>
             <p>
               Collaboration is a vital aspect of my work ethic. I love working
