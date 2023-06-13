@@ -13,46 +13,25 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
   const [isActiveThree, setIsActiveThree] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState(false);
+  const [isSelected, setIsSelected] = React.useState(null);
+  const [isSelectedOne, setIsSelectedOne] = React.useState(false);
+  const [isSelectedTwo, setIsSelectedTwo] = React.useState(null);
 
-  const uniqueIdRef = React.useRef(1);
+  const handleCardClick = (id) => {
+    setIsSelected(id);
+    if (id === 1) {
+      setIsSelectedOne(true);
+      setIsClicked(true);
+    }
 
-  const handleCardClick = (e) => {
-    const skills = cards.flatMap((card) =>
-      card.cardItems.map((item) => item.skill)
-    );
+    if (id === 2) {
+      setIsSelectedTwo(true);
+      setIsClicked(true);
+    }
 
-    const element = e.target;
-    element.setAttribute("data-unique-id", uniqueIdRef.current);
-    uniqueIdRef.current += 1;
-
-    // if (uniqueIdRef.current && skills[0] === "html") {
-    //   setIsClicked(true);
-    // }
-
-    console.log("uniqueIdRef.current: ", uniqueIdRef.current);
-    console.log("isClicked: ", isClicked);
-    console.log(element);
-    console.log(skills[0]);
+    console.log("id: ", id);
+    console.log("isSelected: ", isSelected);
   };
-
-  // React.useEffect(() => {
-  //   const handleClickedCard = () => {
-  //   e.target.id = `${cards[0].cardItems[0].skill}`;
-  //   console.log(e.target.id);
-  //   const skills = cards.flatMap((card) =>
-  //     card.cardItems.map((item) => item.skill)
-  //   );
-  //   console.log(skills[0]);
-  //   const firstCardSkill = cards[0].cardItems[0].skill;
-  //   console.log(firstCardSkill);
-  // };
-
-  //   document.addEventListener("click", handleClickedCard);
-
-  //   return () => {
-  //     document.removeEventListener("click", handleClickedCard);
-  //   };
-  // }, [isClicked]);
 
   const toggleConcise = () => {
     setIsConcise(!isConcise);
@@ -129,6 +108,9 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
             isActiveOne={isActiveOne}
             toggleArrowOne={toggleArrowOne}
             isClicked={isClicked}
+            isSelected={isSelected}
+            isSelectedOne={isSelectedOne}
+            isSelectedTwo={isSelectedTwo}
             handleCardClick={handleCardClick}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}

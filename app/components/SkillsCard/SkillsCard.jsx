@@ -3,10 +3,10 @@ import React from "react";
 
 import style from "./styles/SkillsCard.module.css";
 
-const SkillsCard = ({ percentage, skill, stroke, number, handleCardClick }) => {
+const SkillsCard = ({ percentage, skill, stroke, number, id, onClick }) => {
   return (
     <div className={style["card-container"]}>
-      <div className={style.card} data-unique-id="" onClick={handleCardClick}>
+      <div className={style.card} onClick={() => onClick(id)}>
         <div className={style.box}>
           <div className={style.percent}>
             <svg>
