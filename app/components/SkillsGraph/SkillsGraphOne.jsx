@@ -6,6 +6,7 @@ import style from "../ContentAbout/styles/ContentAbout.module.css";
 
 const SkillsGraphOne = ({
   isClicked,
+  handleCardClick,
   isActiveOne,
   toggleArrowOne,
   skillsContainerLeft,
@@ -28,14 +29,14 @@ const SkillsGraphOne = ({
                 number={cards[0].cardItems[0].number}
                 skill={cards[0].cardItems[0].skill}
                 stroke={cards[0].cardItems[0].stroke}
-                isClicked={isClicked}
+                handleCardClick={handleCardClick}
               />
               <SkillsCard
                 percentage={cards[0].cardItems[1].percentage}
                 number={cards[0].cardItems[1].number}
                 skill={cards[0].cardItems[1].skill}
                 stroke={cards[0].cardItems[1].stroke}
-                isClicked={isClicked}
+                handleCardClick={handleCardClick}
               />
             </div>
           )}

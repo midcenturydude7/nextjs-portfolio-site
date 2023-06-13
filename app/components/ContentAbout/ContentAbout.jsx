@@ -12,19 +12,47 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
   const [isActiveOne, setIsActiveOne] = React.useState(false);
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
   const [isActiveThree, setIsActiveThree] = React.useState(false);
-  const [isClicked, setisClicked] = React.useState(false);
+  const [isClicked, setIsClicked] = React.useState(false);
 
-  React.useEffect(() => {
-    const handleClickedCard = (e) => {
-      e.target.id = `${cards[0].cardItems[0].id}`;
-      console.log(e.target.id);
-    };
-    document.addEventListener("click", handleClickedCard);
+  const uniqueIdRef = React.useRef(1);
 
-    return () => {
-      document.removeEventListener("click", handleClickedCard);
-    };
-  }, [isClicked]);
+  const handleCardClick = (e) => {
+    const skills = cards.flatMap((card) =>
+      card.cardItems.map((item) => item.skill)
+    );
+
+    const element = e.target;
+    element.setAttribute("data-unique-id", uniqueIdRef.current);
+    uniqueIdRef.current += 1;
+
+    // if (uniqueIdRef.current && skills[0] === "html") {
+    //   setIsClicked(true);
+    // }
+
+    console.log("uniqueIdRef.current: ", uniqueIdRef.current);
+    console.log("isClicked: ", isClicked);
+    console.log(element);
+    console.log(skills[0]);
+  };
+
+  // React.useEffect(() => {
+  //   const handleClickedCard = () => {
+  //   e.target.id = `${cards[0].cardItems[0].skill}`;
+  //   console.log(e.target.id);
+  //   const skills = cards.flatMap((card) =>
+  //     card.cardItems.map((item) => item.skill)
+  //   );
+  //   console.log(skills[0]);
+  //   const firstCardSkill = cards[0].cardItems[0].skill;
+  //   console.log(firstCardSkill);
+  // };
+
+  //   document.addEventListener("click", handleClickedCard);
+
+  //   return () => {
+  //     document.removeEventListener("click", handleClickedCard);
+  //   };
+  // }, [isClicked]);
 
   const toggleConcise = () => {
     setIsConcise(!isConcise);
@@ -101,6 +129,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
             isActiveOne={isActiveOne}
             toggleArrowOne={toggleArrowOne}
             isClicked={isClicked}
+            handleCardClick={handleCardClick}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />

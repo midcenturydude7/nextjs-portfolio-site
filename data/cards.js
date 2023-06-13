@@ -68,7 +68,7 @@ const cards = [
     cardName: "Tools",
     cardItems: [
       {
-        id: 1,
+        id: 5,
         skill: "react",
         title: "React",
         percentage: 55,
@@ -83,7 +83,7 @@ const cards = [
         text: "",
       },
       {
-        id: 2,
+        id: 6,
         skill: "nextjs",
         title: "Next.js",
         percentage: 35,
@@ -97,7 +97,7 @@ const cards = [
         text: "",
       },
       {
-        id: 3,
+        id: 7,
         skill: "nodejs",
         title: "Node.js",
         percentage: 30,
@@ -112,7 +112,7 @@ const cards = [
         text: "",
       },
       {
-        id: 4,
+        id: 8,
         skill: "sass/scss",
         title: "SASS / SCSS",
         percentage: 60,
@@ -133,7 +133,7 @@ const cards = [
     cardName: "Skills",
     cardItems: [
       {
-        id: 1,
+        id: 9,
         skill: "design",
         title: "UI/UX Design",
         percentage: 40,
@@ -148,7 +148,7 @@ const cards = [
         text: "",
       },
       {
-        id: 2,
+        id: 10,
         skill: "animations",
         title: "CSS Animations",
         percentage: 55,
@@ -163,7 +163,7 @@ const cards = [
         text: "",
       },
       {
-        id: 3,
+        id: 11,
         skill: "algo & data",
         title: "Alogrithms & Data Structures",
         percentage: 30,
@@ -178,7 +178,7 @@ const cards = [
         text: "",
       },
       {
-        id: 4,
+        id: 12,
         skill: "git/github",
         title: "Git / GitHub",
         percentage: 70,
