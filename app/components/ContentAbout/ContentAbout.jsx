@@ -13,24 +13,26 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
   const [isActiveThree, setIsActiveThree] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState(false);
-  const [isSelected, setIsSelected] = React.useState(null);
+  const [isSelected, setIsSelected] = React.useState(1);
   const [isSelectedOne, setIsSelectedOne] = React.useState(false);
   const [isSelectedTwo, setIsSelectedTwo] = React.useState(null);
 
   const handleCardClick = (id) => {
     setIsSelected(id);
-    if (id === 1) {
-      setIsSelectedOne(true);
-      setIsClicked(true);
-    }
+    console.log(`isSelected: ${isSelected}`);
+    // if (id === 1) {
+    //   setIsSelectedOne(true);
+    //   setIsClicked(true);
+    // }
 
-    if (id === 2) {
-      setIsSelectedTwo(true);
-      setIsClicked(true);
-    }
+    // if (id === 2) {
+    //   setIsSelectedTwo(true);
+    //   setIsClicked(true);
+    // }
 
-    console.log("id: ", id);
-    console.log("isSelected: ", isSelected);
+    // console.log("id: ", id);
+    // console.log("isSelected: ", isSelected);
+    // console.log(`The css card id is: ${cards[0].cardItems[1].id}`);
   };
 
   const toggleCard = () => {

@@ -30,7 +30,7 @@ const SkillsGraphOne = ({
           {!isActiveOne && (
             <div className={`${skillsContainerLeft}`}>
               <SkillsCard
-                id={cards[0].cardItems[0].id}
+                id={1}
                 percentage={cards[0].cardItems[0].percentage}
                 number={cards[0].cardItems[0].number}
                 skill={cards[0].cardItems[0].skill}
@@ -38,7 +38,7 @@ const SkillsGraphOne = ({
                 onClick={handleCardClick}
               />
               <SkillsCard
-                id={cards[0].cardItems[1].id}
+                id={2}
                 percentage={cards[0].cardItems[1].percentage}
                 number={cards[0].cardItems[1].number}
                 skill={cards[0].cardItems[1].skill}
@@ -91,6 +91,13 @@ const SkillsGraphOne = ({
             <li>
               <h2 className={style["skills-graph-title-left"]}>css</h2>
             </li>
+            <ul>
+              <li>
+                <button className={style["arrow-one"]} onClick={toggleCard}>
+                  <CgCloseO className={style["arrow-icon-one"]} />
+                </button>
+              </li>
+            </ul>
           </ul>
         </div>
       )}
