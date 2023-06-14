@@ -1,5 +1,6 @@
 import SkillsCard from "../SkillsCard/SkillsCard";
 import SkillsHeaderOne from "../SkillsHeader/SkillsHeaderOne";
+import { CgCloseO } from "react-icons/cg";
 
 import cards from "../../../data/cards";
 import style from "../ContentAbout/styles/ContentAbout.module.css";
@@ -12,6 +13,7 @@ const SkillsGraphOne = ({
   handleCardClick,
   isActiveOne,
   toggleArrowOne,
+  toggleCard,
   skillsContainerLeft,
   skillsContainerRight,
 }) => {
@@ -67,11 +69,30 @@ const SkillsGraphOne = ({
           )}
         </div>
       )}
-      {isClicked && isSelected && isSelectedOne && (
-        <div className={style["skills-graph"]}>HTML stuff goes here</div>
+      {isClicked && isSelectedOne && (
+        <div className={style["skills-graph"]}>
+          <ul>
+            <li>
+              <h2 className={style["skills-graph-title-left"]}>html</h2>
+            </li>
+            <ul>
+              <li>
+                <button className={style["arrow-one"]} onClick={toggleCard}>
+                  <CgCloseO className={style["arrow-icon-one"]} />
+                </button>
+              </li>
+            </ul>
+          </ul>
+        </div>
       )}
-      {isClicked && isSelected && isSelectedTwo && (
-        <div className={style["skills-graph"]}>CSS stuff goes here</div>
+      {isClicked && isSelectedTwo && (
+        <div className={style["skills-graph"]}>
+          <ul>
+            <li>
+              <h2 className={style["skills-graph-title-left"]}>css</h2>
+            </li>
+          </ul>
+        </div>
       )}
     </>
   );

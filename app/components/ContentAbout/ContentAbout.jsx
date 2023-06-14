@@ -33,6 +33,11 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
     console.log("isSelected: ", isSelected);
   };
 
+  const toggleCard = () => {
+    setIsClicked(!isClicked);
+    console.log(`Button clicked! isClicked: ${isClicked}`);
+  };
+
   const toggleConcise = () => {
     setIsConcise(!isConcise);
     console.log(`Button clicked! isConcise: ${isConcise}`);
@@ -112,6 +117,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
             isSelectedOne={isSelectedOne}
             isSelectedTwo={isSelectedTwo}
             handleCardClick={handleCardClick}
+            toggleCard={toggleCard}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
