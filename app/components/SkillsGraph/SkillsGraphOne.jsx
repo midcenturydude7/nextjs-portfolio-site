@@ -9,8 +9,12 @@ const SkillsGraphOne = ({
   isClicked,
   isCard1Selected,
   isCard2Selected,
+  isCard3Selected,
+  isCard4Selected,
   handleCard1Click,
   handleCard2Click,
+  handleCard3Click,
+  handleCard4Click,
   isActiveOne,
   toggleArrowOne,
   toggleCard,
@@ -57,6 +61,7 @@ const SkillsGraphOne = ({
                 number={cards[0].cardItems[2].number}
                 skill={cards[0].cardItems[2].skill}
                 stroke={cards[0].cardItems[2].stroke}
+                onClick={handleCard3Click}
               />
               <SkillsCard
                 id={cards[0].cardItems[3].id}
@@ -64,6 +69,7 @@ const SkillsGraphOne = ({
                 number={cards[0].cardItems[3].number}
                 skill={cards[0].cardItems[3].skill}
                 stroke={cards[0].cardItems[3].stroke}
+                onClick={handleCard4Click}
               />
             </div>
           )}
@@ -73,7 +79,7 @@ const SkillsGraphOne = ({
         <div className={style["skills-graph"]}>
           <ul>
             <li>
-              <h2 className={style["skills-graph-title-left"]}>html</h2>
+              <h2 className={style["skills-graph-title-left"]}>HTML</h2>
             </li>
             <ul>
               <li>
@@ -89,7 +95,39 @@ const SkillsGraphOne = ({
         <div className={style["skills-graph"]}>
           <ul>
             <li>
-              <h2 className={style["skills-graph-title-left"]}>css</h2>
+              <h2 className={style["skills-graph-title-left"]}>CSS</h2>
+            </li>
+            <ul>
+              <li>
+                <button className={style["arrow-one"]} onClick={toggleCard}>
+                  <CgCloseO className={style["arrow-icon-one"]} />
+                </button>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      )}
+      {isCard3Selected && isClicked && (
+        <div className={style["skills-graph"]}>
+          <ul>
+            <li>
+              <h2 className={style["skills-graph-title-left"]}>JavaScript</h2>
+            </li>
+            <ul>
+              <li>
+                <button className={style["arrow-one"]} onClick={toggleCard}>
+                  <CgCloseO className={style["arrow-icon-one"]} />
+                </button>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      )}
+      {isCard4Selected && isClicked && (
+        <div className={style["skills-graph"]}>
+          <ul>
+            <li>
+              <h2 className={style["skills-graph-title-left"]}>TypeScript</h2>
             </li>
             <ul>
               <li>

@@ -14,15 +14,41 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
   const [isClicked, setIsClicked] = React.useState(false);
   const [isCard1Selected, setIsCard1Selected] = React.useState(false);
   const [isCard2Selected, setIsCard2Selected] = React.useState(false);
+  const [isCard3Selected, setIsCard3Selected] = React.useState(false);
+  const [isCard4Selected, setIsCard4Selected] = React.useState(false);
 
   const handleCard1Click = () => {
     setIsCard1Selected(true);
+    setIsCard2Selected(false);
+    setIsCard3Selected(false);
+    setIsCard4Selected(false);
     setIsClicked(true);
     console.log(`HTML card clicked! isCard1Selected: ${!isCard1Selected}`);
   };
 
   const handleCard2Click = () => {
     setIsCard2Selected(true);
+    setIsCard1Selected(false);
+    setIsCard3Selected(false);
+    setIsCard4Selected(false);
+    setIsClicked(true);
+    console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
+  };
+
+  const handleCard3Click = () => {
+    setIsCard3Selected(true);
+    setIsCard4Selected(false);
+    setIsCard1Selected(false);
+    setIsCard2Selected(false);
+    setIsClicked(true);
+    console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
+  };
+
+  const handleCard4Click = () => {
+    setIsCard4Selected(true);
+    setIsCard3Selected(false);
+    setIsCard2Selected(false);
+    setIsCard1Selected(false);
     setIsClicked(true);
     console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
   };
@@ -109,8 +135,12 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
             isClicked={isClicked}
             handleCard1Click={handleCard1Click}
             handleCard2Click={handleCard2Click}
+            handleCard3Click={handleCard3Click}
+            handleCard4Click={handleCard4Click}
             isCard1Selected={isCard1Selected}
             isCard2Selected={isCard2Selected}
+            isCard3Selected={isCard3Selected}
+            isCard4Selected={isCard4Selected}
             toggleCard={toggleCard}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
