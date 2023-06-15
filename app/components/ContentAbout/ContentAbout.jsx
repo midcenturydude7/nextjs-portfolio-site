@@ -4,7 +4,6 @@ import SkillsGraphOne from "../SkillsGraph/SkillsGraphOne";
 import SkillsGraphTwo from "../SkillsGraph/SkillsGraphTwo";
 import SkillsGraphThree from "../SkillsGraph/SkillsGraphThree";
 
-import cards from "../../../data/cards";
 import style from "./styles/ContentAbout.module.css";
 
 const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
@@ -13,26 +12,19 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
   const [isActiveThree, setIsActiveThree] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState(false);
-  const [isSelected, setIsSelected] = React.useState(1);
-  const [isSelectedOne, setIsSelectedOne] = React.useState(false);
-  const [isSelectedTwo, setIsSelectedTwo] = React.useState(null);
+  const [isCard1Selected, setIsCard1Selected] = React.useState(false);
+  const [isCard2Selected, setIsCard2Selected] = React.useState(false);
 
-  const handleCardClick = (id) => {
-    setIsSelected(id);
-    console.log(`isSelected: ${isSelected}`);
-    // if (id === 1) {
-    //   setIsSelectedOne(true);
-    //   setIsClicked(true);
-    // }
+  const handleCard1Click = () => {
+    setIsCard1Selected(true);
+    setIsClicked(true);
+    console.log(`HTML card clicked! isCard1Selected: ${!isCard1Selected}`);
+  };
 
-    // if (id === 2) {
-    //   setIsSelectedTwo(true);
-    //   setIsClicked(true);
-    // }
-
-    // console.log("id: ", id);
-    // console.log("isSelected: ", isSelected);
-    // console.log(`The css card id is: ${cards[0].cardItems[1].id}`);
+  const handleCard2Click = () => {
+    setIsCard2Selected(true);
+    setIsClicked(true);
+    console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
   };
 
   const toggleCard = () => {
@@ -115,10 +107,10 @@ const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
             isActiveOne={isActiveOne}
             toggleArrowOne={toggleArrowOne}
             isClicked={isClicked}
-            isSelected={isSelected}
-            isSelectedOne={isSelectedOne}
-            isSelectedTwo={isSelectedTwo}
-            handleCardClick={handleCardClick}
+            handleCard1Click={handleCard1Click}
+            handleCard2Click={handleCard2Click}
+            isCard1Selected={isCard1Selected}
+            isCard2Selected={isCard2Selected}
             toggleCard={toggleCard}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}

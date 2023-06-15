@@ -7,10 +7,10 @@ import style from "../ContentAbout/styles/ContentAbout.module.css";
 
 const SkillsGraphOne = ({
   isClicked,
-  isSelected,
-  isSelectedOne,
-  isSelectedTwo,
-  handleCardClick,
+  isCard1Selected,
+  isCard2Selected,
+  handleCard1Click,
+  handleCard2Click,
   isActiveOne,
   toggleArrowOne,
   toggleCard,
@@ -30,20 +30,20 @@ const SkillsGraphOne = ({
           {!isActiveOne && (
             <div className={`${skillsContainerLeft}`}>
               <SkillsCard
-                // id={1}
-                // percentage={cards[0].cardItems[0].percentage}
-                // number={cards[0].cardItems[0].number}
-                // skill={cards[0].cardItems[0].skill}
-                // stroke={cards[0].cardItems[0].stroke}
-                onClick={handleCardClick}
+                id={1}
+                percentage={cards[0].cardItems[0].percentage}
+                number={cards[0].cardItems[0].number}
+                skill={cards[0].cardItems[0].skill}
+                stroke={cards[0].cardItems[0].stroke}
+                onClick={handleCard1Click}
               />
               <SkillsCard
-                // id={2}
-                // percentage={cards[0].cardItems[1].percentage}
-                // number={cards[0].cardItems[1].number}
-                // skill={cards[0].cardItems[1].skill}
-                // stroke={cards[0].cardItems[1].stroke}
-                onClick={handleCardClick}
+                id={2}
+                percentage={cards[0].cardItems[1].percentage}
+                number={cards[0].cardItems[1].number}
+                skill={cards[0].cardItems[1].skill}
+                stroke={cards[0].cardItems[1].stroke}
+                onClick={handleCard2Click}
               />
             </div>
           )}
@@ -69,7 +69,7 @@ const SkillsGraphOne = ({
           )}
         </div>
       )}
-      {isClicked && isSelectedOne && (
+      {isCard1Selected && isClicked && (
         <div className={style["skills-graph"]}>
           <ul>
             <li>
@@ -85,7 +85,7 @@ const SkillsGraphOne = ({
           </ul>
         </div>
       )}
-      {isClicked && isSelectedTwo && (
+      {isCard2Selected && isClicked && (
         <div className={style["skills-graph"]}>
           <ul>
             <li>
