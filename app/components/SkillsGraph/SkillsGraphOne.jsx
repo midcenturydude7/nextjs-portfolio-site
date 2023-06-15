@@ -30,19 +30,19 @@ const SkillsGraphOne = ({
           {!isActiveOne && (
             <div className={`${skillsContainerLeft}`}>
               <SkillsCard
-                id={1}
-                percentage={cards[0].cardItems[0].percentage}
-                number={cards[0].cardItems[0].number}
-                skill={cards[0].cardItems[0].skill}
-                stroke={cards[0].cardItems[0].stroke}
+                // id={1}
+                // percentage={cards[0].cardItems[0].percentage}
+                // number={cards[0].cardItems[0].number}
+                // skill={cards[0].cardItems[0].skill}
+                // stroke={cards[0].cardItems[0].stroke}
                 onClick={handleCardClick}
               />
               <SkillsCard
-                id={2}
-                percentage={cards[0].cardItems[1].percentage}
-                number={cards[0].cardItems[1].number}
-                skill={cards[0].cardItems[1].skill}
-                stroke={cards[0].cardItems[1].stroke}
+                // id={2}
+                // percentage={cards[0].cardItems[1].percentage}
+                // number={cards[0].cardItems[1].number}
+                // skill={cards[0].cardItems[1].skill}
+                // stroke={cards[0].cardItems[1].stroke}
                 onClick={handleCardClick}
               />
             </div>
