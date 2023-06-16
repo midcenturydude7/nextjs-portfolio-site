@@ -1,4 +1,5 @@
 import { CgCloseO } from "react-icons/cg";
+import { FaLaptopCode } from "react-icons/fa";
 
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
@@ -17,6 +18,13 @@ const SkillsCardHtml = ({ toggleCard }) => {
           </li>
         </ul>
       </ul>
+      <div className={style["skills-graph-content-container"]}>
+        <div className="coursework-header">
+          <FaLaptopCode className={style["content-icon-html"]} />
+          <h3>Coursework</h3>
+        </div>
+      </div>
+      <div>Projects</div>
     </div>
   );
 };

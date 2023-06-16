@@ -262,6 +262,20 @@
 .content-container .graph-container .skills-graph .skills-graph-container-right {
   animation: fade-in-left 0.3s ease-in 0.1s both;
 }
+.content-container .graph-container .skills-graph .skills-graph-content-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .content-icon-html {
+  font-size: 2.5rem;
+  color: inherit;
+  background: #6913f3;
+  padding: 0.15em;
+  border-radius: 50%;
+}
 .content-container .graph-container .skills-graph:nth-of-type(2) {
   float: left;
   border-color: var(--border-violet);
