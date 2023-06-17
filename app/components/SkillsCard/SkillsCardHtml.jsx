@@ -19,11 +19,12 @@ const SkillsCardHtml = ({ toggleCard }) => {
         </ul>
       </ul>
       <div className={style["skills-graph-content-container"]}>
-        <div className="coursework-header">
+        <div className={style["coursework-header"]}>
           <FaLaptopCode className={style["content-icon-html"]} />
           <h3>Coursework</h3>
         </div>
       </div>
+      <div>Scrimba Frontend Developer Certificate Program</div>
       <div>Projects</div>
     </div>
   );
