@@ -1,5 +1,5 @@
 import { CgCloseO } from "react-icons/cg";
-import { FaLaptopCode } from "react-icons/fa";
+import { FaLaptopCode, FaCodeBranch } from "react-icons/fa";
 
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
@@ -23,9 +23,23 @@ const SkillsCardHtml = ({ toggleCard }) => {
           <FaLaptopCode className={style["content-icon-html"]} />
           <h3>Coursework</h3>
         </div>
+        <div className={style["coursework-list"]}>
+          <ul className={style["coursework-list-items"]}>
+            <li>Scrimba Frontend Developer Certificate Program</li>
+            <li>Dave Gray&#39;s HTML Tutorial</li>
+          </ul>
+        </div>
+        <div className={style["coursework-header"]}>
+          <FaCodeBranch className={style["content-icon-html"]} />
+          <h3>Projects</h3>
+        </div>
+        <div className={style["coursework-list"]}>
+          <ul className={style["coursework-list-items"]}>
+            <li>Scrimba Frontend Developer Certificate Program</li>
+            <li>Dave Gray&#39;s HTML Tutorial</li>
+          </ul>
+        </div>
       </div>
-      <div>Scrimba Frontend Developer Certificate Program</div>
-      <div>Projects</div>
     </div>
   );
 };
