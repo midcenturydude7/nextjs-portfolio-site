@@ -4,7 +4,6 @@ import SkillsCardHtml from "../SkillsCard/SkillsCardHtml";
 import SkillsCardCss from "../SkillsCard/SkillsCardCss";
 import SkillsCardJs from "../SkillsCard/SkillsCardJs";
 import SkillsCardTs from "../SkillsCard/SkillsCardTs";
-import { CgCloseO } from "react-icons/cg";
 
 import cards from "../../../data/cards";
 import style from "../ContentAbout/styles/ContentAbout.module.css";
