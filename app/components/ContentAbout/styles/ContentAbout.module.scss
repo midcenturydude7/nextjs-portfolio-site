@@ -330,11 +330,10 @@
         padding: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: flex-start;
         flex-wrap: wrap;
         animation: fade-in-left 0.3s ease-in 0.1s both;
-        border: 1px solid white;
 
         .coursework-header {
           margin: 0;
@@ -344,13 +343,15 @@
           align-items: center;
           flex-wrap: wrap;
           gap: 1em;
+          color: #6913f3;
 
           .content-icon-html {
             font-size: 2.2rem;
-            color: inherit;
+            color: #bfb5f7;
             background: #6913f3;
             padding: 0.15em;
             border-radius: 50%;
+            border: 1.5px solid #bfb5f7;
           }
         }
 
@@ -367,6 +368,38 @@
             flex-direction: column;
             gap: 0.5em;
             animation: none;
+
+            .main-list {
+              .course-title {
+                .course-link {
+                  text-decoration: none;
+                  color: #bfb5f7;
+                  transition: all 0.5s ease;
+
+                  &:hover {
+                    color: #6913f3;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+
+            .main-list:last-child {
+              margin-top: 0.25em;
+            }
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              line-height: 1.75;
+              animation: none;
+
+              .sub-list {
+                font-style: italic;
+              }
+            }
           }
         }
       }
