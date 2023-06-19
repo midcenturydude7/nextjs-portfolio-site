@@ -263,7 +263,6 @@
   animation: fade-in-left 0.3s ease-in 0.1s both;
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container {
-  width: 450px;
   margin: 0.5em 0 0 0;
   padding: 0;
   display: flex;
