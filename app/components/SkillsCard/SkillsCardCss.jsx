@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SkillsCardItem from "./SkillsCardItem";
 import { CgCloseO } from "react-icons/cg";
 import { FaLaptopCode, FaCodeBranch } from "react-icons/fa";
 
@@ -26,30 +27,20 @@ const SkillsCardCss = ({ toggleCard }) => {
         </div>
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
-            <li className={style["main-list"]}>
-              <h4 className={style["course-title"]}>
-                <Link
-                  href="https://scrimba.com/learn/frontend"
-                  className={style["course-link"]}
-                  target="_blank">
-                  Scrimba Frontend Developer Certificate Program
-                </Link>
-              </h4>
-            </li>
+            <SkillsCardItem
+              courseUrl="https://scrimba.com/learn/frontend"
+              courseText="Scrimba Frontend Developer Certificate Program"
+            />
             <ul>
-              <li className={style["sub-list"]}>- Essential CSS concepts</li>
-              <li className={style["sub-list"]}>- Responsive design</li>
+              <li className={style["sub-list"]}>- Web dev basics</li>
+              <li className={style["sub-list"]}>
+                - Making websites interactive
+              </li>
             </ul>
-            <li className={style["main-list"]}>
-              <h4 className={style["course-title"]}>
-                <Link
-                  href="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit"
-                  className={style["course-link"]}
-                  target="_blank">
-                  HTML Full Course for Beginners | Dave Gray
-                </Link>
-              </h4>
-            </li>
+            <SkillsCardItem
+              courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
+              courseText="HTML Full Course for Beginners | Dave Gray"
+            />
           </ul>
         </div>
         <div className={style["coursework-header"]}>
@@ -58,50 +49,34 @@ const SkillsCardCss = ({ toggleCard }) => {
         </div>
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
-            <li className={style["main-list"]}>
-              <h4 className={style["course-title"]}>
-                <Link
-                  href="https://scrimba.com/learn/frontend"
-                  className={style["course-link"]}
-                  target="_blank">
-                  Scrimba Frontend Developer Certificate Program
-                </Link>
-              </h4>
-            </li>
+            <SkillsCardItem
+              courseUrl="tps://scrimba.com/learn/frontend"
+              courseText="Scrimba Frontend Developer Certificate Program"
+            />
             <ul>
               <li className={style["sub-list"]}>- Essential CSS concepts</li>
               <li className={style["sub-list"]}>- Responsive design</li>
             </ul>
-            <li className={style["main-list"]}>
-              <h4 className={style["course-title"]}>
-                <Link
-                  href="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit"
-                  className={style["course-link"]}
-                  target="_blank">
-                  Conquering Responsive Layouts | Kevin Powell
-                </Link>
-              </h4>
-            </li>
-            <li className={style["main-list"]}>
-              <h4 className={style["course-title"]}>
-                <Link
-                  href="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit"
-                  className={style["course-link"]}
-                  target="_blank">
-                  Flexbox Simplified | Kevin Powell
-                </Link>
-              </h4>
-            </li>
-            <li className={style["main-list"]}>
-              <h4 className={style["course-title"]}>
-                <Link
-                  href="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit"
-                  className={style["course-link"]}
-                  target="_blank">
-                  CSS Tutorials for Beginners | Dave Gray
-                </Link>
-              </h4>
-            </li>
+            <SkillsCardItem
+              courseUrl="https://frontendmasters.com/courses/getting-started-css/"
+              courseText="Getting Started with CSS | Frontend Masters, Jen Kramer"
+            />
+            <SkillsCardItem
+              courseUrl="https://courses.kevinpowell.co/conquering-responsive-layouts"
+              courseText="Conquering Responsive Layouts | Kevin Powell"
+            />
+            <SkillsCardItem
+              courseUrl="https://courses.kevinpowell.co/view/courses/flexbox-simplified"
+              courseText="Flexbox Simplified | Kevin Powell"
+            />
+            <SkillsCardItem
+              courseUrl="https://cssgrid.io/"
+              courseText="CSS Grid | Wes Bos"
+            />
+            <SkillsCardItem
+              courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6Mx9fd9elt80G1bPcySmWit"
+              courseText="CSS Tutorials for Beginners | Dave Gray"
+            />
           </ul>
         </div>
       </div>
