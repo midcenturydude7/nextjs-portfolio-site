@@ -1,6 +1,3 @@
-"use client";
-import React from "react";
-
 import style from "./styles/SkillsCard.module.css";
 
 const SkillsCard = ({ percentage, skill, stroke, number, onClick }) => {
