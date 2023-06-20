@@ -1,7 +1,6 @@
 import style from "./styles/SkillsCard.module.css";
 
 import cards from "../../../data/cards";
-
 const SkillsCardMap = () => {
   return (
     <div className={style["card-container"]}>
@@ -17,7 +16,7 @@ const SkillsCardMap = () => {
                     cy="70"
                     r="70"
                     style={{
-                      stroke: cardItem.stroke,
+                      stroke: `var(${cardItem.stroke})`,
                       strokeDashoffset: `calc(440 - (440 * ${cardItem.number}) / 100)`,
                     }}></circle>
                 </svg>

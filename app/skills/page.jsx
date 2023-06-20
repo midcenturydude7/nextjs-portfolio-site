@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "../components/Navbar/Navbar";
-import ContentRoute from "../components/ContentRoute/ContentRoute";
+import ContentSkills from "../components/ContentSkills/ContentSkills";
 import FooterRoute from "../components/FooterRoute/FooterRoute";
 import { useTheme } from "../../context/ThemeProvider";
 
@@ -12,7 +12,7 @@ const Skills = () => {
   return (
     <div className={style["wrapper-truncated"]}>
       <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} isMobile={isMobile} />
-      <ContentRoute
+      <ContentSkills
         title="Here&#39;s some skills!"
         isNavOpen={isNavOpen}
         isMobile={isMobile}

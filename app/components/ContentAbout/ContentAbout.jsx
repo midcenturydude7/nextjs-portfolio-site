@@ -6,7 +6,7 @@ import SkillsGraphThree from "../SkillsGraph/SkillsGraphThree";
 
 import style from "./styles/ContentAbout.module.css";
 
-const ContentAbout = ({ title, isNavOpen, isMobile, id }) => {
+const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   const [isConcise, setIsConcise] = React.useState(false);
   const [isActiveOne, setIsActiveOne] = React.useState(false);
   const [isActiveTwo, setIsActiveTwo] = React.useState(false);
