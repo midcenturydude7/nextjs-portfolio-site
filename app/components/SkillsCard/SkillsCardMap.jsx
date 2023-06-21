@@ -1,6 +1,7 @@
 import style from "./styles/SkillsCard.module.css";
 
 import cards from "../../../data/cards";
+
 const SkillsCardMap = () => {
   return (
     <div className={style["card-container"]}>
