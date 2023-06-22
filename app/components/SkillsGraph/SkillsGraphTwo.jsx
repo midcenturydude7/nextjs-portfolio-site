@@ -9,7 +9,6 @@ import cards from "../../../data/cards";
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
 const SkillsGraphTwo = ({
-  isClicked,
   isClicked2,
   isCard5Selected,
   isCard6Selected,

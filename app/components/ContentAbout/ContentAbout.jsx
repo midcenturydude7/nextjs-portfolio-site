@@ -248,7 +248,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           <SkillsGraphTwo
             isActiveTwo={isActiveTwo}
             toggleArrowTwo={toggleArrowTwo}
-            isClicked={isClicked}
+            isClicked2={isClicked2}
             handleCard5Click={handleCard5Click}
             handleCard6Click={handleCard6Click}
             handleCard7Click={handleCard7Click}
