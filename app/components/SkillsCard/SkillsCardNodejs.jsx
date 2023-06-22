@@ -4,12 +4,12 @@ import { FaLaptopCode, FaCodeBranch } from "react-icons/fa";
 
 import style from "../ContentAbout/styles/ContentAbout.module.css";
 
-const SkillsCardNodejs = ({ toggleCardTwo }) => {
+const SkillsCardNodejs = ({ toggleCard2 }) => {
   return (
     <div className={style["skills-graph"]}>
       <ul>
         <li>
-          <h2 className={style["skills-graph-title-right"]}>React</h2>
+          <h2 className={style["skills-graph-title-right"]}>Node.js</h2>
         </li>
         <ul>
           <li>

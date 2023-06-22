@@ -10,6 +10,7 @@ import style from "../ContentAbout/styles/ContentAbout.module.css";
 
 const SkillsGraphTwo = ({
   isClicked,
+  isClicked2,
   isCard5Selected,
   isCard6Selected,
   isCard7Selected,
@@ -26,7 +27,7 @@ const SkillsGraphTwo = ({
 }) => {
   return (
     <>
-      {!isClicked && (
+      {!isClicked2 && (
         <div className={style["skills-graph"]}>
           <SkillsHeaderTwo
             isActiveTwo={isActiveTwo}
@@ -79,22 +80,22 @@ const SkillsGraphTwo = ({
         </div>
       )}
       {/* TOOLS: REACT CONTENT */}
-      {isCard5Selected && isClicked && (
+      {isCard5Selected && isClicked2 && (
         <SkillsCardReact toggleCard2={toggleCard2} />
       )}
 
       {/* TOOLS: NEXTJS CONTENT */}
-      {isCard6Selected && isClicked && (
+      {isCard6Selected && isClicked2 && (
         <SkillsCardNextjs toggleCard2={toggleCard2} />
       )}
 
       {/* TOOLS: NODEJS CONTENT */}
-      {isCard7Selected && isClicked && (
+      {isCard7Selected && isClicked2 && (
         <SkillsCardNodejs toggleCard2={toggleCard2} />
       )}
 
       {/* TOOLS: SASS/SCSS CONTENT */}
-      {isCard8Selected && isClicked && (
+      {isCard8Selected && isClicked2 && (
         <SkillsCardScss toggleCard2={toggleCard2} />
       )}
     </>

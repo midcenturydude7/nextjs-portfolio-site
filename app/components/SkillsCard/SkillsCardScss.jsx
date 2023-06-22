@@ -9,7 +9,7 @@ const SkillsCardScss = ({ toggleCard2 }) => {
     <div className={style["skills-graph"]}>
       <ul>
         <li>
-          <h2 className={style["skills-graph-title-right"]}>React</h2>
+          <h2 className={style["skills-graph-title-right"]}>SASS/SCSS</h2>
         </li>
         <ul>
           <li>
