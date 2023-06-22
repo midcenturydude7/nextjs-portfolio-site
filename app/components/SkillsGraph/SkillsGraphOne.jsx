@@ -59,7 +59,7 @@ const SkillsGraphOne = ({
           {isActiveOne && (
             <div className={`${skillsContainerRight}`}>
               <SkillsCard
-                id={cards[0].cardItems[2].id}
+                id={3}
                 percentage={cards[0].cardItems[2].percentage}
                 number={cards[0].cardItems[2].number}
                 skill={cards[0].cardItems[2].skill}
@@ -67,7 +67,7 @@ const SkillsGraphOne = ({
                 onClick={handleCard3Click}
               />
               <SkillsCard
-                id={cards[0].cardItems[3].id}
+                id={4}
                 percentage={cards[0].cardItems[3].percentage}
                 number={cards[0].cardItems[3].number}
                 skill={cards[0].cardItems[3].skill}
@@ -82,12 +82,15 @@ const SkillsGraphOne = ({
       {isCard1Selected && isClicked && (
         <SkillsCardHtml toggleCard={toggleCard} />
       )}
+
       {/* CODE: CSS CONTENT */}
       {isCard2Selected && isClicked && (
         <SkillsCardCss toggleCard={toggleCard} />
       )}
+
       {/* CODE: JS CONTENT */}
       {isCard3Selected && isClicked && <SkillsCardJs toggleCard={toggleCard} />}
+
       {/* CODE: TS CONTENT */}
       {isCard4Selected && isClicked && <SkillsCardTs toggleCard={toggleCard} />}
     </>

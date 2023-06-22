@@ -16,12 +16,24 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   const [isCard2Selected, setIsCard2Selected] = React.useState(false);
   const [isCard3Selected, setIsCard3Selected] = React.useState(false);
   const [isCard4Selected, setIsCard4Selected] = React.useState(false);
+  const [isCard5Selected, setIsCard5Selected] = React.useState(false);
+  const [isCard6Selected, setIsCard6Selected] = React.useState(false);
+  const [isCard7Selected, setIsCard7Selected] = React.useState(false);
+  const [isCard8Selected, setIsCard8Selected] = React.useState(false);
+  const [isCard9Selected, setIsCard9Selected] = React.useState(false);
+  const [isCard10Selected, setIsCard10Selected] = React.useState(false);
+  const [isCard11Selected, setIsCard11Selected] = React.useState(false);
+  const [isCard12Selected, setIsCard12Selected] = React.useState(false);
 
   const handleCard1Click = () => {
     setIsCard1Selected(true);
     setIsCard2Selected(false);
     setIsCard3Selected(false);
     setIsCard4Selected(false);
+    setIsCard5Selected(false);
+    setIsCard6Selected(false);
+    setIsCard7Selected(false);
+    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`HTML card clicked! isCard1Selected: ${!isCard1Selected}`);
   };
@@ -31,6 +43,10 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard1Selected(false);
     setIsCard3Selected(false);
     setIsCard4Selected(false);
+    setIsCard5Selected(false);
+    setIsCard6Selected(false);
+    setIsCard7Selected(false);
+    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
   };
@@ -40,6 +56,10 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard4Selected(false);
     setIsCard1Selected(false);
     setIsCard2Selected(false);
+    setIsCard5Selected(false);
+    setIsCard6Selected(false);
+    setIsCard7Selected(false);
+    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
   };
@@ -49,11 +69,64 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard3Selected(false);
     setIsCard2Selected(false);
     setIsCard1Selected(false);
+    setIsCard5Selected(false);
+    setIsCard6Selected(false);
+    setIsCard7Selected(false);
+    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
   };
 
+  const handleCard5Click = () => {
+    setIsCard1Selected(false);
+    setIsCard2Selected(false);
+    setIsCard3Selected(false);
+    setIsCard4Selected(false);
+    setIsCard5Selected(true);
+    setIsCard6Selected(false);
+    setIsCard7Selected(false);
+    setIsCard8Selected(false);
+  };
+
+  const handleCard6Click = () => {
+    setIsCard1Selected(false);
+    setIsCard2Selected(false);
+    setIsCard3Selected(false);
+    setIsCard4Selected(false);
+    setIsCard6Selected(true);
+    setIsCard5Selected(false);
+    setIsCard7Selected(false);
+    setIsCard8Selected(false);
+  };
+
+  const handleCard7Click = () => {
+    setIsCard1Selected(false);
+    setIsCard2Selected(false);
+    setIsCard3Selected(false);
+    setIsCard4Selected(false);
+    setIsCard7Selected(true);
+    setIsCard5Selected(false);
+    setIsCard6Selected(false);
+    setIsCard8Selected(false);
+  };
+
+  const handleCard8Click = () => {
+    setIsCard1Selected(false);
+    setIsCard2Selected(false);
+    setIsCard3Selected(false);
+    setIsCard4Selected(false);
+    setIsCard8Selected(true);
+    setIsCard5Selected(false);
+    setIsCard6Selected(false);
+    setIsCard7Selected(false);
+  };
+
   const toggleCard = () => {
+    setIsClicked(!isClicked);
+    console.log(`Button clicked! isClicked: ${isClicked}`);
+  };
+
+  const toggleCard2 = () => {
     setIsClicked(!isClicked);
     console.log(`Button clicked! isClicked: ${isClicked}`);
   };
@@ -170,6 +243,16 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           <SkillsGraphTwo
             isActiveTwo={isActiveTwo}
             toggleArrowTwo={toggleArrowTwo}
+            isClicked={isClicked}
+            handleCard5Click={handleCard5Click}
+            handleCard6Click={handleCard6Click}
+            handleCard7Click={handleCard7Click}
+            handleCard8Click={handleCard8Click}
+            isCard5Selected={isCard5Selected}
+            isCard6Selected={isCard6Selected}
+            isCard7Selected={isCard7Selected}
+            isCard8Selected={isCard8Selected}
+            toggleCard2={toggleCard2}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
@@ -198,6 +281,7 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
           <SkillsGraphThree
             isActiveThree={isActiveThree}
             toggleArrowThree={toggleArrowThree}
+            isClicked={isClicked}
             skillsContainerLeft={style["skills-graph-container-left"]}
             skillsContainerRight={style["skills-graph-container-right"]}
           />
