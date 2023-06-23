@@ -168,7 +168,8 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.content-container .graph-container .skills-graph ul {
+.content-container .graph-container .skills-graph ul,
+.content-container .graph-container .skills-graph .row-reverse {
   width: 100%;
   list-style: none;
   margin: 0;
@@ -178,21 +179,26 @@
   align-items: flex-start;
 }
 .content-container .graph-container .skills-graph ul li .skills-graph-title-left,
-.content-container .graph-container .skills-graph ul li .skills-graph-title-right {
+.content-container .graph-container .skills-graph ul li .skills-graph-title-right,
+.content-container .graph-container .skills-graph .row-reverse li .skills-graph-title-left,
+.content-container .graph-container .skills-graph .row-reverse li .skills-graph-title-right {
   margin-bottom: 1em;
   padding: 0.1em 0.5em;
   border-radius: 4px;
   color: #9c9c9c;
 }
-.content-container .graph-container .skills-graph ul li .skills-graph-title-left {
+.content-container .graph-container .skills-graph ul li .skills-graph-title-left,
+.content-container .graph-container .skills-graph .row-reverse li .skills-graph-title-left {
   background: #6913f3;
   border-left: 8px solid #9c9c9c;
 }
-.content-container .graph-container .skills-graph ul li .skills-graph-title-right {
+.content-container .graph-container .skills-graph ul li .skills-graph-title-right,
+.content-container .graph-container .skills-graph .row-reverse li .skills-graph-title-right {
   background: #092df3;
   border-right: 8px solid #9c9c9c;
 }
-.content-container .graph-container .skills-graph ul ul {
+.content-container .graph-container .skills-graph ul ul,
+.content-container .graph-container .skills-graph .row-reverse ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -200,16 +206,20 @@
   margin: 0;
   padding: 0;
 }
-.content-container .graph-container .skills-graph ul ul li button.arrow-one:hover {
+.content-container .graph-container .skills-graph ul ul li button.arrow-one:hover,
+.content-container .graph-container .skills-graph .row-reverse ul li button.arrow-one:hover {
   background: #6913f3;
 }
-.content-container .graph-container .skills-graph ul ul li button.arrow-two:hover {
+.content-container .graph-container .skills-graph ul ul li button.arrow-two:hover,
+.content-container .graph-container .skills-graph .row-reverse ul li button.arrow-two:hover {
   background: #092df3;
 }
-.content-container .graph-container .skills-graph ul ul li button.arrow-three:hover {
+.content-container .graph-container .skills-graph ul ul li button.arrow-three:hover,
+.content-container .graph-container .skills-graph .row-reverse ul li button.arrow-three:hover {
   background: #7a31aa;
 }
-.content-container .graph-container .skills-graph ul ul li button {
+.content-container .graph-container .skills-graph ul ul li button,
+.content-container .graph-container .skills-graph .row-reverse ul li button {
   display: flex;
   margin: 0;
   padding: 0;
@@ -221,23 +231,39 @@
 }
 .content-container .graph-container .skills-graph ul ul li button:hover .arrow-icon-one,
 .content-container .graph-container .skills-graph ul ul li button:hover .arrow-icon-two,
-.content-container .graph-container .skills-graph ul ul li button:hover .arrow-icon-three {
+.content-container .graph-container .skills-graph ul ul li button:hover .arrow-icon-three,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover .arrow-icon-one,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover .arrow-icon-two,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover .arrow-icon-three {
   color: #9c9c9c;
 }
 .content-container .graph-container .skills-graph ul ul li button .arrow-icon-one,
 .content-container .graph-container .skills-graph ul ul li button .arrow-icon-two,
-.content-container .graph-container .skills-graph ul ul li button .arrow-icon-three {
+.content-container .graph-container .skills-graph ul ul li button .arrow-icon-three,
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-one,
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-two,
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-three {
   font-size: 2.25rem;
   transition: all 0.5s ease;
 }
-.content-container .graph-container .skills-graph ul ul li button .arrow-icon-one {
+.content-container .graph-container .skills-graph ul ul li button .arrow-icon-one,
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-one {
   color: #6913f3;
 }
-.content-container .graph-container .skills-graph ul ul li button .arrow-icon-two {
+.content-container .graph-container .skills-graph ul ul li button .arrow-icon-two,
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-two {
   color: #092df3;
 }
-.content-container .graph-container .skills-graph ul ul li button .arrow-icon-three {
+.content-container .graph-container .skills-graph ul ul li button .arrow-icon-three,
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-three {
   color: #7a31aa;
+}
+.content-container .graph-container .skills-graph .row-reverse {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.content-container .graph-container .skills-graph .row-reverse ul {
+  justify-content: flex-start;
 }
 .content-container .graph-container .skills-graph ul.skills-list-two {
   flex-direction: row-reverse;
@@ -272,7 +298,9 @@
   flex-wrap: wrap;
   animation: fade-in-left 0.3s ease-in 0.1s both;
 }
-.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header {
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three {
   margin: 0;
   padding: 0;
   display: flex;
@@ -280,15 +308,45 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1em;
-  color: #6913f3;
 }
-.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header .content-icon-html {
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one .content-icon-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one .content-icon-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one .content-icon-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two .content-icon-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two .content-icon-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two .content-icon-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three .content-icon-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three .content-icon-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three .content-icon-three {
   font-size: 2.2rem;
-  color: #bfb5f7;
-  background: #6913f3;
   padding: 0.15em;
   border-radius: 50%;
   border: 1.5px solid #bfb5f7;
+  color: #bfb5f7;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one .content-icon-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two .content-icon-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three .content-icon-one {
+  background: #6913f3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one .content-icon-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two .content-icon-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three .content-icon-two {
+  background: #092df3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one .content-icon-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two .content-icon-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three .content-icon-three {
+  background: #7a31aa;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-one {
+  color: #6913f3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-two {
+  color: #092df3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-header-three {
+  color: #7a31aa;
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list {
   display: flex;

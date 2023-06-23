@@ -7,7 +7,7 @@ import style from "../ContentAbout/styles/ContentAbout.module.css";
 const SkillsCardNodejs = ({ toggleCard2 }) => {
   return (
     <div className={style["skills-graph"]}>
-      <ul>
+      <ul className={style["row-reverse"]}>
         <li>
           <h2 className={style["skills-graph-title-right"]}>Node.js</h2>
         </li>
@@ -20,8 +20,8 @@ const SkillsCardNodejs = ({ toggleCard2 }) => {
         </ul>
       </ul>
       <div className={style["skills-graph-content-container"]}>
-        <div className={style["coursework-header"]}>
-          <FaCodeBranch className={style["content-icon-html"]} />
+        <div className={style["coursework-header-two"]}>
+          <FaCodeBranch className={style["content-icon-two"]} />
           <h3>Projects</h3>
         </div>
         <div className={style["coursework-list"]}>
@@ -42,8 +42,8 @@ const SkillsCardNodejs = ({ toggleCard2 }) => {
             />
           </ul>
         </div>
-        <div className={style["coursework-header"]}>
-          <FaLaptopCode className={style["content-icon-html"]} />
+        <div className={style["coursework-header-two"]}>
+          <FaLaptopCode className={style["content-icon-two"]} />
           <h3>Coursework</h3>
         </div>
         <div className={style["coursework-list"]}>

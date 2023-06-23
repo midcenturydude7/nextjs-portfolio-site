@@ -200,7 +200,8 @@
       justify-content: flex-start;
       align-items: flex-start;
 
-      ul {
+      ul,
+      .row-reverse {
         width: 100%;
         list-style: none;
         margin: 0;
@@ -297,6 +298,15 @@
         }
       }
 
+      .row-reverse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        ul {
+          justify-content: flex-start;
+        }
+      }
+
       ul.skills-list-two {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -335,7 +345,9 @@
         flex-wrap: wrap;
         animation: fade-in-left 0.3s ease-in 0.1s both;
 
-        .coursework-header {
+        .coursework-header-one,
+        .coursework-header-two,
+        .coursework-header-three {
           margin: 0;
           padding: 0;
           display: flex;
@@ -343,16 +355,40 @@
           align-items: center;
           flex-wrap: wrap;
           gap: 1em;
-          color: #6913f3;
 
-          .content-icon-html {
+          .content-icon-one,
+          .content-icon-two,
+          .content-icon-three {
             font-size: 2.2rem;
-            color: #bfb5f7;
-            background: #6913f3;
             padding: 0.15em;
             border-radius: 50%;
             border: 1.5px solid #bfb5f7;
+            color: #bfb5f7;
           }
+
+          .content-icon-one {
+            background: #6913f3;
+          }
+
+          .content-icon-two {
+            background: #092df3;
+          }
+
+          .content-icon-three {
+            background: #7a31aa;
+          }
+        }
+
+        .coursework-header-one {
+          color: #6913f3;
+        }
+
+        .coursework-header-two {
+          color: #092df3;
+        }
+
+        .coursework-header-three {
+          color: #7a31aa;
         }
 
         .coursework-list {

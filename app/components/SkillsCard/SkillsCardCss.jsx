@@ -21,8 +21,8 @@ const SkillsCardCss = ({ toggleCard }) => {
         </ul>
       </ul>
       <div className={style["skills-graph-content-container"]}>
-        <div className={style["coursework-header"]}>
-          <FaCodeBranch className={style["content-icon-html"]} />
+        <div className={style["coursework-header-one"]}>
+          <FaCodeBranch className={style["content-icon-one"]} />
           <h3>Projects</h3>
         </div>
         <div className={style["coursework-list"]}>
@@ -43,8 +43,8 @@ const SkillsCardCss = ({ toggleCard }) => {
             />
           </ul>
         </div>
-        <div className={style["coursework-header"]}>
-          <FaLaptopCode className={style["content-icon-html"]} />
+        <div className={style["coursework-header-one"]}>
+          <FaLaptopCode className={style["content-icon-one"]} />
           <h3>Coursework</h3>
         </div>
         <div className={style["coursework-list"]}>

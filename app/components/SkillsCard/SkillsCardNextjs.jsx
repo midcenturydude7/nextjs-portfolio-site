@@ -7,7 +7,7 @@ import style from "../ContentAbout/styles/ContentAbout.module.css";
 const SkillsCardNextjs = ({ toggleCard2 }) => {
   return (
     <div className={style["skills-graph"]}>
-      <ul>
+      <ul className={style["row-reverse"]}>
         <li>
           <h2 className={style["skills-graph-title-right"]}>Next.js</h2>
         </li>
