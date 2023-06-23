@@ -31,10 +31,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard2Selected(false);
     setIsCard3Selected(false);
     setIsCard4Selected(false);
-    setIsCard5Selected(false);
-    setIsCard6Selected(false);
-    setIsCard7Selected(false);
-    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`HTML card clicked! isCard1Selected: ${!isCard1Selected}`);
   };
@@ -44,10 +40,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard1Selected(false);
     setIsCard3Selected(false);
     setIsCard4Selected(false);
-    setIsCard5Selected(false);
-    setIsCard6Selected(false);
-    setIsCard7Selected(false);
-    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`CSS card clicked! isCard2Selected: ${!isCard2Selected}`);
   };
@@ -57,10 +49,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard4Selected(false);
     setIsCard1Selected(false);
     setIsCard2Selected(false);
-    setIsCard5Selected(false);
-    setIsCard6Selected(false);
-    setIsCard7Selected(false);
-    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`JS card clicked! isCard3Selected: ${!isCard3Selected}`);
   };
@@ -70,19 +58,11 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
     setIsCard3Selected(false);
     setIsCard2Selected(false);
     setIsCard1Selected(false);
-    setIsCard5Selected(false);
-    setIsCard6Selected(false);
-    setIsCard7Selected(false);
-    setIsCard8Selected(false);
     setIsClicked(true);
     console.log(`TS card clicked! isCard4Selected: ${!isCard4Selected}`);
   };
 
   const handleCard5Click = () => {
-    setIsCard1Selected(false);
-    setIsCard2Selected(false);
-    setIsCard3Selected(false);
-    setIsCard4Selected(false);
     setIsCard5Selected(true);
     setIsCard6Selected(false);
     setIsCard7Selected(false);
@@ -91,10 +71,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   };
 
   const handleCard6Click = () => {
-    setIsCard1Selected(false);
-    setIsCard2Selected(false);
-    setIsCard3Selected(false);
-    setIsCard4Selected(false);
     setIsCard6Selected(true);
     setIsCard5Selected(false);
     setIsCard7Selected(false);
@@ -103,10 +79,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   };
 
   const handleCard7Click = () => {
-    setIsCard1Selected(false);
-    setIsCard2Selected(false);
-    setIsCard3Selected(false);
-    setIsCard4Selected(false);
     setIsCard7Selected(true);
     setIsCard5Selected(false);
     setIsCard6Selected(false);
@@ -115,10 +87,6 @@ const ContentAbout = ({ title, isNavOpen, isMobile }) => {
   };
 
   const handleCard8Click = () => {
-    setIsCard1Selected(false);
-    setIsCard2Selected(false);
-    setIsCard3Selected(false);
-    setIsCard4Selected(false);
     setIsCard8Selected(true);
     setIsCard5Selected(false);
     setIsCard6Selected(false);
