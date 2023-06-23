@@ -240,9 +240,15 @@
 .content-container .graph-container .skills-graph ul ul li button .arrow-icon-one,
 .content-container .graph-container .skills-graph ul ul li button .arrow-icon-two,
 .content-container .graph-container .skills-graph ul ul li button .arrow-icon-three,
+.content-container .graph-container .skills-graph ul ul li button .x-icon-one,
+.content-container .graph-container .skills-graph ul ul li button .x-icon-two,
+.content-container .graph-container .skills-graph ul ul li button .x-icon-three,
 .content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-one,
 .content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-two,
-.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-three {
+.content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-three,
+.content-container .graph-container .skills-graph .row-reverse ul li button .x-icon-one,
+.content-container .graph-container .skills-graph .row-reverse ul li button .x-icon-two,
+.content-container .graph-container .skills-graph .row-reverse ul li button .x-icon-three {
   font-size: 2.25rem;
   transition: all 0.5s ease;
 }
@@ -257,6 +263,42 @@
 .content-container .graph-container .skills-graph ul ul li button .arrow-icon-three,
 .content-container .graph-container .skills-graph .row-reverse ul li button .arrow-icon-three {
   color: #7a31aa;
+}
+.content-container .graph-container .skills-graph ul ul li button:hover,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover {
+  background: #9c9c9c;
+}
+.content-container .graph-container .skills-graph ul ul li button:hover .x-icon-one,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover .x-icon-one {
+  color: #6913f3;
+}
+.content-container .graph-container .skills-graph ul ul li button:hover .x-icon-two,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover .x-icon-two {
+  color: #092df3;
+}
+.content-container .graph-container .skills-graph ul ul li button:hover .x-icon-three,
+.content-container .graph-container .skills-graph .row-reverse ul li button:hover .x-icon-three {
+  color: #7a31aa;
+}
+.content-container .graph-container .skills-graph ul ul li button .x-icon-one,
+.content-container .graph-container .skills-graph ul ul li button .x-icon-two,
+.content-container .graph-container .skills-graph ul ul li button .x-icon-three,
+.content-container .graph-container .skills-graph .row-reverse ul li button .x-icon-one,
+.content-container .graph-container .skills-graph .row-reverse ul li button .x-icon-two,
+.content-container .graph-container .skills-graph .row-reverse ul li button .x-icon-three {
+  color: #9c9c9c;
+}
+.content-container .graph-container .skills-graph ul ul li .x-one,
+.content-container .graph-container .skills-graph .row-reverse ul li .x-one {
+  background: #6913f3;
+}
+.content-container .graph-container .skills-graph ul ul li .x-two,
+.content-container .graph-container .skills-graph .row-reverse ul li .x-two {
+  background: #092df3;
+}
+.content-container .graph-container .skills-graph ul ul li .x-three,
+.content-container .graph-container .skills-graph .row-reverse ul li .x-three {
+  background: #7a31aa;
 }
 .content-container .graph-container .skills-graph .row-reverse {
   flex-direction: row-reverse;
@@ -362,14 +404,23 @@
   gap: 0.5em;
   animation: none;
 }
-.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link {
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-one,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-two,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-three {
   text-decoration: none;
   color: #bfb5f7;
   transition: all 0.5s ease;
 }
-.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link:hover {
-  color: #6913f3;
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-one:hover,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-two:hover,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-three:hover {
   text-decoration: underline;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-one:hover {
+  color: #6913f3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-two:hover {
+  color: #092df3;
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list:last-child {
   margin-top: 0.25em;

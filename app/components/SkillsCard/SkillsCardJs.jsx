@@ -13,8 +13,8 @@ const SkillsCardJs = ({ toggleCard }) => {
         </li>
         <ul>
           <li>
-            <button className={style["arrow-one"]} onClick={toggleCard}>
-              <CgCloseO className={style["arrow-icon-one"]} />
+            <button className={style["x-one"]} onClick={toggleCard}>
+              <CgCloseO className={style["x-icon-one"]} />
             </button>
           </li>
         </ul>
@@ -27,6 +27,7 @@ const SkillsCardJs = ({ toggleCard }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
@@ -37,6 +38,7 @@ const SkillsCardJs = ({ toggleCard }) => {
               </li>
             </ul>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
               courseText="HTML Full Course for Beginners | Dave Gray"
             />
@@ -49,6 +51,7 @@ const SkillsCardJs = ({ toggleCard }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
@@ -59,6 +62,7 @@ const SkillsCardJs = ({ toggleCard }) => {
               <li className={style["sub-list"]}>- Next-level Javascript</li>
             </ul>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://beginnerjavascript.com/"
               courseText="Beginner JavaScript | Wes Bos"
             />

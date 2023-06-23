@@ -13,8 +13,8 @@ const SkillsCardTs = ({ toggleCard }) => {
         </li>
         <ul>
           <li>
-            <button className={style["arrow-one"]} onClick={toggleCard}>
-              <CgCloseO className={style["arrow-icon-one"]} />
+            <button className={style["x-one"]} onClick={toggleCard}>
+              <CgCloseO className={style["x-icon-one"]} />
             </button>
           </li>
         </ul>
@@ -27,6 +27,7 @@ const SkillsCardTs = ({ toggleCard }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
@@ -37,6 +38,7 @@ const SkillsCardTs = ({ toggleCard }) => {
               </li>
             </ul>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
               courseText="HTML Full Course for Beginners | Dave Gray"
             />
@@ -49,14 +51,17 @@ const SkillsCardTs = ({ toggleCard }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://frontendmasters.com/courses/typescript-v3/"
               courseText="TypeScript Fundamentals, v3 | Frontend Masters, Mike North"
             />
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://frontendmasters.com/courses/intermediate-typescript/"
               courseText="Intermediate TypeScript | Frontend Masters, Mike North"
             />
             <SkillsCardItem
+              linkColor="course-link-one"
               courseUrl="https://frontendmasters.com/courses/react-typescript-v2/"
               courseText="React and TypeScript, v2 | Frontend Masters, Steve Kinney"
             />

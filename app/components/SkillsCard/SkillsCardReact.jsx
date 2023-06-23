@@ -13,8 +13,8 @@ const SkillsCardReact = ({ toggleCard2 }) => {
         </li>
         <ul>
           <li>
-            <button className={style["arrow-two"]} onClick={toggleCard2}>
-              <CgCloseO className={style["arrow-icon-two"]} />
+            <button className={style["x-two"]} onClick={toggleCard2}>
+              <CgCloseO className={style["x-icon-two"]} />
             </button>
           </li>
         </ul>
@@ -27,6 +27,7 @@ const SkillsCardReact = ({ toggleCard2 }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              linkColor="course-link-two"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
@@ -37,6 +38,7 @@ const SkillsCardReact = ({ toggleCard2 }) => {
               </li>
             </ul>
             <SkillsCardItem
+              linkColor="course-link-two"
               courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
               courseText="HTML Full Course for Beginners | Dave Gray"
             />
@@ -49,6 +51,7 @@ const SkillsCardReact = ({ toggleCard2 }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              linkColor="course-link-two"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
@@ -59,6 +62,7 @@ const SkillsCardReact = ({ toggleCard2 }) => {
               </li>
             </ul>
             <SkillsCardItem
+              linkColor="course-link-two"
               courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
               courseText="HTML Full Course for Beginners | Dave Gray"
             />
