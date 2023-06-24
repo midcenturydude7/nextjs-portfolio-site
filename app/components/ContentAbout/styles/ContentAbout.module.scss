@@ -461,7 +461,11 @@
             animation: none;
 
             .main-list {
-              .course-title {
+              .course-title-one,
+              .course-title-two,
+              .course-title-three {
+                transition: all 0.5s ease;
+
                 .course-link-one,
                 .course-link-two,
                 .course-link-three {
@@ -491,6 +495,24 @@
                   }
                 }
               }
+
+              .course-title-one {
+                &:hover {
+                  color: #6913f3;
+                }
+              }
+
+              .course-title-two {
+                &:hover {
+                  color: #092df3;
+                }
+              }
+
+              .course-title-three {
+                &:hover {
+                  color: #7a31aa;
+                }
+              }
             }
 
             .main-list:last-child {
@@ -502,11 +524,55 @@
               flex-direction: column;
               align-items: flex-start;
               justify-content: center;
-              line-height: 1.75;
+              line-height: 2;
               animation: none;
 
               .sub-list {
                 font-style: italic;
+                font-size: 1.05rem;
+                margin-left: 1em;
+
+                .sub-course-title-one,
+                .sub-course-title-two,
+                .sub-course-title-three {
+                  transition: all 0.5s ease;
+
+                  .sub-course-link-one,
+                  .sub-course-link-two,
+                  .sub-course-link-three {
+                    text-decoration: none;
+                    color: #bfb5f7;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+
+                  .sub-course-link-one {
+                    &:hover {
+                      color: #6913f3;
+                    }
+                  }
+
+                  .sub-course-link-two {
+                    &:hover {
+                      color: #092df3;
+                    }
+                  }
+
+                  .sub-course-link-three {
+                    &:hover {
+                      color: #7a31aa;
+                    }
+                  }
+                }
+
+                .sub-course-title-one {
+                  &:hover {
+                    color: #6913f3;
+                  }
+                }
               }
             }
           }
