@@ -197,6 +197,16 @@
   background: #092df3;
   border-right: 8px solid #9c9c9c;
 }
+.content-container .graph-container .skills-graph ul li .small-text,
+.content-container .graph-container .skills-graph .row-reverse li .small-text {
+  font-size: 1.2rem;
+  padding: 0.5em 0.7em;
+}
+.content-container .graph-container .skills-graph ul li .smaller-text,
+.content-container .graph-container .skills-graph .row-reverse li .smaller-text {
+  font-size: 1.1rem;
+  padding: 0.5em 0.7em;
+}
 .content-container .graph-container .skills-graph ul ul,
 .content-container .graph-container .skills-graph .row-reverse ul {
   list-style: none;
