@@ -436,6 +436,9 @@
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-two:hover {
   color: #092df3;
 }
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title .course-link-three:hover {
+  color: #7a31aa;
+}
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list:last-child {
   margin-top: 0.25em;
 }
