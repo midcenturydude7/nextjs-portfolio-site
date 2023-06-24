@@ -300,6 +300,10 @@
 .content-container .graph-container .skills-graph .row-reverse ul li .x-three {
   background: #7a31aa;
 }
+.content-container .graph-container .skills-graph ul li.header-width,
+.content-container .graph-container .skills-graph .row-reverse li.header-width {
+  width: 100%;
+}
 .content-container .graph-container .skills-graph .row-reverse {
   flex-direction: row-reverse;
   justify-content: space-between;
