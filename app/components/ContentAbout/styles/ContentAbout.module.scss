@@ -573,6 +573,18 @@
                     color: #6913f3;
                   }
                 }
+
+                .sub-course-title-two {
+                  &:hover {
+                    color: #092df3;
+                  }
+                }
+
+                .sub-course-title-three {
+                  &:hover {
+                    color: #7a31aa;
+                  }
+                }
               }
             }
           }

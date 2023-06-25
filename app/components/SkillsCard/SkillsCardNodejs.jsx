@@ -1,4 +1,5 @@
 import SkillsCardItem from "./SkillsCardItem";
+import SkillsCardSubItem from "./SkillsCardSubItem";
 import { CgCloseO } from "react-icons/cg";
 import { FaLaptopCode, FaCodeBranch } from "react-icons/fa";
 
@@ -27,17 +28,27 @@ const SkillsCardNodejs = ({ toggleCard2 }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              courseTitle="course-title-two"
               linkColor="course-link-two"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
             <ul>
-              <li className={style["sub-list"]}>- Web dev basics</li>
-              <li className={style["sub-list"]}>
-                - Making websites interactive
-              </li>
+              <SkillsCardSubItem
+                subCourseText="Web dev basics"
+                subCourseTitle="sub-course-title-two"
+                subCourseUrl="https://scrimba.com/learn/frontend"
+                subLinkColor="sub-course-link-two"
+              />
+              <SkillsCardSubItem
+                subCourseText="Making websites interactive"
+                subCourseTitle="sub-course-title-two"
+                subCourseUrl="https://scrimba.com/learn/frontend"
+                subLinkColor="sub-course-link-two"
+              />
             </ul>
             <SkillsCardItem
+              courseTitle="course-title-two"
               linkColor="course-link-two"
               courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
               courseText="HTML Full Course for Beginners | Dave Gray"
@@ -51,17 +62,27 @@ const SkillsCardNodejs = ({ toggleCard2 }) => {
         <div className={style["coursework-list"]}>
           <ul className={style["coursework-list-items"]}>
             <SkillsCardItem
+              courseTitle="course-title-two"
               linkColor="course-link-two"
               courseUrl="https://scrimba.com/learn/frontend"
               courseText="Scrimba Frontend Developer Certificate Program"
             />
             <ul>
-              <li className={style["sub-list"]}>- Web dev basics</li>
-              <li className={style["sub-list"]}>
-                - Making websites interactive
-              </li>
+              <SkillsCardSubItem
+                subCourseText="Web dev basics"
+                subCourseTitle="sub-course-title-two"
+                subCourseUrl="https://scrimba.com/learn/frontend"
+                subLinkColor="sub-course-link-two"
+              />
+              <SkillsCardSubItem
+                subCourseText="Making websites interactive"
+                subCourseTitle="sub-course-title-two"
+                subCourseUrl="https://scrimba.com/learn/frontend"
+                subLinkColor="sub-course-link-two"
+              />
             </ul>
             <SkillsCardItem
+              courseTitle="course-title-two"
               linkColor="course-link-two"
               courseUrl="https://www.youtube.com/playlist?list=PL0Zuz27SZ-6OlAwitnFUubtE93DO-l0vu"
               courseText="HTML Full Course for Beginners | Dave Gray"

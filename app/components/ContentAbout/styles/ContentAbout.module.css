@@ -534,6 +534,12 @@
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-one:hover {
   color: #6913f3;
 }
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-two:hover {
+  color: #092df3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-three:hover {
+  color: #7a31aa;
+}
 .content-container .graph-container .skills-graph:nth-of-type(2) {
   float: left;
   border-color: var(--border-violet);
