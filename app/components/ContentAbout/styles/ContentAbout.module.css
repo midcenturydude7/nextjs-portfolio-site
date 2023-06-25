@@ -467,6 +467,11 @@
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-three .course-link-two:hover {
   color: #092df3;
 }
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-one .course-link-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-two .course-link-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-three .course-link-three {
+  color: #8b5eaa;
+}
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-one .course-link-three:hover,
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-two .course-link-three:hover,
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-three .course-link-three:hover {
@@ -483,6 +488,9 @@
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-two:hover {
   color: #092df3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-three {
+  color: #7f3faa;
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items .main-list .course-title-three:hover {
   color: #7a31aa;
@@ -552,6 +560,11 @@
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-three .sub-course-link-two:hover {
   color: #092df3;
 }
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-one .sub-course-link-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-two .sub-course-link-three,
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-three .sub-course-link-three {
+  color: #9e86ad;
+}
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-one .sub-course-link-three:hover,
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-two .sub-course-link-three:hover,
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-three .sub-course-link-three:hover {
@@ -568,6 +581,9 @@
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-two:hover {
   color: #092df3;
+}
+.content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-three {
+  color: #7f3faa;
 }
 .content-container .graph-container .skills-graph .skills-graph-content-container .coursework-list .coursework-list-items ul .sub-list .sub-course-title-three:hover {
   color: #7a31aa;
