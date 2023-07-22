@@ -24,7 +24,6 @@ const ContentSkills = ({ title }) => {
   return (
     <div>
       <h1 className={style.title}>{title}</h1>
-      <SkillsCardMap />
     </div>
   );
 };
