@@ -24,11 +24,7 @@ const ContentSkills = ({ title }) => {
   return (
     <div>
       <h1 className={style.title}>{title}</h1>
-      {cards.flatMap((card) =>
-        card.cardItems.forEach((cardItem) =>
-          cardItem.id === 1 ? <p>{cardItem.name}</p> : null
-        )
-      )}
+      <SkillsCardMap />
     </div>
   );
 };
